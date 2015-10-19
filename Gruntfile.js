@@ -15,8 +15,29 @@ module.exports = function(grunt) {
   //
   // You have been warned!
   grunt.initConfig({
-
+    sass: {
+      dev: {
+        options: {
+          style: 'expanded'
+        },
+        files: [{
+          expand: true,
+          cwd: 'static/scss',
+          src: ['*.scss'],
+          dest: 'static/css',
+          ext: '.css'
+        }]
+      }
+    },
+    watch: {
+      sass: {
+        files:['static/scss/**/*.scss'],
+        tasks: ['sass', 'build']
+      }
+    }
   });
+
+  grunt.loadNpmTasks('grunt-contrib-sass');
 
   // NEVER REMOVE THESE LINES, OR ELSE YOUR PROJECT MAY NOT WORK
   require('./options/generatorOptions.js')(grunt);

@@ -1,0 +1,52 @@
+
+
+/********** @STRUCTURE *********/
+
+html, body {
+	width:100%;
+	height:100%;
+}
+
+
+
+
+/********** @RESPONSIVE *********/
+
+@media (min-width: 768px) {
+
+
+	
+}	
+
+//lg
+@media ($lg-query) {
+
+
+
+}
+
+//md
+@media ($md-query) {
+
+
+
+}
+
+//sm
+@media ($sm-query) {
+
+
+
+} 
+
+//xs
+@media ($xs-query) {
+
+}
+
+@media (min-width: $xs-size) {
+	
+}
+
+
+
