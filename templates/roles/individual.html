@@ -35,17 +35,9 @@
         {{ item.publish_date|date('F d Y') }}
       </li>
       <li>
-        <strong>Preview URL: </strong>
-        {{ item.preview_url }}
-      </li>
-      <li>
-        <strong>Slug: </strong>
-        {{ item.slug }}
-      </li>
-      <li>
-        <strong>Team (Role): </strong>
+        <strong>Team (Relationship): </strong>
         {# Relationship. Note that use the label you set for the relation, not the content-type name. #}
-        {% for relation in item.team_role %}
+        {% for relation in item.team_relationship %}
           {# You can ouput more than just the name. Feel free to output more fields from the CMS. #}
           <a href="{{ url(relation) }}">{{ relation.name }}</a>{% if not loop.last %},{% endif %}
         {% endfor %}

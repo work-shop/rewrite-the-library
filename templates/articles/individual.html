@@ -35,22 +35,16 @@
         {{ item.publish_date|date('F d Y') }}
       </li>
       <li>
-        <strong>Preview URL: </strong>
-        {{ item.preview_url }}
-      </li>
-      <li>
-        <strong>Slug: </strong>
-        {{ item.slug }}
-      </li>
-      <li>
-        <strong>Article Metadata: </strong>
-        {{ item.article_metadata }}
+        <strong>Metadata Section: </strong>
+        {{ item.metadata_section }}
       </li>
       <li>
         <strong>Author: </strong>
         {# Relationship. Note that use the label you set for the relation, not the content-type name. #}
-        {# You can ouput more than just the name. Feel free to output more fields from the CMS. #}
-        <a href="{{ url(item.author) }}">{{ item.author.name }}</a>
+        {% for relation in item.author %}
+          {# You can ouput more than just the name. Feel free to output more fields from the CMS. #}
+          <a href="{{ url(relation) }}">{{ relation.name }}</a>{% if not loop.last %},{% endif %}
+        {% endfor %}
       </li>
       <li>
         <strong>Category: </strong>
@@ -67,16 +61,27 @@
         {% endfor %}
       </li>
       <li>
-        <strong>Projects (Related Articles): </strong>
+        <strong>Related Projects: </strong>
         {# Relationship. Note that use the label you set for the relation, not the content-type name. #}
-        {% for relation in item.projects_related_articles %}
+        {% for relation in item.related_projects %}
           {# You can ouput more than just the name. Feel free to output more fields from the CMS. #}
           <a href="{{ url(relation) }}">{{ relation.name }}</a>{% if not loop.last %},{% endif %}
         {% endfor %}
       </li>
       <li>
-        <strong>Article Body: </strong>
-        {{ item.article_body }}
+        <strong>Override Publication Date: </strong>
+        {# Format the date. You can use PHP's date function to format as needed. http://php.net/manual/en/function.date.php #}
+        {{ item.override_publication_date|date('F d Y') }}
+      </li>
+      <li>
+        <strong>Body Section: </strong>
+        {{ item.body_section }}
+      </li>
+      <li>
+        <strong>Hero Image: </strong>
+        {# You can pull out a lot more information from the image property. Info here: #}
+        {# http://www.webhook.com/docs/widget-template-reference/#image #}
+        <img src="{{ item.hero_image|imageSize(200, 200) }}" />
       </li>
       <li>
         <strong>Above The Fold: </strong>

@@ -28,5 +28,51 @@
         {# Format the date. You can use PHP's date function to format as needed. http://php.net/manual/en/function.date.php #}
         {{ cms.about.last_updated|date('F d Y') }}
       </li>
+      <li>
+        <strong>Preview URL: </strong>
+        {{ cms.about.preview_url }}
+      </li>
+      <li>
+        <strong>Slug: </strong>
+        {{ cms.about.slug }}
+      </li>
+      <li>
+        <strong>Home Page: </strong>
+        {{ cms.about.home_page }}
+      </li>
+      <li>
+        <strong>About Page: </strong>
+        {{ cms.about.about_page }}
+      </li>
+      <li>
+        <strong>About Page Hero Image: </strong>
+        {# You can pull out a lot more information from the image property. Info here: #}
+        {# http://www.webhook.com/docs/widget-template-reference/#image #}
+        <img src="{{ cms.about.about_page_hero_image|imageSize(200, 200) }}" />
+      </li>
+      <li>
+        <strong>About Page Callout: </strong>
+        {{ cms.about.about_page_callout }}
+      </li>
+      <li>
+        <strong>Teammembers: </strong>
+        {# Relationship. Note that use the label you set for the relation, not the content-type name. #}
+        {% for relation in cms.about.teammembers %}
+          {# You can ouput more than just the name. Feel free to output more fields from the CMS. #}
+          <a href="{{ url(relation) }}">{{ relation.name }}</a>{% if not loop.last %},{% endif %}
+        {% endfor %}
+      </li>
+      <li>
+        <strong>Spaces Page: </strong>
+        {{ cms.about.spaces_page }}
+      </li>
+      <li>
+        <strong>Projects Page: </strong>
+        {{ cms.about.projects_page }}
+      </li>
+      <li>
+        <strong>Articles Page: </strong>
+        {{ cms.about.articles_page }}
+      </li>
   </ul>
 {% endblock %}

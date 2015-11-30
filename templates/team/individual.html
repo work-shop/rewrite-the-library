@@ -50,5 +50,29 @@
         <strong>Bio: </strong>
         {{ item.bio }}
       </li>
+      <li>
+        <strong>Articles (Author): </strong>
+        {# Relationship. Note that use the label you set for the relation, not the content-type name. #}
+        {% for relation in item.articles_author %}
+          {# You can ouput more than just the name. Feel free to output more fields from the CMS. #}
+          <a href="{{ url(relation) }}">{{ relation.name }}</a>{% if not loop.last %},{% endif %}
+        {% endfor %}
+      </li>
+      <li>
+        <strong>Projects (Collaborators): </strong>
+        {# Relationship. Note that use the label you set for the relation, not the content-type name. #}
+        {% for relation in item.projects_collaborators %}
+          {# You can ouput more than just the name. Feel free to output more fields from the CMS. #}
+          <a href="{{ url(relation) }}">{{ relation.name }}</a>{% if not loop.last %},{% endif %}
+        {% endfor %}
+      </li>
+      <li>
+        <strong>About (Teammembers): </strong>
+        {# Relationship. Note that use the label you set for the relation, not the content-type name. #}
+        {% for relation in item.about_teammembers %}
+          {# You can ouput more than just the name. Feel free to output more fields from the CMS. #}
+          <a href="{{ url(relation) }}">{{ relation.name }}</a>{% if not loop.last %},{% endif %}
+        {% endfor %}
+      </li>
   </ul>
 {% endblock %}
