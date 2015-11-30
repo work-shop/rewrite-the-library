@@ -41,6 +41,26 @@
         {{ cms.about.home_page }}
       </li>
       <li>
+        <strong>Slideshow Start Image: </strong>
+        {# You can pull out a lot more information from the image property. Info here: #}
+        {# http://www.webhook.com/docs/widget-template-reference/#image #}
+        <img src="{{ cms.about.slideshow_start_image|imageSize(200, 200) }}" />
+      </li>
+      <li>
+        <strong>Slideshow Start Copy: </strong>
+        {{ cms.about.slideshow_start_copy }}
+      </li>
+      <li>
+        <strong>Slideshow End Image: </strong>
+        {# You can pull out a lot more information from the image property. Info here: #}
+        {# http://www.webhook.com/docs/widget-template-reference/#image #}
+        <img src="{{ cms.about.slideshow_end_image|imageSize(200, 200) }}" />
+      </li>
+      <li>
+        <strong>Slideshow End Copy: </strong>
+        {{ cms.about.slideshow_end_copy }}
+      </li>
+      <li>
         <strong>About Page: </strong>
         {{ cms.about.about_page }}
       </li>
@@ -55,6 +75,10 @@
         {{ cms.about.about_page_callout }}
       </li>
       <li>
+        <strong>About Page Teammembers Intro: </strong>
+        {{ cms.about.about_page_teammembers_intro }}
+      </li>
+      <li>
         <strong>Teammembers: </strong>
         {# Relationship. Note that use the label you set for the relation, not the content-type name. #}
         {% for relation in cms.about.teammembers %}
@@ -67,12 +91,36 @@
         {{ cms.about.spaces_page }}
       </li>
       <li>
+        <strong>Spaces Page Callout: </strong>
+        {{ cms.about.spaces_page_callout }}
+      </li>
+      <li>
         <strong>Projects Page: </strong>
         {{ cms.about.projects_page }}
       </li>
       <li>
+        <strong>Projects Page Callout: </strong>
+        {{ cms.about.projects_page_callout }}
+      </li>
+      <li>
+        <strong>Projects page Image: </strong>
+        {# You can pull out a lot more information from the image property. Info here: #}
+        {# http://www.webhook.com/docs/widget-template-reference/#image #}
+        <img src="{{ cms.about.projects_page_image|imageSize(200, 200) }}" />
+      </li>
+      <li>
         <strong>Articles Page: </strong>
         {{ cms.about.articles_page }}
+      </li>
+      <li>
+        <strong>Articles Page Callout: </strong>
+        {{ cms.about.articles_page_callout }}
+      </li>
+      <li>
+        <strong>Articles Page Image: </strong>
+        {# You can pull out a lot more information from the image property. Info here: #}
+        {# http://www.webhook.com/docs/widget-template-reference/#image #}
+        <img src="{{ cms.about.articles_page_image|imageSize(200, 200) }}" />
       </li>
   </ul>
 {% endblock %}
