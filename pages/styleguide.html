@@ -1,0 +1,52 @@
+{# This file acts as a styling playground for the site. #}
+
+
+{% import "templates/partials/cards/article-cards.html" as articles %}
+
+{% import "templates/partials/cards/project-cards.html" as projects %}
+
+{% extends "templates/partials/base.html" %}
+
+{% block body_attributes %}{% endblock %}
+
+{% block title %}{% parent %} - Styleguide{% endblock %}
+
+{% block content %}
+
+	<h1>This is an <span class="bold">h1</span></h1>
+
+	<h2>This is an <span class="bold">h2</span></h2>
+
+	<h3>This is an <span class="bold">h3</span></h3>
+
+	<h4>This is an <span class="bold">h4</span></h4>
+
+	<h5>This is an <span class="bold">h5</span></h5>
+
+	<h6>This is an <span class="bold">h6</span></h6>
+
+	<p>This is a <span class="bold">p</span></p>
+
+	<section>
+
+		{{ articles.featured_card( cms.about.featured_article ) }}
+
+		{{ articles.expanded_card( cms.about.featured_article ) }}
+
+		{{ articles.condensed_card( cms.about.featured_article ) }}
+
+	</section>
+
+	
+	<section>
+
+		{{ projects.featured_card( cms.about.featured_project ) }}
+
+		{{ projects.expanded_card( cms.about.featured_project ) }}
+
+		{{ projects.condensed_card( cms.about.featured_project ) }}
+
+	</section>
+
+{% endblock %}
+
