@@ -58,7 +58,6 @@ function equal_width( target, selector ) {
 	};
 
 	$( document ).ready( function() {
-		$('.background').animate({opacity: 0}, 1000, function() { $( this ).hide(); });
 		$(window).on('resize', recalculate);
 		recalculate();
 	});

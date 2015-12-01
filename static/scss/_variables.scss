@@ -1,20 +1,18 @@
 /********** @VARIABLES *********/
 
-$white: #ffffff;
-$brand: #d65839;
-$ultra-light: #fafafa;
-$light: #f1f1f1;
+$brand: #10A879;
 
-$medium-light: darken( $light, 20 );
-$dark: #222222;
-$medium-dark: lighten( $dark, 20 );
-$medium: #555555;
-$error: #ff4a4a;
+$white: #ffffff;
+$ultra-light: #fafafa;
+$light: #efefef;
+$medium: #777777;
+$dark: #2B2B2B;
 
 $nav-height: 75px;
 $mobile-margins: 15px;
 
-$transitions: .25s;
+$transition-duration: .75s;
+
 
 $lg-size: 1201px;
 $lg-query: "min-width: #{ $lg-size }";
@@ -27,9 +25,3 @@ $sm-query: "max-width: #{$sm-size}";
 
 $xs-size: 767px;
 $xs-query: "max-width: #{ $xs-size }";
-
-
-$transition-duration: .75s;
-
-$open-skew: 0deg;
-$closed-skew:-5deg;

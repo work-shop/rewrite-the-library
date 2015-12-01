@@ -8,7 +8,7 @@
 	-ms-transform: $properties; 			
 }	
 
-@mixin transition($property: all,$duration: $transitions, $delay: 0s, $easing: ease){
+@mixin transition($property: all,$duration: $transition-duration, $delay: 0s, $easing: ease){
 	transition: $property $duration $delay $easing;
 	-moz-transition: $property $duration $delay $easing; 
 	-webkit-transition: $property $duration $delay $easing; 

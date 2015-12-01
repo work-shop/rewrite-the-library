@@ -1,20 +1,12 @@
 
 
-/********** @STRUCTURE *********/
-
-html, body {
-	width:100%;
-	height:100%;
-}
-
-
-
-
 /********** @RESPONSIVE *********/
 
+
+//sm and up
 @media (min-width: 768px) {
 
-
+	
 	
 }	
 
@@ -42,11 +34,10 @@ html, body {
 //xs
 @media ($xs-query) {
 
+
+
 }
 
-@media (min-width: $xs-size) {
-	
-}
 
 
 
