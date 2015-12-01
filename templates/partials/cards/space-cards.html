@@ -1,0 +1,42 @@
+{# ------------------------------------------------------- #}
+
+{# MACROS for SPACES #}
+
+{# ------------------------------------------------------- #}
+
+{% import "templates/partials/cards/project-cards.html" as projects %}
+
+{% import "templates/partials/cards/article-cards.html" as articles %}
+
+{% macro card( space ) %}
+	
+	<a href="{{ url( space ) }}">
+		{{ space.name }}
+
+		<figure width="200" height="200">
+			<img src="{{ space.context_svg|imageSize(auto) }}" />
+		</figure>
+
+		<h6>
+			{{ space.projects_space|size }} Project{{ space.projects_space|size|pluralize() }}, 
+			{{ space.articles_spaces|size }} Article{{ space.articles_spaces|size|pluralize() }}
+		</h6>
+
+		{{ space.description }}
+
+
+		{% for project in space.projects_space %}
+
+			{{ projects.condensed_card( project ) }}
+
+		{% endfor %}
+
+
+		{% for article in space.articles_spaces %}
+
+			{{ articles.condensed_card( article ) }}
+
+		{% endfor %}
+	</a>
+
+{% endmacro %}

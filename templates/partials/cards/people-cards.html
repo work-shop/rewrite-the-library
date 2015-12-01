@@ -1,0 +1,23 @@
+{# ------------------------------------------------------- #}
+
+{# MACROS for PEOPLE #}
+
+{# ------------------------------------------------------- #}
+
+{% macro card( project, zoom ) %}
+
+	{% if zoom == "expanded" %}
+
+		<h2>expanded person</h2>
+
+	{% elseif zoom == "condensed" %}
+
+		<h3>condensed person</h3>
+
+	{% endif %}
+
+{% endmacro %}
+
+{% macro expanded_card( project ) %} {{ card( project, "expanded" ) }} {% endmacro %}
+
+{% macro condensed_card( project ) %} {{ card( project, "condensed" ) }} {% endmacro %}

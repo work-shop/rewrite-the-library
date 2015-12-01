@@ -1,0 +1,29 @@
+{# ------------------------------------------------------- #}
+
+{# MACROS for PROJECTS #}
+
+{# ------------------------------------------------------- #}
+
+{% macro card( project, zoom ) %}
+
+	{% if zoom == "featured" %}
+
+		<h1>featured project</h1>
+
+	{% elseif zoom == "expanded" %}
+
+		<h2>expanded project</h2>
+
+	{% elseif zoom == "condensed" %}
+
+		<h3>condensed project</h3>
+
+	{% endif %}
+
+{% endmacro %}
+
+{% macro featured_card( project ) %} {{ card( project, "featured" ) }} {% endmacro %}
+
+{% macro expanded_card( project ) %} {{ card( project, "expanded" ) }} {% endmacro %}
+
+{% macro condensed_card( project ) %} {{ card( project, "condensed" ) }} {% endmacro %}

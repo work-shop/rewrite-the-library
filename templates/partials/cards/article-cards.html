@@ -1,0 +1,29 @@
+{# ------------------------------------------------------- #}
+
+{# MACROS for ARTICLES #}
+
+{# ------------------------------------------------------- #}
+
+{% macro card( article, zoom ) %}
+
+	{% if zoom == "featured" %} {# put all specialized markup for the featured card here. #}
+
+		<h1>featured article</h1>
+
+	{% elseif zoom == "expanded" %} {# put all specialized markup for the expanded card here. #}
+
+		<h2>expanded article</h2>
+
+	{% elseif zoom == "condensed" %} {# put all specialized markup for the condensed card here. #}
+
+		<h3>condensed article</h3>
+
+	{% endif %}
+
+{% endmacro %}
+
+{% macro featured_card( article ) %} {{ card( article, "featured" ) }} {% endmacro %}
+
+{% macro expanded_card( article ) %} {{ card( article, "expanded" ) }} {% endmacro %}
+
+{% macro condensed_card( article ) %} {{ card( article, "condensed" ) }} {% endmacro %}
