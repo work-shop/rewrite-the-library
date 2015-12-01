@@ -1,0 +1,46 @@
+{# ------------------------------------------------------- #}
+
+{# MACROS for HERO #}
+
+{# ------------------------------------------------------- #}
+
+
+{% macro with( title, description, image ) %}
+
+	{% if url( item ) == getCurrentUrl() %} {# It's an individual page #}
+	
+		<img src="{{ image|imageSize(auto) }}" />
+
+		{% if item.project_images %}
+
+			<ul>
+			
+			{% for image in item.project_images %}
+
+
+				<li>
+					<img src="{{ image|imageSize(auto) }}" />
+					{% if image.caption %} {{ image.caption }}{% endif %}
+				</li>
+
+			{% endfor %}
+
+			</ul>
+
+		{% endif %}
+
+		{% if title %}<h1>{{ title }}</h1>{% endif %}
+
+		{% if description %}<h2>{{ description }}</h2>{% endif %}
+
+	{% else %} {# It's a list page #}
+
+		<img src="{{ image|imageSize(auto) }}" />
+
+		<h1>{{ title }}</h1>
+
+		<h2>{{ description }}</h2>
+
+	{% endif %}
+
+{% endmacro %}
