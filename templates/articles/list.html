@@ -23,7 +23,7 @@
 	
 	{{ hero.with( pagename, cms.about.articles_page_callout, cms.about.articles_page_image ) }}
 
-	{{ nav.from( cms.article_categories ) }}
+	{{ nav.from( "Categories", cms.article_categories ) }}
 
 	{% for article in cms.articles %}
 
