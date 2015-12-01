@@ -1,0 +1,21 @@
+{# 
+
+	This is the bottom of the Page Guidepost Partial
+	It refers to a variable that is set in its parent to determine
+	how to display its responsibilities.
+
+ #}
+
+{% macro callout() %}
+
+	<h4>this is the callout guidepost</h4>
+
+{% endmacro %}
+
+
+
+{% macro back( to ) %}
+
+	<a href="{{ to.url }}"><h4>this is the back guidepost. it goes to: {{ to.name }}</h4></a>
+
+{% endmacro %}
