@@ -20,8 +20,6 @@
 
     {% include "templates/partials/deck.html" %}
 
-    {# Projects and Articles Callout #}
-
   <p class="din-regular">Din Regular</p>
 
   <p class="din-medium">Din Medium</p>
@@ -34,13 +32,17 @@
 
   <p class="din-bold italic">Din Bold Italic</p>
 
-    {{ projects.featured_card( cms.about.featured_project ) }}
+    {% if cms.about.featured_project %}
 
-    {# Featured Article Card #}
+        {{ projects.featured_card( cms.about.featured_project ) }}
 
-    {{ articles.featured_card( cms.about.featured_article ) }}
+    {% endif %}
 
-    {# Guide Post #}
+    {% if cms.about.featured_project %}
+
+        {{ articles.featured_card( cms.about.featured_article ) }}
+
+    {% endif %}
 
     {{ guideposts.callout() }}
 
