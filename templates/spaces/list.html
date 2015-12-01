@@ -24,12 +24,6 @@
 	<figure width="200" height="200">
 		<img src="{{ cms.about.first_floor_image|imageSize(auto) }}" />
 	</figure>
-
-	{% for space in cms.spaces %}
-
-		<script type="text/javascript">console.log( {{ space|json }} ); </script>
-
-	{% endfor %}
 	
 	{% for space in cms.spaces|where('floor', 'First Floor') %}
 
