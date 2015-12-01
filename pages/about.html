@@ -1,3 +1,5 @@
+{% import "templates/partials/hero.html" as hero %}
+
 {% import "templates/partials/cards/people-cards.html" as person %}
 
 {% import "templates/partials/guideposts.html" as guideposts %}
@@ -8,25 +10,15 @@
 
 {% block content %}
 
-  {{ cms.about.about_page_tagline }}
-
-  <br /><br />
-
-  {{ cms.about.about_page_description }}
-
-  <br /><br />
+  {{ hero.with( undefined, cms.about.about_page_tagline, cms.about.about_page_hero_image ) }}
 
   {{ cms.about.about_page_teammembers_intro }}
-
-  <br /><br />
 
   {% for teammember in cms.about.teammembers %}
 
     {{ person.expanded_card( teammember ) }}
 
   {% endfor %}
-
-  <br /><br />
 
   {{ cms.about.about_page_call_to_action }}
 
