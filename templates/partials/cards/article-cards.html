@@ -6,19 +6,61 @@
 
 {% macro card( article, zoom ) %}
 
-	{% if zoom == "featured" %} {# put all specialized markup for the featured card here. #}
+	<a href="{{ url( article ) }}">
 
-		<h1>featured article</h1>
+	<li data-sort-value="{{article.category.name|lower|replace(' ','-','g')}},*">
 
-	{% elseif zoom == "expanded" %} {# put all specialized markup for the expanded card here. #}
+	{% if zoom == "featured" %}
 
-		<h2>expanded article</h2>
 
-	{% elseif zoom == "condensed" %} {# put all specialized markup for the condensed card here. #}
+		<h2>{{ article.name }}</h2>
 
-		<h3>condensed article</h3>
+		{% if ( article.override_publication_date ) %}
+			{{ article.publish_date|date('M d Y') }}
+		{% else %}
+			{{ article.publish_date|date('M d Y') }}
+		{% endif %}
+		
+		<h4>{{ article.author|json }}</h4>
+
+		<img src="{{ article.hero_image|imageSize(auto) }}">
+
+		<h2>{{ project.tagline }}</h2>
+
+		<h2>{{ project.summary }}</h2>
+
+
+	{% elseif zoom == "expanded" %}
+
+
+		<h2>{{ article.name }}</h2>
+
+		{% if ( article.override_publication_date ) %}
+			{{ article.publish_date|date('M d Y') }}
+		{% else %}
+			{{ article.publish_date|date('M d Y') }}
+		{% endif %}
+
+		<h4>{{ article.author.name }}</h4>
+
+		<img src="{{ article.hero_image|imageSize(auto) }}">
+
+		<h2>{{ article.above_the_fold }}</h2>
+
+
+	{% elseif zoom == "condensed" %}
+
+
+		<h2>{{ article.name }}</h2>
+
+		<img src="{{ article.hero_image|imageSize(auto) }}">
+
 
 	{% endif %}
+
+	</li>
+
+	</a>
 
 {% endmacro %}
 

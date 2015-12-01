@@ -4,23 +4,57 @@
 
 {# ------------------------------------------------------- #}
 
+
 {% macro card( project, zoom ) %}
+
+	<a href="{{ url( project ) }}">
+
+	<li data-sort-value="{{ project.space.name|lower|replace(' ', '-', 'g')}},*">
 
 	{% if zoom == "featured" %}
 
-		<h1>featured project</h1>
+
+		<h2>{{ project.name }}</h2>
+
+		<h4>
+			{{ project.collaborators|size }} Teammember{{ project.collaborators|size|pluralize("s") }} - {{ project.project_timeline }}
+		</h4>	
+
+		<img src="{{ project.hero_image|imageSize(auto) }}">
+
+		<h2>{{ project.tagline }}</h2>
+
+		<h2>{{ project.summary }}</h2>
+
 
 	{% elseif zoom == "expanded" %}
 
-		<h2>expanded project</h2>
+
+		<h2>{{ project.name }}</h2>
+
+		<h4>
+			{{ project.collaborators|size }} Teammember{{ project.collaborators|size|pluralize("s") }} - {{ project.project_timeline }}
+		</h4>
+
+		<img src="{{ project.hero_image|imageSize(auto) }}">
+
+		<h2>{{ project.tagline }}</h2>
+
 
 	{% elseif zoom == "condensed" %}
 
-		<h3>condensed project</h3>
+
+		<h2>{{ project.name }}</h2>
+
+		<img src="{{ project.hero_image|imageSize(auto) }}">
+
 
 	{% endif %}
 
+	</li>
+
 {% endmacro %}
+
 
 {% macro featured_card( project ) %} {{ card( project, "featured" ) }} {% endmacro %}
 
