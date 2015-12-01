@@ -1,4 +1,33 @@
-{# Simple search form, remove from search index #}
-<form action="/search-results/" method="get" data-search-index="false">
- <input type="text" name="q" placeholder="Search" id="tipue_search_input" />
-</form>
+{# ------------------------------------------------------- #}
+
+{# HEADER #}
+
+{# partial #}
+
+{# ------------------------------------------------------- #}
+
+{% if item %} 
+
+	{% set title = item %}
+
+{% else %}
+
+	{% for type in getTypes( true ) %}
+
+		{% if url( type ) == getCurrentUrl() %}
+
+			{% set title = type%}
+
+		{% endif %}
+
+	{% endfor %}
+
+{% endif %}
+
+
+
+<header>
+	<a href="/"><h3>Rewrite the Library</h3></a>
+	<a href="{{ url( title ) }}"><h3>{{ title.name }}</h3></a>
+	<a><h3>Menu</h3></a>
+</header>

@@ -1,39 +1,35 @@
 {# ------------------------------------------------------- #}
 
-{# FOOTER #}
+{# MENU SPACE PAGE #}
 
 {# partial #}
 
 {# ------------------------------------------------------- #}
 
-<footer>
-	
-	<ul>
+<menu class="hidden">
+
 	{% for space in cms.spaces %}
 
-		<li><a href="{{ url( space ) }}">{{ space.name }}</a></li>
+		<a href="{{ url( space ) }}">{{ space.name }}</a>
 
 	{% endfor %}
-	</ul>
 
 	<br />
 	
-	<ul>
 	{% for project in cms.projects %}
 
-		<li><a href="{{ url( project ) }}">{{ project.name }}</a></li>
+		<a href="{{ url( project ) }}">{{ project.name }}</a>
+
+
 
 	{% endfor %}
-	</ul>
 
 	<br />
 
-	<ul>
 	{% for article in cms.articles %}
 
-		<li><a href="{{ url( article ) }}">{{ article.name }}</a></li>
+		<a href="{{ url( article ) }}">{{ article.name }}</a>
 
 	{% endfor %}
-	</ul>
 
-</footer>
+</menu>
