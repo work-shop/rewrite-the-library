@@ -1,0 +1,846 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"blo",
+				"block-background	 _objects.scss"
+			],
+			[
+				"nav",
+				"navTarget"
+			],
+			[
+				"dev",
+				"device-android"
+			],
+			[
+				"land",
+				"landing-clip"
+			],
+			[
+				"window",
+				"windowHeight"
+			],
+			[
+				"for",
+				"for	for (…) {…}"
+			],
+			[
+				"yello",
+				"yellow-dark	 _typography.scss"
+			],
+			[
+				"transfor",
+				"transform-origin"
+			],
+			[
+				"pro",
+				"pronunciation"
+			],
+			[
+				"load",
+				"loadPreviews"
+			],
+			[
+				"get_post_thumbn",
+				"get_the_post_thumbnail"
+			],
+			[
+				"exam",
+				"examples_count"
+			],
+			[
+				"place_image",
+				"place_image_2"
+			],
+			[
+				"anim",
+				"anim-	animation: ${1:name} ${2:duration} ${3:timing-function} ${4:delay} ${5:iteration-count} ${6:direction} ${7:fill-mode};"
+			],
+			[
+				"event",
+				"event_headline"
+			],
+			[
+				"template",
+				"template_directory"
+			],
+			[
+				"have",
+				"have_posts"
+			],
+			[
+				"event_st",
+				"event_start_time"
+			],
+			[
+				"clos",
+				"closemodal"
+			],
+			[
+				"modal",
+				"modal_category_id"
+			],
+			[
+				"modal_cate",
+				"modal_category_title"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"padding",
+				"padding-bottom"
+			],
+			[
+				"js",
+				"json_encode"
+			],
+			[
+				"padd",
+				"padding-right"
+			],
+			[
+				"border",
+				"border-bottom"
+			],
+			[
+				"speaker",
+				"speaker-modal"
+			],
+			[
+				"prevent",
+				"preventOverScroll"
+			],
+			[
+				"even",
+				"event-modal"
+			],
+			[
+				"speak",
+				"speaker-modal"
+			],
+			[
+				"overs",
+				"overscroller"
+			],
+			[
+				"event_start_date",
+				"event_start_date_and_time"
+			],
+			[
+				"event_date",
+				"event_date_and_time"
+			],
+			[
+				"thursday_",
+				"thursday_october_22"
+			],
+			[
+				"thur",
+				"thursday_events"
+			],
+			[
+				"eve",
+				"event_date"
+			],
+			[
+				"thu",
+				"thursday_events"
+			],
+			[
+				"thurs",
+				"thursday_count"
+			],
+			[
+				"thursday",
+				"thursday_event"
+			],
+			[
+				"ta",
+				"target	Attr"
+			],
+			[
+				"block",
+				"blockTarget"
+			],
+			[
+				"cate",
+				"category_term"
+			],
+			[
+				"car",
+				"category_description"
+			],
+			[
+				"flex-con",
+				"flex-control-nav	 style.scss"
+			],
+			[
+				"box-s",
+				"box-shadow($x: 0px,  $y: 0px,  $size: 4px,  $shadow-color: rgba(50, 50, 50, .5))	 mixins.scss"
+			],
+			[
+				"icon",
+				"icon-custom	 style.scss"
+			],
+			[
+				"back",
+				"backShareCheck"
+			],
+			[
+				"trans",
+				"transform($properties)	 mixins.scss"
+			],
+			[
+				"pla",
+				"player_id"
+			],
+			[
+				"transition",
+				"transition($property: all, $duration: $transitions,  $delay: 0s,  $easing: ease)	 mixins.scss"
+			],
+			[
+				"coll",
+				"collection_stories"
+			],
+			[
+				"vimeo",
+				"vimeo_id"
+			],
+			[
+				"font-",
+				"font-family-serif	 setup.scss"
+			],
+			[
+				"padde",
+				"padded-less	 setup.scss"
+			],
+			[
+				"templ",
+				"template_directory"
+			],
+			[
+				"fon-",
+				"font-family-serif	 type.scss"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"co",
+				"collections"
+			],
+			[
+				"get_templ",
+				"get_template_directory_uri"
+			],
+			[
+				"tr",
+				"transition"
+			],
+			[
+				"slide",
+				"slideshow-caption	 style.scss"
+			],
+			[
+				"backgr",
+				"background-cover	 setup.scss"
+			],
+			[
+				"border-ra",
+				"border-radius($radius: 0px)	 mixins.scss"
+			],
+			[
+				"col-s",
+				"col-sm-8	 reset.scss"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"inlin",
+				"inline-block"
+			],
+			[
+				"box-sh",
+				"box-shadow($x: 0px,  $y: 0px,  $size: 4px,  $shadow-color: rgba(50, 50, 50, .25))	 mixins.scss"
+			],
+			[
+				"transi",
+				"transition-duration"
+			],
+			[
+				"jchoi",
+				"jchoice2"
+			],
+			[
+				"chosen",
+				"chosen1"
+			],
+			[
+				"text-",
+				"text-transform"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"mysql",
+				"mysql_error"
+			],
+			[
+				"mysqlc",
+				"mysql_connect"
+			],
+			[
+				"php",
+				"php"
+			],
+			[
+				"G",
+				"_GET"
+			],
+			[
+				"th",
+				"theNumber"
+			],
+			[
+				"var",
+				"var2"
+			],
+			[
+				"arr",
+				"array1"
+			],
+			[
+				"ar",
+				"array	$… = array (…)"
+			],
+			[
+				"arra",
+				"array3"
+			],
+			[
+				"pading",
+				"padding-bottom"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 335.0,
+		"last_filter": "Snippet: ",
+		"selected_items":
+		[
+			[
+				"Snippet: ",
+				"Snippet: Lorem ipsum"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Remove Package"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Install Package"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"browse",
+				"Preferences: Browse Packages"
+			]
+		],
+		"width": 561.0
+	},
+	"console":
+	{
+		"height": 125.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'eb2297e1a458f27d836c04bb0cbaf282' + 'd0e7a3098092775ccb37ca9d6b2e4b7d'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/Greg/Web/rewrite-the-library"
+	],
+	"file_history":
+	[
+		"/Applications/MAMP/htdocs/bluebackyard/wp-content/themes/bluebackyard/partials/modals.php",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/footer.php",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/assets/css/style.scss",
+		"/Applications/MAMP/htdocs/cm/wp-content/themes/cm/partials/back_and_share.php",
+		"/Users/Greg/Web/gov-lab/templates/partials/base.html",
+		"/Users/Greg/Web/rewrite-the-library/pages/index.html",
+		"/Users/Greg/Web/rewrite-the-library/static/scss/main.scss",
+		"/Users/Greg/Web/rewrite-the-library/static/javascript/main.js",
+		"/Users/Greg/Web/rewrite-the-library/static/scss/_objects.scss",
+		"/Users/Greg/Web/rewrite-the-library/static/scss/_projects.scss",
+		"/Users/Greg/Web/rewrite-the-library/static/scss/_blog.scss",
+		"/Users/Greg/Web/rewrite-the-library/static/scss/_general.scss",
+		"/Users/Greg/Web/rewrite-the-library/static/scss/_about.scss",
+		"/Users/Greg/Web/rewrite-the-library/static/scss/_spaces.scss",
+		"/Users/Greg/Web/rewrite-the-library/static/scss/_home.scss",
+		"/Users/Greg/Web/rewrite-the-library/static/scss/_responsive.scss",
+		"/Users/Greg/Web/rewrite-the-library/static/scss/_style.scss",
+		"/Users/Greg/Web/rewrite-the-library/static/scss/_mixins.scss",
+		"/Users/Greg/Web/rewrite-the-library/static/scss/_variables.scss",
+		"/Applications/MAMP/htdocs/bluebackyard/wp-content/themes/bluebackyard-placeholder/assets/js/youtube.js",
+		"/Applications/MAMP/htdocs/bluebackyard/wp-content/themes/bluebackyard-placeholder/assets/js/functions.js",
+		"/Applications/MAMP/htdocs/bluebackyard/wp-content/themes/bluebackyard-placeholder/library/classes/class_init_actions.php",
+		"/Applications/MAMP/htdocs/bluebackyard/wp-content/themes/bluebackyard-placeholder/partials/sanctuaries.php",
+		"/Applications/MAMP/htdocs/bluebackyard/wp-content/themes/bluebackyard/partials/nav.php",
+		"/Applications/MAMP/htdocs/kyna/wp-content/themes/kynaleski/partials/landing.php",
+		"/Applications/MAMP/htdocs/kyna/wp-content/themes/kynaleski/assets/css/_variables.scss",
+		"/Applications/MAMP/htdocs/kyna/wp-content/themes/kynaleski/assets/css/_typography.scss",
+		"/Applications/MAMP/htdocs/kyna/wp-content/themes/kynaleski/partials/bio.php",
+		"/Applications/MAMP/htdocs/kyna/wp-content/themes/kynaleski/functions.php",
+		"/Applications/MAMP/htdocs/kyna/wp-content/themes/kynaleski/library/classes/class_init_actions.php",
+		"/Applications/MAMP/htdocs/kyna/wp-content/themes/kynaleski/partials/books.php",
+		"/Applications/MAMP/htdocs/kyna/wp-content/themes/kynaleski/partials/news.php",
+		"/Applications/MAMP/htdocs/kyna/wp-content/themes/kynaleski/assets/css/_animations.scss",
+		"/Applications/MAMP/htdocs/dream/wp-content/themes/dream/functions.php",
+		"/Applications/MAMP/htdocs/work-shop/wp-content/themes/work-shop/index.php",
+		"/Applications/MAMP/htdocs/bluebackyard/wp-content/themes/bluebackyard/partials/vote.php",
+		"/Applications/MAMP/htdocs/bluebackyard/wp-content/themes/bluebackyard/assets/js/twitter.js",
+		"/Applications/MAMP/htdocs/bluebackyard/wp-content/themes/bluebackyard/assets/css/_style.scss",
+		"/Applications/MAMP/htdocs/bluebackyard/wp-content/themes/bluebackyard/assets/js/functions.js",
+		"/Applications/MAMP/htdocs/kyna/wp-content/themes/kynaleski/assets/css/_style.scss",
+		"/Applications/MAMP/htdocs/kyna/wp-content/themes/kynaleski/assets/js/functions.js",
+		"/Applications/MAMP/htdocs/kyna/wp-content/themes/kynaleski/partials/nav.php",
+		"/Applications/MAMP/htdocs/kyna/wp-content/themes/kynaleski/library/theme_options.php",
+		"/Applications/MAMP/htdocs/bluebackyard/wp-content/themes/bluebackyard/partials/places.php",
+		"/Applications/MAMP/htdocs/bluebackyard/wp-content/themes/bluebackyard/library/classes/class_init_actions.php",
+		"/Applications/MAMP/htdocs/bluebackyard/wp-content/themes/bluebackyard/partials/sanctuaries.php",
+		"/Applications/MAMP/htdocs/bluebackyard/wp-content/themes/bluebackyard/assets/css/_objects.scss",
+		"/Applications/MAMP/htdocs/bluebackyard/wp-content/themes/bluebackyard/partials/introduction.php",
+		"/Applications/MAMP/htdocs/bluebackyard/wp-content/themes/bluebackyard/partials/process.php",
+		"/Applications/MAMP/htdocs/bluebackyard/wp-content/themes/bluebackyard/partials/footer_menu.php",
+		"/Applications/MAMP/htdocs/bluebackyard/wp-content/themes/bluebackyard/header.php",
+		"/Users/Greg/Web/gov-lab/static/scss/_map.scss",
+		"/Users/Greg/Web/gov-lab/static/scss/_wysiwyg_figures.scss",
+		"/Users/Greg/Web/gov-lab/static/scss/_variables.scss",
+		"/Users/Greg/Web/gov-lab/templates/partials/header.html",
+		"/Users/Greg/Web/gov-lab/static/javascript/functions.js",
+		"/Users/Greg/Web/gov-lab/templates/partials/aside.html",
+		"/Users/Greg/Web/gov-lab/static/scss/_mixins.scss",
+		"/Users/Greg/Web/gov-lab/static/scss/_reset.scss",
+		"/Applications/MAMP/htdocs/bluebackyard/wp-content/themes/bluebackyard/assets/css/_typography.scss",
+		"/Applications/MAMP/htdocs/bluebackyard/wp-content/themes/bluebackyard/index.php",
+		"/Applications/MAMP/htdocs/bluebackyard/wp-content/themes/bluebackyard/library/classes/class_init_filters.php",
+		"/Applications/MAMP/htdocs/bluebackyard/wp-content/themes/bluebackyard/partials/share.php",
+		"/Applications/MAMP/htdocs/bluebackyard/wp-content/themes/bluebackyard-placeholder/assets/css/_style.scss",
+		"/Applications/MAMP/htdocs/bluebackyard/wp-content/themes/bluebackyard/partials/cards.php",
+		"/Applications/MAMP/htdocs/hyperion/wp-content/themes/thedatasphere/assets/css/_typography.scss",
+		"/Applications/MAMP/htdocs/hyperion/wp-content/themes/thedatasphere/assets/css/_style.scss",
+		"/Applications/MAMP/htdocs/hyperion/wp-content/themes/thedatasphere/partials/nav.php",
+		"/Applications/MAMP/htdocs/hyperion/wp-content/themes/thedatasphere/header.php",
+		"/Applications/MAMP/htdocs/hyperion/wp-content/themes/thedatasphere/partials/landing.php",
+		"/Applications/MAMP/htdocs/hyperion/wp-content/themes/thedatasphere/partials/footer_menu.php",
+		"/Users/Greg/Web/hyperion/templates/organizations/list.html",
+		"/Applications/MAMP/htdocs/hyperion/wp-content/themes/thedatasphere/partials/posts.php",
+		"/Applications/MAMP/htdocs/hyperion/wp-content/themes/thedatasphere/archive.php",
+		"/Applications/MAMP/htdocs/hyperion/wp-content/themes/thedatasphere/partials/page_content.php",
+		"/Applications/MAMP/htdocs/hyperion/wp-content/themes/thedatasphere/single.php",
+		"/Applications/MAMP/htdocs/hyperion/wp-content/themes/thedatasphere/assets/css/_variables.scss",
+		"/Applications/MAMP/htdocs/hyperion/wp-content/themes/thedatasphere/index.php",
+		"/Applications/MAMP/htdocs/hyperion/wp-content/themes/thedatasphere/footer.php",
+		"/Applications/MAMP/htdocs/hyperion/wp-content/themes/thedatasphere/page.php",
+		"/Applications/MAMP/htdocs/hyperion/wp-content/themes/thedatasphere/functions.php",
+		"/Applications/MAMP/htdocs/hyperion/wp-content/themes/thedatasphere/library/classes/class_init_actions.php",
+		"/Applications/MAMP/htdocs/kyna/wp-content/themes/kynaleski/assets/css/main.scss",
+		"/Applications/MAMP/htdocs/kyna/wp-content/themes/kynaleski/assets/css/animations.scss",
+		"/Applications/MAMP/htdocs/kyna/wp-content/themes/kynaleski/assets/css/_test.scss",
+		"/Applications/MAMP/htdocs/kyna/wp-content/themes/kynaleski/library/classes/class_init_filters.php",
+		"/Applications/MAMP/htdocs/kyna/wp-content/themes/kynaleski/footer.php",
+		"/Applications/MAMP/htdocs/kyna/wp-content/themes/kynaleski/index.php",
+		"/Applications/MAMP/htdocs/kyna/wp-content/themes/kynaleski/header.php",
+		"/Applications/MAMP/htdocs/kyna/wp-content/themes/kynaleski/style.css",
+		"/Applications/MAMP/htdocs/kyna/wp-config.php",
+		"/Applications/MAMP/htdocs/kyna/assets/css/_style.scss",
+		"/Applications/MAMP/htdocs/kyna/index.php",
+		"/Applications/MAMP/htdocs/kyna/assets/css/_typography.scss",
+		"/Applications/MAMP/htdocs/loeb/wp-content/themes/loebreunion/partials/schedule.php",
+		"/Applications/MAMP/htdocs/loeb/wp-content/themes/loebreunion/partials/nav.php",
+		"/Applications/MAMP/htdocs/loeb/wp-content/themes/loebreunion/header.php",
+		"/Applications/MAMP/htdocs/loeb/wp-content/themes/loebreunion/index.php",
+		"/Applications/MAMP/htdocs/loeb/wp-content/themes/loebreunion/assets/css/_style.scss",
+		"/Applications/MAMP/htdocs/loeb/wp-content/themes/loebreunion/partials/registration.php",
+		"/Applications/MAMP/htdocs/loeb/wp-content/themes/loebreunion/partials/speaker_modal2.php",
+		"/Applications/MAMP/htdocs/loeb/wp-content/themes/loebreunion/partials/speaker_modal.php",
+		"/Applications/MAMP/htdocs/loeb/wp-content/themes/loebreunion/partials/event_modal.php",
+		"/Applications/MAMP/htdocs/loeb/wp-content/themes/loebreunion/partials/category_modals.php",
+		"/Applications/MAMP/htdocs/loeb/wp-content/themes/loebreunion/partials/footer_menu.php",
+		"/Applications/MAMP/htdocs/loeb/wp-content/themes/loebreunion/assets/css/_typography.scss",
+		"/Applications/MAMP/htdocs/loeb/wp-content/themes/loebreunion/assets/js/functions.js",
+		"/Applications/MAMP/htdocs/loeb/wp-content/themes/loebreunion/partials/event.php",
+		"/Applications/MAMP/htdocs/loeb/wp-content/themes/loebreunion/page-more-info.php",
+		"/Applications/MAMP/htdocs/loeb/wp-content/themes/loebreunion/partials/speakers.php",
+		"/Applications/MAMP/htdocs/loeb/wp-content/themes/loebreunion/partials/introduction.php",
+		"/Applications/MAMP/htdocs/loeb/wp-content/themes/loebreunion/partials/speaker.php",
+		"/Applications/MAMP/htdocs/loeb/wp-content/themes/loebreunion/partials/category_modal.php",
+		"/Applications/MAMP/htdocs/loeb/wp-content/themes/loebreunion/page-about.php",
+		"/Applications/MAMP/htdocs/loeb/wp-content/themes/loebreunion/footer.php",
+		"/Applications/MAMP/htdocs/loeb/wp-content/themes/loebreunion/functions.php",
+		"/Applications/MAMP/htdocs/loeb/wp-content/themes/loebreunion/library/classes/class_ajax.php",
+		"/Applications/MAMP/htdocs/loeb/wp-content/themes/loebreunion/library/classes/class_init_actions.php",
+		"/Applications/MAMP/htdocs/loeb/wp-content/themes/loebreunion/assets/css/_objects.scss",
+		"/Applications/MAMP/htdocs/loeb/wp-content/themes/loebreunion/partials/map_utilities.php",
+		"/Applications/MAMP/htdocs/loeb/wp-content/themes/loebreunion/page.php",
+		"/Applications/MAMP/htdocs/loeb/wp-content/themes/loebreunion/page-register.php",
+		"/Applications/MAMP/htdocs/loeb/wp-content/themes/loebreunion/partials/temporary.php",
+		"/Applications/MAMP/htdocs/loeb/wp-content/themes/loebreunion/library/classes/class_init_filters.php",
+		"/Applications/MAMP/htdocs/loeb/wp-content/themes/loebreunion/partials/page_content.php",
+		"/Applications/MAMP/htdocs/loeb/wp-content/themes/loebreunion/library/globals.php",
+		"/Applications/MAMP/htdocs/loeb/wp-content/themes/loebreunion/partials/event_modals.php",
+		"/Applications/MAMP/htdocs/loeb/wp-content/themes/loebreunion/partials/speaker_modals.php"
+	],
+	"find":
+	{
+		"height": 30.0
+	},
+	"find_in_files":
+	{
+		"height": 104.0,
+		"where_history":
+		[
+			"<project>",
+			"<current file>",
+			"mixins.scss",
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"nav-spy",
+			"nav",
+			"gallery-im",
+			"share",
+			"checkbox",
+			"block-bac",
+			"overview",
+			"modal-close",
+			"success",
+			"closeMo",
+			"modalC",
+			"modal-close",
+			"submit",
+			"view",
+			"transitions",
+			".white",
+			"transform",
+			"submit",
+			"loadpage",
+			"rendervideo",
+			"parall",
+			"scrollstart",
+			"touchmov",
+			"footer",
+			"process",
+			"flexsli",
+			"gallery-",
+			"flexslider",
+			"video",
+			"process",
+			"loadPa",
+			"playVid",
+			"playV",
+			"loadpage",
+			"video",
+			"modal",
+			"vote-it",
+			"nav",
+			"place-modal",
+			"nav",
+			"scale",
+			"active",
+			"overview",
+			"$pl",
+			"flex",
+			"scale",
+			"anim",
+			"header",
+			"load",
+			"click",
+			"load",
+			"lo",
+			"load",
+			"play",
+			"setup",
+			"video",
+			"iframe",
+			"hover",
+			"outlined",
+			"no-hover",
+			"header",
+			"atta",
+			"consol",
+			"conso//l",
+			"consol",
+			"closing",
+			"animat",
+			"vote",
+			"header",
+			"iframe",
+			"console",
+			"consolge",
+			"modal",
+			"place-modal",
+			"place",
+			"submi",
+			"intpu",
+			".choi",
+			"place",
+			"place1",
+			"container-fluid",
+			"iframe",
+			"header",
+			"after",
+			"header",
+			"ifram",
+			"iframe",
+			"bio",
+			"bio-body",
+			"load",
+			"trimto",
+			"icon",
+			"yellow",
+			"vote",
+			"place",
+			"places",
+			"spy",
+			"spy.run",
+			"scrollS",
+			"spy",
+			"direction",
+			"767",
+			"sanc",
+			"nav",
+			"side-nav",
+			"Trial",
+			"Trail",
+			"trial",
+			"bold",
+			"header",
+			"aside",
+			"header",
+			"logo",
+			"skew",
+			"map-instr",
+			"sanc",
+			"sanct",
+			"#000",
+			"1",
+			"control",
+			"flexs",
+			"bindmodal",
+			"bimd",
+			"header",
+			"flex",
+			"site",
+			"feed",
+			"Blue"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"$brand",
+			"2",
+			"Place",
+			"Locations",
+			"Character Category",
+			"Character Categories",
+			"Character",
+			"event",
+			"Event",
+			"Events",
+			"Speaker",
+			"rgba(155,46,206,",
+			"rgba(155,46,206",
+			"col-sm-4",
+			"h4",
+			"6s",
+			"h5",
+			"3s",
+			"2s",
+			".5s",
+			"5",
+			"icon",
+			"p",
+			"h3",
+			"7",
+			"4",
+			"000",
+			"$",
+			"6",
+			"5",
+			"4",
+			"23",
+			"2",
+			"$radius",
+			"@mixin ",
+			"$",
+			"/assets/",
+			" ",
+			"",
+			".9",
+			".5",
+			"class",
+			"grid3",
+			"grid2",
+			"grid4"
+		],
+		"reverse": false,
+		"show_context": false,
+		"use_buffer2": false,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 30.0
+	},
+	"input":
+	{
+		"height": 39.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.CSS Extended Completions":
+	{
+		"height": 0.0
+	},
+	"output.find_results":
+	{
+		"height": 138.0
+	},
+	"pinned_build_system": "",
+	"project": "rewrite-the-library.sublime-project",
+	"replace":
+	{
+		"height": 56.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"partials/story_tile.php"
+			],
+			[
+				"footer",
+				"footer.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 210.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
