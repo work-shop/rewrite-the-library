@@ -1,0 +1,61 @@
+{# ------------------------------------------------------- #}
+
+{# MACRO for RELATED #}
+
+{# macro #}
+
+{# ------------------------------------------------------- #}
+
+{% import "templates/partials/cards/article-cards.html" as articles %}
+
+{% import "templates/partials/cards/project-cards.html" as projects %}
+
+{% macro to( item ) %}
+	{% if item._type == "articles" %}
+
+		{% set projects = item.related_projects %}
+
+		{% set articles = [] %}
+
+		{% for space in item.spaces %}
+
+			{% set projects = merge( projects, space.projects_space ) %}
+ 
+			{% set articles = merge( articles, space.articles_spaces ) %}
+
+		{% endfor %}
+
+		{% set articles = articles|exclude('name', item.name) %}
+
+
+	{% elseif item._type == "projects" %}
+
+		{% set projects = merge( item.related_projects, item.space.projects_space )|exclude('name', item.name ) %}
+
+		{% set articles = merge( item.articles_related_projects, item.space.articles_spaces )  %}		
+
+	{% endif %}
+
+
+	{% if projects|size %}
+
+		{% for project in projects %}
+
+			{{ projects.condensed_card( project ) }}
+
+		{% endfor %}
+
+	{% endif %}
+	
+	{% if articles|size %}
+
+		{% for article in articles %}
+
+			{{ articles.condensed_card( article ) }}
+
+		{% endfor %}
+
+	{% endif %}
+		
+
+{% endmacro %}
