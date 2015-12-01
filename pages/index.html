@@ -8,6 +8,8 @@
 
 {% import "templates/partials/cards/project-cards.html" as projects %}
 
+{% import "templates/partials/guideposts.html" as guideposts %}
+
 {% extends "templates/partials/base.html" %}
 
 {% block body_attributes %}{% endblock %}
@@ -40,7 +42,7 @@
 
     {# Guide Post #}
 
-    {% include "templates/partials/guidepost.html" %}
+    {{ guideposts.callout() }}
 
 {% endblock %}
 
