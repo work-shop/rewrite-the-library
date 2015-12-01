@@ -1,0 +1,25 @@
+{# ------------------------------------------------------- #}
+
+{# NAV MACROS #}
+
+{# ------------------------------------------------------- #}
+
+{% macro from( name, taxonomy ) %}
+
+{% if taxonomy|size %}
+
+	<nav>
+		<ul>
+		<li class="active" data-sort-key="*">All {{ name }}</li>
+
+		{% for term in taxonomy %}
+
+			<li data-sort-key="{{ term.name|lower|replace(' ', '-', 'g') }}" > {{ term.name}}</li>
+
+		{% endfor %}
+		</ul>
+	</nav>
+		
+{% endif %}
+
+{% endmacro %}
