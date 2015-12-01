@@ -6,6 +6,7 @@ lib-cov
 *.out
 *.pid
 *.gz
+*.map
 .DS_Store
 
 pids
@@ -14,6 +15,7 @@ results
 
 npm-debug.log
 node_modules
+.sass-cache
 
 /.build
 /.firebase.conf
