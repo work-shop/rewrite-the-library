@@ -4,17 +4,34 @@
 
 {# ------------------------------------------------------- #}
 
-{% macro card( project, zoom ) %}
+{% macro card( person, zoom ) %}
+
+	{% if person.website %}<a href="{{ person.website }}">{% endif %}
 
 	{% if zoom == "expanded" %}
 
-		<h2>expanded person</h2>
+
+		<h3>{{ person.name }}</h3>
+
+		<img src="{{ person.image|imageSize(auto)}}" />
+
+		{% if person.email %}<a href="mailto:{{ person.email }}">{{ person.email }}</a>{%endif %}
+
+		{% if person.phone_number %} {{ person.phone_number }} {% endif %}
+
+		<h6>
+			{{ person.projects_collaborators|size }} Project{{ person.projects_collaborators|size|pluralize() }}, 
+			{{ person.articles_author|size }} Article{{ person.articles_author|size|pluralize() }}
+		</h6>
+
 
 	{% elseif zoom == "condensed" %}
 
-		<h3>condensed person</h3>
+		<img src="{{ person.image|imageSize(auto)}}" />
 
 	{% endif %}
+
+	{% if person.website %}</a>{% endif %}
 
 {% endmacro %}
 
