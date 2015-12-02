@@ -28,10 +28,18 @@ function equal_width( target, selector ) {
 					els
 				); 
 			}	
-		}
+		}	
 
 		$(document).trigger('dom-is-sized');
+
 	}
+
+
+	function collapseSubLists(){
+		$('.sub-list').slideUp();
+		$('.sub-list').removeClass('open').addClass('closed');
+		console.log('setupSubLists');
+	}	
 
 	var actionmap = 
 	{ 
@@ -59,9 +67,9 @@ function equal_width( target, selector ) {
 
 	$( document ).ready( function() {
 		$(window).on('resize', recalculate);
+		collapseSubLists();
 		recalculate();
 	});
-
 	
 	
 })( jQuery );

@@ -6,30 +6,74 @@
 
 {# ------------------------------------------------------- #}
 
-<menu class="hidden">
+<menu class="closed" id="menu">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-8 col-sm-offset-2">
+				<nav id="menu-nav">
+					<ul class="centered uppercase">
+						<li><a href="/">Home</a></li>
+						<li><a href="/about">About</a></li>
+						<li class="sub-list-parent">
+							<a href="#" class="menu-nav-toggle">Library Spaces</a>
+							<ul class="open sub-list">
+								{% for space in cms.spaces %}
+									<li><a href="{{ url( space ) }}">{{ space.name }}</a></li>
+									<li><a href="{{ url( space ) }}">{{ space.name }}</a></li>
+									<li><a href="{{ url( space ) }}">{{ space.name }}</a></li>
+									<li><a href="{{ url( space ) }}">{{ space.name }}</a></li>
+									<li><a href="{{ url( space ) }}">{{ space.name }}</a></li>
 
-	{% for space in cms.spaces %}
+								{% endfor %}
+							</ul>
+						</li>
+						<li class="sub-list-parent">
+							<a href="#" class="menu-nav-toggle">The Projects</a>
+							<ul class="closed sub-list">
+								{% for project in cms.projects %}
+									<li><a href="{{ url( project ) }}">{{ project.name }}</a></li>
+									<li><a href="{{ url( project ) }}">{{ project.name }}</a></li>
+									<li><a href="{{ url( project ) }}">{{ project.name }}</a></li>
 
-		<a href="{{ url( space ) }}">{{ space.name }}</a>
+								{% endfor %}
+							</ul>
+						</li>
+						<li class="sub-list-parent">
+							<a href="#" class="menu-nav-toggle">The Articles</a>
+							<ul class="closed sub-list">
+								{% for article in cms.articles %}
+									<li><a href="{{ url( article ) }}">{{ article.name }}</a></li>
+									<li><a href="{{ url( article ) }}">{{ article.name }}</a></li>
+									<li><a href="{{ url( article ) }}">{{ article.name }}</a></li>
+									<li><a href="{{ url( article ) }}">{{ article.name }}</a></li>
+									<li><a href="{{ url( article ) }}">{{ article.name }}</a></li>
+									<li><a href="{{ url( article ) }}">{{ article.name }}</a></li>
+									<li><a href="{{ url( article ) }}">{{ article.name }}</a></li>
+									<li><a href="{{ url( article ) }}">{{ article.name }}</a></li>
+									<li><a href="{{ url( article ) }}">{{ article.name }}</a></li>
+									<li><a href="{{ url( article ) }}">{{ article.name }}</a></li>
+									<li><a href="{{ url( article ) }}">{{ article.name }}</a></li>
+									<li><a href="{{ url( article ) }}">{{ article.name }}</a></li>
+									<li><a href="{{ url( article ) }}">{{ article.name }}</a></li>
+									<li><a href="{{ url( article ) }}">{{ article.name }}</a></li>
+									<li><a href="{{ url( article ) }}">{{ article.name }}</a></li>
+									<li><a href="{{ url( article ) }}">{{ article.name }}</a></li>
+									<li><a href="{{ url( article ) }}">{{ article.name }}</a></li>
+									<li><a href="{{ url( article ) }}">{{ article.name }}</a></li>
+									<li><a href="{{ url( article ) }}">{{ article.name }}</a></li>
+									<li><a href="{{ url( article ) }}">{{ article.name }}</a></li>
 
-	{% endfor %}
-
-	<br />
-	
-	{% for project in cms.projects %}
-
-		<a href="{{ url( project ) }}">{{ project.name }}</a>
-
-
-
-	{% endfor %}
-
-	<br />
-
-	{% for article in cms.articles %}
-
-		<a href="{{ url( article ) }}">{{ article.name }}</a>
-
-	{% endfor %}
-
+								{% endfor %}
+							</ul>
+						</li>					
+					</ul>
+				</nav>
+			</div>
+			<div class="col-sm-2">
+				<a href="#" id="menu-close" class="menu-toggle display-block right">
+					<span class="icon" data-icon="x"></span>
+				</a>
+			</div>
+		</div>
+	</div>
 </menu>

@@ -2099,8 +2099,8 @@ fancy objects
 
 @font-face {
   font-family: 'modern_pictograms_proregular';
-  src: url("modernpictogramspro_234.eot");
-  src: url("modernpictogramspro_234?#iefix") format("embedded-opentype"), url("modernpictogramspro_234.woff") format("woff"), url("modernpictogramspro_234.ttf") format("truetype");
+  src: url("../fonts/modernpictogramspro_234.eot");
+  src: url("../fonts/modernpictogramspro_234?#iefix") format("embedded-opentype"), url("../fonts/modernpictogramspro_234.woff") format("woff"), url("../fonts/modernpictogramspro_234.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -2112,11 +2112,11 @@ body {
   font-style: normal;
 }
 
-.din-regular {
+.din-regular, menu li li a {
   font-weight: 400;
 }
 
-.din-medium, #header-rwtl a span {
+.din-medium, #header-rwtl a span, menu li a {
   font-weight: 500;
 }
 
@@ -2469,12 +2469,16 @@ figure[data-type=quote] cite:before {
   }
 }
 /********** @GLOBALS *********/
-a:hover {
-  transition: color 0.125s 0s ease;
-  -moz-transition: color 0.125s 0s ease;
-  -webkit-transition: color 0.125s 0s ease;
-  -o-transition: color 0.125s 0s ease;
-  -ms-transition: color 0.125s 0s ease;
+a {
+  transition: all 0.125s 0s ease;
+  -moz-transition: all 0.125s 0s ease;
+  -webkit-transition: all 0.125s 0s ease;
+  -o-transition: all 0.125s 0s ease;
+  -ms-transition: all 0.125s 0s ease;
+}
+
+a:focus {
+  color: #2B2B2B;
 }
 
 .border-bottom, #header-olin, #header-rwtl a span {
@@ -2485,7 +2489,7 @@ a.border-bottom:hover, a#header-olin:hover {
   border-bottom-color: #10A879;
 }
 
-/********** @HEADER, MENU *********/
+/********** @HEADER *********/
 #header-olin {
   height: 60px;
 }
@@ -2516,17 +2520,77 @@ a.border-bottom:hover, a#header-olin:hover {
   margin-top: 14px;
   display: block;
 }
+#header-rwtl a:hover {
+  color: #2B2B2B;
+}
 #header-rwtl a:hover span {
   border-bottom-color: #10A879;
+  color: #10A879;
 }
 #header-rwtl a span {
-  transition: border-bottom-color 0.125s 0s ease;
-  -moz-transition: border-bottom-color 0.125s 0s ease;
-  -webkit-transition: border-bottom-color 0.125s 0s ease;
-  -o-transition: border-bottom-color 0.125s 0s ease;
-  -ms-transition: border-bottom-color 0.125s 0s ease;
+  transition: all 0.125s 0s ease;
+  -moz-transition: all 0.125s 0s ease;
+  -webkit-transition: all 0.125s 0s ease;
+  -o-transition: all 0.125s 0s ease;
+  -ms-transition: all 0.125s 0s ease;
   text-transform: uppercase;
   padding-bottom: 3px;
+}
+
+/********** @MENUS AND MODALS *********/
+body.modal-open {
+  overflow: hidden;
+}
+
+.header-after menu {
+  padding-top: 90px;
+}
+
+menu {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  margin: 0;
+  padding: 0;
+  padding-top: 150px;
+  transition: transform 0.75s 0s ease;
+  -moz-transition: transform 0.75s 0s ease;
+  -webkit-transition: transform 0.75s 0s ease;
+  -o-transition: transform 0.75s 0s ease;
+  -ms-transition: transform 0.75s 0s ease;
+  transform: translate(0, -125%);
+  -moz-transform: translate(0, -125%);
+  -webkit-transform: translate(0, -125%);
+  -o-transform: translate(0, -125%);
+  -ms-transform: translate(0, -125%);
+  overflow: scroll;
+}
+menu.open {
+  transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+}
+menu li {
+  line-height: 4;
+}
+menu li a {
+  display: block;
+}
+menu li ul {
+  margin-bottom: 3em;
+}
+menu li li {
+  line-height: 2.5;
+}
+
+#menu-close .icon:before {
+  font-size: 28px;
 }
 
 /********** @MAIN *********/
@@ -2535,5 +2599,10 @@ main {
 }
 
 /********** @RESPONSIVE *********/
+@media (max-width: 767px) {
+  #menu-close {
+    right: auto;
+  }
+}
 
 /*# sourceMappingURL=main.css.map */
