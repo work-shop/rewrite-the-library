@@ -34,9 +34,10 @@
 //xs
 @media ($xs-query) {
 
-	#menu-close{
-		right: auto;
+	menu{
+		padding-top: $header-height;
 	}
+
 
 
 

@@ -2505,7 +2505,7 @@ a.border-bottom:hover, a#header-olin:hover {
   top: 60px;
   background: white;
   left: 0;
-  z-index: 9;
+  z-index: 7;
   transition: position 0.125s 0s ease;
   -moz-transition: position 0.125s 0s ease;
   -webkit-transition: position 0.125s 0s ease;
@@ -2548,7 +2548,7 @@ body.modal-open {
 
 menu {
   position: fixed;
-  z-index: 10;
+  z-index: 8;
   top: 0;
   left: 0;
   width: 100%;
@@ -2569,6 +2569,10 @@ menu {
   -ms-transform: translate(0, -125%);
   overflow: scroll;
 }
+menu .container {
+  position: relative;
+  z-index: 10;
+}
 menu.open {
   transform: translate(0, 0);
   -moz-transform: translate(0, 0);
@@ -2580,7 +2584,15 @@ menu li {
   line-height: 4;
 }
 menu li a {
-  display: block;
+  padding-bottom: 2px;
+  border-bottom: 3px solid transparent;
+}
+menu li a:hover {
+  color: #10A879;
+  border-bottom: 3px solid #10A879;
+}
+menu li a.active {
+  border-bottom: 3px solid #2B2B2B;
 }
 menu li ul {
   margin-bottom: 3em;
@@ -2588,9 +2600,28 @@ menu li ul {
 menu li li {
   line-height: 2.5;
 }
+menu li li a.active {
+  border-bottom: 2px solid #2B2B2B;
+}
+menu li li a:hover {
+  border-bottom-color: transparent;
+}
 
+#menu-close {
+  position: relative;
+  top: 20px;
+}
 #menu-close .icon:before {
   font-size: 28px;
+}
+
+.blanket {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9;
 }
 
 /********** @MAIN *********/
@@ -2600,8 +2631,8 @@ main {
 
 /********** @RESPONSIVE *********/
 @media (max-width: 767px) {
-  #menu-close {
-    right: auto;
+  menu {
+    padding-top: 60px;
   }
 }
 

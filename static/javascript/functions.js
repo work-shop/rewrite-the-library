@@ -38,6 +38,11 @@ jQuery(document).ready(function($) {
 	  	menuNavToggle($(this));
 	});	
 
+	$('.blanket').click(function(event) {
+	  	event.preventDefault();
+	  	cycleMenu();
+	});
+
 
 	$('*[data-sort-key]').on('click', function() {
 		activate( $(this) );
@@ -50,7 +55,6 @@ jQuery(document).ready(function($) {
 $(window).scroll(function() { 
 	
 	window.requestAnimationFrame(headerSpy);
-
 
 });//end window.scroll
 
@@ -98,39 +102,20 @@ function cycleMenu() {
 	}
 }
 
-// function menuNavToggle(_link){
-// 	var sibling = $(_link).next();
-// 	if($(sibling).hasClass('closed')){
-// 		$(sibling).removeClass('closed').addClass('open');
-// 	  $( sibling ).animate({
-// 	    height: '100%'
-// 	  }, 500, function() {
-// 	    // Animation complete.
-// 	  });
-
-// 	}
-// 	else{
-// 	  $( sibling ).animate({
-// 	    height: '0'
-// 	  }, 500, function() {
-// 	    // Animation complete.
-// 	  });
-
-// 		$(sibling).removeClass('open').addClass('closed');
-// 	}
-// }
-
 
 function menuNavToggle(_link){
 	var sibling = $(_link).next();
+	var link = _link;
 
 	if($(sibling).hasClass('closed')){
 		$(sibling).removeClass('closed').addClass('open');
 	  	$( sibling ).slideDown();
+	  	$(link).addClass('opened');
 	}
 	else{
 		$(sibling).removeClass('open').addClass('closed');
 	  	$( sibling ).slideUp();		
+	  	$(link).removeClass('opened');
 	}
 }
 
