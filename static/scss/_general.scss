@@ -1,0 +1,75 @@
+
+
+/********** @GLOBALS *********/
+
+a:hover{
+	@include transition(color, .125s);
+}
+
+.border-bottom{
+	border-bottom: 3px solid $dark;
+}
+
+a.border-bottom:hover{
+	border-bottom-color: $brand;
+}
+
+
+/********** @HEADER, MENU *********/
+
+#header-olin{
+	// position: absolute;
+	// width: 100%;
+	// top: 0;
+	// left: 0;
+	height: $header-height;
+	@extend .border-bottom;
+
+	img{
+		width: 170px;
+		margin-top: 13px;
+	}
+}
+
+#header-rwtl{
+	position: absolute;
+	width: 100%;
+	height: $header-height;
+	top: $header-height;
+	background: white;
+	left: 0;
+	z-index: 9;
+	@include transition(position,.125s);
+
+	&.fixed{
+		position: fixed;
+		top: 0;
+
+	}
+
+	a{
+		margin-top: 14px;
+		display: block;
+
+		&:hover{
+			span{
+				border-bottom-color: $brand;
+			}
+		}
+
+		span{
+			@include transition(border-bottom-color,.125s);
+			@extend .border-bottom;
+			@extend .din-medium;
+			text-transform: uppercase;
+			padding-bottom: 3px;
+		}
+	}
+}
+
+
+/********** @MAIN *********/
+
+main{
+	padding-top: $header-height;
+}

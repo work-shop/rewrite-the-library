@@ -33,7 +33,7 @@
 
     {% block head_extra %}{% endblock %}
   </head>
-  <body {% block body_attributes %}before header-absolute modal-off{% endblock %}>
+  <body class="header-before header-absolute modal-off" {% block body_attributes %}before header-absolute modal-off{% endblock %}>
     {% block body %}
       <!--[if lt IE 7]>
         <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
@@ -43,7 +43,11 @@
 
       {% include "templates/partials/header.html" %}
 
-      {% block content %}{% endblock %}
+      <main id="content">
+
+        {% block content %}{% endblock %}
+
+      </main>
 
       {% include "templates/partials/footer.html" %}
 
