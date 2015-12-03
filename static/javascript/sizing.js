@@ -30,15 +30,29 @@ function equal_width( target, selector ) {
 			}	
 		}	
 
+		deckSizing();
+
 		$(document).trigger('dom-is-sized');
 
 	}
 
+	function deckSizing(){
+		var windowHeight = $(window).height();
+		var headerHeight = $('#header-rwtl').height();
+		var deckHeight = windowHeight - (headerHeight * 2) - 40;
+		var navHeight = $('#deck-nav').height();
+		var deckSlickHeight = deckHeight - navHeight - 6;
+
+		$('#deck').height(deckHeight);
+		$('#deck-slick').height(deckSlickHeight);
+		$('.deck-intro').height(deckSlickHeight);
+		$('.deck-slide').height(deckSlickHeight);
+		
+	}
 
 	function collapseSubLists(){
 		$('.sub-list').slideUp();
 		$('.sub-list').removeClass('open').addClass('closed');
-		console.log('setupSubLists');
 	}	
 
 	var actionmap = 

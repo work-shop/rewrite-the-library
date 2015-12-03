@@ -49,6 +49,40 @@ jQuery(document).ready(function($) {
 		filter( $(this).data('sort-key'), $('*[data-sort-value]') );
 	});	
 
+
+	$('#deck-slick').slick({
+		centerMode: true,
+		arrows: true,
+		// dots: true,
+		centerPadding: '250px',
+		slidesToShow: 1,
+		responsive: [
+		    {
+		      breakpoint: 1024,
+		      settings: {
+		        arrows: true,
+		        centerMode: true,
+		        centerPadding: '90px',
+		        slidesToShow: 1
+		      }
+		    },
+		    {
+		      breakpoint: 768,
+		      settings: {
+		        arrows: true,
+		        dots: true,
+		        centerMode: true,
+		        centerPadding: '10px',
+		        slidesToShow: 1
+		      }
+		    }
+		  ]	
+	});
+
+	$('.deck-slide').click(function(event) {
+		$('#deck-slick').slick('slickNext');
+	});
+
 });//end document.ready
 
 

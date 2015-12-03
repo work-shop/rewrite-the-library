@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /********** @VARIABLES *********/
 /********** @MIXINS *********/
 /********** @RESET *********/
@@ -1637,7 +1638,7 @@ fancy objects
   height: 100%;
   top: 0;
   left: 0;
-  background: rgba(40, 30, 30, 0.75);
+  background: rgba(0, 0, 0, 0.4);
   transition: all 0.75s 0s ease;
   -moz-transition: all 0.75s 0s ease;
   -webkit-transition: all 0.75s 0s ease;
@@ -2110,6 +2111,7 @@ body {
   font-family: "DinPro", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
+  color: #2B2B2B;
 }
 
 .din-regular, menu li li a {
@@ -2124,7 +2126,7 @@ body {
   font-weight: 700;
 }
 
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
+h1, .h1, h2, .h2, h3, .h3, #deck-nav li a, h4, .h4, h5, .h5, h6, .h6 {
   font-weight: normal;
   line-height: 1.4em;
   font-weight: 500;
@@ -2138,12 +2140,12 @@ h2, .h2 {
   font-size: 2em;
 }
 
-h3, .h3 {
-  font-size: 1.6em;
+h3, .h3, #deck-nav li a {
+  font-size: 1.25em;
 }
 
 h4, .h4 {
-  font-size: 1.25em;
+  font-size: 1.1em;
 }
 
 h5, .h5 {
@@ -2168,15 +2170,63 @@ p {
   body {
     font-size: 16px;
   }
+
+  h1, .h1 {
+    font-size: 2em;
+  }
+
+  h2, .h2 {
+    font-size: 1.6em;
+  }
+
+  h3, .h3, #deck-nav li a {
+    font-size: 1.25em;
+  }
+
+  h4, .h4 {
+    font-size: 1em;
+  }
+
+  h5, .h5 {
+    font-size: .8em;
+  }
+
+  h6, .h6 {
+    font-size: .7em;
+  }
 }
 @media (max-width: 992px) {
   body {
     font-size: 14px;
   }
+
+  h1, .h1 {
+    font-size: 1.6em;
+  }
+
+  h2, .h2 {
+    font-size: 1.25em;
+  }
+
+  h3, .h3, #deck-nav li a {
+    font-size: 1em;
+  }
+
+  h4, .h4 {
+    font-size: .8em;
+  }
+
+  h5, .h5 {
+    font-size: .7em;
+  }
+
+  h6, .h6 {
+    font-size: .6em;
+  }
 }
 @media (max-width: 767px) {
   body {
-    font-size: 16px;
+    font-size: 13px;
   }
 }
 /********** @FORMATTING *********/
@@ -2280,6 +2330,10 @@ p {
   color: #2B2B2B;
 }
 
+.medium {
+  color: #777777;
+}
+
 .brand {
   color: #10A879;
 }
@@ -2333,7 +2387,7 @@ p {
   }
 }
 /********** @ICONS *********/
-.icon:before {
+.icon:before, #deck-slick button:before {
   content: attr(data-icon);
   font-family: "modern_pictograms_proregular";
   font-size: 30px;
@@ -2341,7 +2395,7 @@ p {
   vertical-align: middle;
   position: relative;
 }
-.icon.large:before {
+.icon.large:before, #deck-slick button.large:before {
   font-size: 72px;
 }
 
@@ -2557,16 +2611,17 @@ menu {
   margin: 0;
   padding: 0;
   padding-top: 150px;
-  transition: transform 0.75s 0s ease;
-  -moz-transition: transform 0.75s 0s ease;
-  -webkit-transition: transform 0.75s 0s ease;
-  -o-transition: transform 0.75s 0s ease;
-  -ms-transition: transform 0.75s 0s ease;
-  transform: translate(0, -125%);
-  -moz-transform: translate(0, -125%);
-  -webkit-transform: translate(0, -125%);
-  -o-transform: translate(0, -125%);
-  -ms-transform: translate(0, -125%);
+  transition: transform 1.25s 0s ease;
+  -moz-transition: transform 1.25s 0s ease;
+  -webkit-transition: transform 1.25s 0s ease;
+  -o-transition: transform 1.25s 0s ease;
+  -ms-transition: transform 1.25s 0s ease;
+  transform: rotateX(-180deg);
+  -moz-transform: rotateX(-180deg);
+  -webkit-transform: rotateX(-180deg);
+  -o-transform: rotateX(-180deg);
+  -ms-transform: rotateX(-180deg);
+  transform-origin: 0 0;
   overflow: scroll;
 }
 menu .container {
@@ -2579,6 +2634,11 @@ menu.open {
   -webkit-transform: translate(0, 0);
   -o-transform: translate(0, 0);
   -ms-transform: translate(0, 0);
+  transform: rotateX(0);
+  -moz-transform: rotateX(0);
+  -webkit-transform: rotateX(0);
+  -o-transform: rotateX(0);
+  -ms-transform: rotateX(0);
 }
 menu li {
   line-height: 4;
@@ -2611,7 +2671,7 @@ menu li li a:hover {
   position: relative;
   top: 20px;
 }
-#menu-close .icon:before {
+#menu-close .icon:before, #menu-close #deck-slick button:before, #deck-slick #menu-close button:before {
   font-size: 28px;
 }
 
@@ -2629,10 +2689,157 @@ main {
   padding-top: 60px;
 }
 
+.container-fluid {
+  padding: 0 30px;
+}
+
+/********** @DECK *********/
+#deck {
+  overflow: hidden;
+  padding-top: 40px;
+}
+
+.deck-intro {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+#deck-slick button {
+  position: absolute;
+  bottom: -80px;
+  left: 60px;
+  width: 20px;
+  height: 20px;
+  background: none;
+  border: none;
+  transform: translate(0, -50%);
+  -moz-transform: translate(0, -50%);
+  -webkit-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  font-size: 0;
+  line-height: 0;
+}
+#deck-slick button:before {
+  content: '‘';
+  display: block;
+  font-size: 40px;
+}
+#deck-slick button:focus {
+  outline: none;
+  border: none;
+}
+#deck-slick button.slick-next {
+  left: auto;
+  right: 70px !important;
+}
+#deck-slick button.slick-next:before {
+  content: '—';
+}
+
+.deck-slide {
+  height: 100%;
+  background: white;
+  border: 3px solid #2B2B2B;
+  overflow: hidden;
+  transition: all 0.5s 0s ease;
+  -moz-transition: all 0.5s 0s ease;
+  -webkit-transition: all 0.5s 0s ease;
+  -o-transition: all 0.5s 0s ease;
+  -ms-transition: all 0.5s 0s ease;
+  opacity: .5;
+  transform: scale(0.8);
+  -moz-transform: scale(0.8);
+  -webkit-transform: scale(0.8);
+  -o-transform: scale(0.8);
+  -ms-transform: scale(0.8);
+  transform-origin: 50% 50%;
+}
+.deck-slide.slick-active {
+  opacity: 1;
+  transform: scale(1);
+  -moz-transform: scale(1);
+  -webkit-transform: scale(1);
+  -o-transform: scale(1);
+  -ms-transform: scale(1);
+}
+.deck-slide:focus {
+  outline: none;
+  border: 3px solid #2B2B2B;
+}
+.deck-slide:hover {
+  cursor: grab;
+  cursor: -webkit-grab;
+}
+.deck-slide.deck-slide-empty {
+  background: none;
+  border: 3px solid transparent;
+}
+.deck-slide.deck-slide-empty:hover {
+  border: 3px solid transparent;
+}
+.deck-slide .slide-caption {
+  width: 39%;
+  margin: 0 auto;
+}
+
+#deck-nav {
+  height: 250px;
+  padding: 40px 120px 40px 120px;
+}
+#deck-nav li {
+  width: 25%;
+  border-left: 1px solid #777777;
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+}
+#deck-nav li:last-child {
+  border-right: 1px solid #777777;
+}
+#deck-nav li a {
+  color: #777777;
+  text-align: center;
+  line-height: 1.2;
+}
+#deck-nav li a.active {
+  color: #10A879;
+}
+
 /********** @RESPONSIVE *********/
+@media (max-width: 1200px) {
+  #deck-nav {
+    height: 250px;
+    padding: 30px 60px 30px 60px;
+  }
+
+  #deck-slick button {
+    bottom: -60px;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+  }
+  #deck-slick button.slick-next {
+    right: 30px !important;
+  }
+}
 @media (max-width: 767px) {
   menu {
     padding-top: 60px;
+  }
+
+  #deck-nav li {
+    border: none !important;
+  }
+  #deck-nav li a {
+    border: 2px solid #777777;
+    content: '.';
   }
 }
 

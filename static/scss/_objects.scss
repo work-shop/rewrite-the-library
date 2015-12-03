@@ -157,7 +157,8 @@ fancy objects
 		height: 100%;
 		top: 0;
 		left: 0;
-		background: rgba(40,30,30,.75);
+		$background-dark: darken($brand, 40%);
+		background: transparentize($background-dark, .6);
 		@include transition(all);
 	}
 }

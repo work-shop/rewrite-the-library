@@ -15,6 +15,7 @@ body{
 	font-family:"DinPro", Helvetica, Arial, sans-serif; 
 	font-weight:normal; 
 	font-style:normal;
+	color: $dark;
 }
 
 .din-regular{
@@ -44,11 +45,11 @@ h2,.h2{
 }
 
 h3,.h3{
-	font-size: 1.6em;
+	font-size: 1.25em;
 }
 
 h4,.h4{
-	font-size: 1.25em;
+	font-size: 1.1em;
 }
 
 h5,.h5{
@@ -76,12 +77,62 @@ p{
 	body{
 		font-size: 16px;
 	}
+
+	h1,.h1{
+		font-size: 2em;
+	}
+
+	h2,.h2{
+		font-size: 1.6em;
+	}
+
+	h3,.h3{
+		font-size: 1.25em;
+	}
+
+	h4,.h4{
+		font-size: 1em;
+	}
+
+	h5,.h5{
+		font-size: .8em;
+	}
+
+	h6,.h6{
+		font-size: .7em;
+	}
+	
 }
 
 //sm
 @media (max-width: 992px) {
+	
 	body{
 		font-size: 14px;
+	}
+
+	h1,.h1{
+		font-size: 1.6em;
+	}
+
+	h2,.h2{
+		font-size: 1.25em;
+	}
+
+	h3,.h3{
+		font-size: 1em;
+	}
+
+	h4,.h4{
+		font-size: .8em;
+	}
+
+	h5,.h5{
+		font-size: .7em;
+	}
+
+	h6,.h6{
+		font-size: .6em;
 	}
 
 } 
@@ -89,7 +140,7 @@ p{
 //xs
 @media (max-width: 767px) {
 	body{
-		font-size: 16px;
+		font-size: 13px;
 	}
 
 
@@ -136,6 +187,10 @@ p{
 
 .dark{
 	color: $dark;
+}
+
+.medium{
+	color: $medium;
 }
 
 .brand{
