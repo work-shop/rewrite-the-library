@@ -1638,7 +1638,7 @@ fancy objects
   height: 100%;
   top: 0;
   left: 0;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.28);
   transition: all 0.75s 0s ease;
   -moz-transition: all 0.75s 0s ease;
   -webkit-transition: all 0.75s 0s ease;
@@ -1675,7 +1675,7 @@ fancy objects
 .vertical-center {
   margin-top: 0;
   position: relative;
-  top: 49%;
+  top: 48%;
   transform: translate(0, -50%);
   -moz-transform: translate(0, -50%);
   -webkit-transform: translate(0, -50%);
@@ -1687,7 +1687,7 @@ fancy objects
   .vertical-center-lg {
     margin-top: 0;
     position: relative;
-    top: 49%;
+    top: 48%;
     transform: translate(0, -50%);
     -moz-transform: translate(0, -50%);
     -webkit-transform: translate(0, -50%);
@@ -1699,7 +1699,7 @@ fancy objects
   .vertical-center-md {
     margin-top: 0;
     position: relative;
-    top: 49%;
+    top: 48%;
     transform: translate(0, -50%);
     -moz-transform: translate(0, -50%);
     -webkit-transform: translate(0, -50%);
@@ -1711,7 +1711,7 @@ fancy objects
   .vertical-center-sm {
     margin-top: 0;
     position: relative;
-    top: 49%;
+    top: 48%;
     transform: translate(0, -50%);
     -moz-transform: translate(0, -50%);
     -webkit-transform: translate(0, -50%);
@@ -1723,7 +1723,7 @@ fancy objects
   .vertical-center-xs {
     margin-top: 0;
     position: relative;
-    top: 49%;
+    top: 48%;
     transform: translate(0, -50%);
     -moz-transform: translate(0, -50%);
     -webkit-transform: translate(0, -50%);
@@ -2126,10 +2126,11 @@ body {
   font-weight: 700;
 }
 
-h1, .h1, h2, .h2, h3, .h3, #deck-nav li a, h4, .h4, h5, .h5, h6, .h6 {
+h1, .h1, h2, .h2, h3, .h3, #deck-nav li a, h4, .h4, .tag-button a, h5, .h5, h6, .h6 {
   font-weight: normal;
-  line-height: 1.4em;
+  line-height: 1.2em;
   font-weight: 500;
+  letter-spacing: -.01em;
 }
 
 h1, .h1 {
@@ -2144,12 +2145,12 @@ h3, .h3, #deck-nav li a {
   font-size: 1.25em;
 }
 
-h4, .h4 {
-  font-size: 1.1em;
+h4, .h4, .tag-button a {
+  font-size: 1.0em;
 }
 
 h5, .h5 {
-  font-size: 1em;
+  font-size: .9em;
 }
 
 h6, .h6 {
@@ -2158,7 +2159,7 @@ h6, .h6 {
 
 p {
   font-size: 1em;
-  line-height: 1.6;
+  line-height: 1.4;
 }
 
 @media (min-width: 1200px) {
@@ -2183,7 +2184,7 @@ p {
     font-size: 1.25em;
   }
 
-  h4, .h4 {
+  h4, .h4, .tag-button a {
     font-size: 1em;
   }
 
@@ -2212,7 +2213,7 @@ p {
     font-size: 1em;
   }
 
-  h4, .h4 {
+  h4, .h4, .tag-button a {
     font-size: .8em;
   }
 
@@ -2543,6 +2544,44 @@ a.border-bottom:hover, a#header-olin:hover {
   border-bottom-color: #10A879;
 }
 
+.tag-button {
+  transform: skew(-8deg);
+  -moz-transform: skew(-8deg);
+  -webkit-transform: skew(-8deg);
+  -o-transform: skew(-8deg);
+  -ms-transform: skew(-8deg);
+}
+.tag-button a {
+  padding: 8px 17px 10px 17px;
+  background: #efefef;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  transition: all 0.125s 0s ease;
+  -moz-transition: all 0.125s 0s ease;
+  -webkit-transition: all 0.125s 0s ease;
+  -o-transition: all 0.125s 0s ease;
+  -ms-transition: all 0.125s 0s ease;
+  transform: skew(8deg);
+  -moz-transform: skew(8deg);
+  -webkit-transform: skew(8deg);
+  -o-transform: skew(8deg);
+  -ms-transform: skew(8deg);
+  line-height: 1.5;
+}
+.tag-button a:hover {
+  background: #10A879;
+  color: white !important;
+}
+.tag-button.tag-button-brand a {
+  background: #10A879;
+  color: white !important;
+}
+.tag-button.tag-button-brand a:hover {
+  color: #10A879 !important;
+  background: #efefef;
+}
+
 /********** @HEADER *********/
 #header-olin {
   height: 60px;
@@ -2727,7 +2766,23 @@ main {
 #deck-slick button:before {
   content: '‘';
   display: block;
-  font-size: 40px;
+  font-size: 43px;
+  color: #777777;
+  transition: all 0.125s 0s ease;
+  -moz-transition: all 0.125s 0s ease;
+  -webkit-transition: all 0.125s 0s ease;
+  -o-transition: all 0.125s 0s ease;
+  -ms-transition: all 0.125s 0s ease;
+  transform-origin: 50% 50%;
+  -webkit-transform-origin: 50% 50%;
+}
+#deck-slick button:hover:before {
+  transform: scale(1.5);
+  -moz-transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+  -o-transform: scale(1.5);
+  -ms-transform: scale(1.5);
+  color: #2B2B2B;
 }
 #deck-slick button:focus {
   outline: none;
@@ -2782,9 +2837,15 @@ main {
 .deck-slide.deck-slide-empty:hover {
   border: 3px solid transparent;
 }
-.deck-slide .slide-caption {
-  width: 39%;
+.deck-slide .slide-text {
+  width: 61%;
+  min-width: 300px;
   margin: 0 auto;
+}
+
+.deck-video iframe {
+  width: 100%;
+  height: 100%;
 }
 
 #deck-nav {
@@ -2809,6 +2870,9 @@ main {
   line-height: 1.2;
 }
 #deck-nav li a.active {
+  color: #10A879;
+}
+#deck-nav li a:hover {
   color: #10A879;
 }
 
@@ -2840,6 +2904,10 @@ main {
   #deck-nav li a {
     border: 2px solid #777777;
     content: '.';
+  }
+
+  .deck-slide .slide-text {
+    width: 90%;
   }
 }
 

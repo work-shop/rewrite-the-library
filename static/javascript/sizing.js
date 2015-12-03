@@ -47,6 +47,7 @@ function equal_width( target, selector ) {
 		$('#deck-slick').height(deckSlickHeight);
 		$('.deck-intro').height(deckSlickHeight);
 		$('.deck-slide').height(deckSlickHeight);
+		$('.deck-video iframe').height(deckSlickHeight);
 		
 	}
 

@@ -2,6 +2,10 @@
 
 /********** @GLOBALS *********/
 
+$tag-padding: 8px 17px 10px 17px;
+$tag-skew: -8deg;
+
+
 a{
 	@include transition(all, .125s);
 }
@@ -16,6 +20,41 @@ a:focus{
 
 a.border-bottom:hover{
 	border-bottom-color: $brand;
+}
+
+.tag-button{
+	@include transform(skew($tag-skew));
+
+	a{
+		padding: $tag-padding;
+		background: $light;
+		@extend .h4;
+		margin: 0;
+		text-transform: uppercase;	
+		letter-spacing: .05em;	
+		@include transition(all,.125s);
+		@include transform(skew(-1 * $tag-skew));
+		line-height: 1.5;
+
+		&:hover{
+			background: $brand;
+			color: white !important;			
+		}
+	}
+
+	&.tag-button-brand{
+
+		a{
+			background: $brand;
+			color: white !important;
+
+			&:hover{
+				color: $brand !important;
+				background: $light;
+			}			
+		}
+
+	}
 }
 
 

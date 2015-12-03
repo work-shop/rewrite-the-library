@@ -60,12 +60,16 @@
 			border: none !important;
 			a{
 				border: 2px solid $medium;
-				//font-size: 0;
 				content: '.';
 			}
 		}
 	}
 
+	.deck-slide{
+		.slide-text{
+			width: 90%;
+		}
+	}		
 
 }
 

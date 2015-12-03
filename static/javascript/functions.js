@@ -54,6 +54,7 @@ jQuery(document).ready(function($) {
 		centerMode: true,
 		arrows: true,
 		// dots: true,
+		focusOnSelect: true,
 		centerPadding: '250px',
 		slidesToShow: 1,
 		responsive: [
@@ -79,9 +80,20 @@ jQuery(document).ready(function($) {
 		  ]	
 	});
 
-	$('.deck-slide').click(function(event) {
-		$('#deck-slick').slick('slickNext');
-	});
+	// $('.slick-active').next().click(function(event) {
+	// 	$('#deck-slick').slick('slickNext');
+	// 	console.log(this);
+	// });
+
+
+	// $('.slick-active').prev().click(function(event) {
+	// 	$('#deck-slick').slick('slickNext');
+	// 	console.log(this);
+	// });	
+
+	// $('.deck-slide').not('.slick-active').click(function(event) {
+	// 	$('#deck-slick').slick('slickNext');
+	// });
 
 });//end document.ready
 
