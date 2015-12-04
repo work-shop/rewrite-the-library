@@ -20,6 +20,16 @@
 
     {% include "templates/partials/deck.html" %}
 
+    <section id="site-introduction" class="block bg-white padded">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+                    <h2 class="centered">See the Projects and read the Articles that are Rewriting the Library at Olin</h2>
+                </div>
+            </div>
+        </div>
+    </section>
+
     {% if cms.about.featured_project %}
 
         {{ projects.featured_card( cms.about.featured_project ) }}

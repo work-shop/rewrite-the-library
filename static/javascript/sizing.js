@@ -41,13 +41,21 @@ function equal_width( target, selector ) {
 		var headerHeight = $('#header-rwtl').height();
 		var deckHeight = windowHeight - (headerHeight * 2) - 40;
 		var navHeight = $('#deck-nav').height();
-		var deckSlickHeight = deckHeight - navHeight - 6;
+		var deckSlickHeight = deckHeight - navHeight;
+
+		if($(window).width() < 768 || $(window).height() < 701){
+		var deckHeight = windowHeight - (headerHeight * 2) - 20;
+			var navHeight = $('#deck-nav').height();
+			var deckSlickHeight = deckHeight - navHeight;			
+		}
 
 		$('#deck').height(deckHeight);
 		$('#deck-slick').height(deckSlickHeight);
 		$('.deck-intro').height(deckSlickHeight);
 		$('.deck-slide').height(deckSlickHeight);
 		$('.deck-video iframe').height(deckSlickHeight);
+
+
 		
 	}
 

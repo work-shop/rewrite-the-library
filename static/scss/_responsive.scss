@@ -51,6 +51,14 @@
 //xs
 @media ($xs-query) {
 
+	#deck{
+		padding-top: 20px;
+	}	
+
+	// #deck-nav{
+	// 	height: 100px;
+	// }
+
 	menu{
 		padding-top: $header-height;
 	}
@@ -73,6 +81,20 @@
 
 }
 
+
+//xs
+@media (max-height: 700px) {
+
+	#deck{
+		padding-top: 20px;
+	}
+
+	// #deck-nav{
+	// 	padding-top: 20px;
+	// 	height: 100px;
+	// }
+
+}
 
 
 
