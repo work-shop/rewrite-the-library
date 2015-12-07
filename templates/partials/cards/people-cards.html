@@ -6,32 +6,45 @@
 
 {% macro card( person, zoom ) %}
 
-	{% if person.website %}<a href="{{ person.website }}">{% endif %}
+	<div class="person card card-person card-person-{{ zoom }} col-xs-6 col-md-4 mb5">
 
-	{% if zoom == "expanded" %}
+		{% if person.website %}<a href="{{ person.website }}">{% endif %}
 
+			{% if zoom == "expanded" %}
 
-		<h3>{{ person.name }}</h3>
+					<div class="tag">
+						<h4>{{ person.name }}</h4>
+					</div>
+					<div class="person-card-metadata row card-metadata">
+						<div class="col-sm-6">
+							<h5 class="person-card-role">{{ person.role.name }}</h5>
+						</div>
+						<div class="col-sm-6">
+							<h5 class="righted person-card-email">
+								<a href="mailto:{{ person.email }}" target="_blank">
+									<span class="icon" data-icon="m"></span>
+								</a>
+							</h5>		
+						</div>
+					</div>
+					<div class="row person-card-body">
+						<div class="col-sm-12">
+							<img src="{{ person.image|imageSize(auto)}}" />
+						</div>
+						<div class="col-sm-12">
+							<h6 class="din-regular person-card-stats">Needs logic for projects, articles</h6>
+						</div>
+					</div>
 
-		<img src="{{ person.image|imageSize(auto)}}" />
+			{% elseif zoom == "condensed" %}
 
-		{% if person.email %}<a href="mailto:{{ person.email }}">{{ person.email }}</a>{%endif %}
+				<img src="{{ person.image|imageSize(auto)}}" />
 
-		{% if person.phone_number %} {{ person.phone_number }} {% endif %}
+			{% endif %}
 
-		<h6>
-			{{ person.projects_collaborators|size }} Project{{ person.projects_collaborators|size|pluralize() }}, 
-			{{ person.articles_author|size }} Article{{ person.articles_author|size|pluralize() }}
-		</h6>
+		{% if person.website %}</a>{% endif %}
 
-
-	{% elseif zoom == "condensed" %}
-
-		<img src="{{ person.image|imageSize(auto)}}" />
-
-	{% endif %}
-
-	{% if person.website %}</a>{% endif %}
+	</div>
 
 {% endmacro %}
 

@@ -83,7 +83,7 @@ function equal_width( target, selector ) {
 		'.all-h': {callback:width, target: 1},
 		'.all-strict': {callback:height_strict, target: 1},
 		//'.double': {callback: height, target: 2},
-		'.eighty-five': {callback: height, target: 0.85},
+		'.eighty-five': {callback: height_strict, target: 0.85},
 		'.height-is-width': {callback: equal_height, target: undefined },
 		//'.width-is-height': {callback: equal_width, target: undefined }
 	};

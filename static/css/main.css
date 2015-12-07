@@ -1626,7 +1626,7 @@ fancy objects
   height: 100%;
   top: 0;
   left: 0;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.75);
   transition: all 0.75s 0s ease;
   -moz-transition: all 0.75s 0s ease;
   -webkit-transition: all 0.75s 0s ease;
@@ -2118,7 +2118,7 @@ body {
   color: #2B2B2B;
 }
 
-.din-regular, menu li li a {
+.din-regular, .card-metadata h5, menu li li a {
   font-weight: 400;
 }
 
@@ -2424,7 +2424,7 @@ p {
 .icon:before, #deck-slick button:before {
   content: attr(data-icon);
   font-family: "modern_pictograms_proregular";
-  font-size: 30px;
+  font-size: 27px;
   line-height: 100%;
   vertical-align: middle;
   position: relative;
@@ -2658,6 +2658,18 @@ a.border-bottom:hover, a.tag:hover, a#header-olin:hover {
   margin-right: 10px;
 }
 
+.card-metadata h5 {
+  margin: .6em 0;
+}
+.card-metadata .icon, .card-metadata #deck-slick button:before, #deck-slick .card-metadata button:before {
+  top: -3px;
+}
+
+.person-card-stats {
+  margin-top: .6em;
+  margin-bottom: 0;
+}
+
 /********** @HEADER *********/
 #header-olin {
   height: 60px;
@@ -2726,11 +2738,11 @@ menu {
   margin: 0;
   padding: 0;
   padding-top: 150px;
-  transition: transform 1.25s 0s ease;
-  -moz-transition: transform 1.25s 0s ease;
-  -webkit-transition: transform 1.25s 0s ease;
-  -o-transition: transform 1.25s 0s ease;
-  -ms-transition: transform 1.25s 0s ease;
+  transition: transform 0.75s 0s ease;
+  -moz-transition: transform 0.75s 0s ease;
+  -webkit-transition: transform 0.75s 0s ease;
+  -o-transition: transform 0.75s 0s ease;
+  -ms-transition: transform 0.75s 0s ease;
   transform: rotateX(-180deg);
   -moz-transform: rotateX(-180deg);
   -webkit-transform: rotateX(-180deg);
@@ -2835,6 +2847,11 @@ main {
 }
 #footer a.brand {
   color: #10A879;
+}
+
+/********** @HERO *********/
+.hero-title span {
+  border-bottom: 5px solid #2B2B2B;
 }
 
 /********** @DECK *********/

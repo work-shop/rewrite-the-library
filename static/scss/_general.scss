@@ -98,12 +98,31 @@ a.border-bottom:hover{
 .article-card-date{
 	margin-right: 15px;
 	position: relative;
-	top: 10px;
+	top: 10px;	
 }
 
 .article-card-author{
 	margin-right: 10px;
 }
+
+.card-metadata{
+
+	h5{
+		margin: .6em 0;
+		@extend .din-regular;
+	}
+
+	.icon{
+		top: -3px;
+	}
+
+}
+
+.person-card-stats{
+	margin-top: .6em;
+	margin-bottom: 0;
+}
+
 
 /********** @HEADER *********/
 
@@ -181,8 +200,7 @@ menu{
 	margin: 0;
 	padding: 0;
 	padding-top: $header-height * 2.5;
-	@include transition(transform,1.25s);
-	//@include transform(translate(0,-125%));
+	@include transition(transform,.75s);
 	@include transform(rotateX(-180deg));
 	transform-origin: 0 0;
 	overflow: scroll;
@@ -308,5 +326,19 @@ main{
 
 	a.brand{
 		color: $brand;
+	}
+}
+
+
+/********** @HERO *********/
+
+.container{
+	//height: inherit;
+}
+
+.hero-title{
+
+	span{
+		border-bottom: 5px solid $dark;	
 	}
 }
