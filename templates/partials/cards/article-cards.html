@@ -6,61 +6,78 @@
 
 {% macro card( article, zoom ) %}
 
-	<a href="{{ url( article ) }}">
+	<div class="article-card card article-card-{{ zoom }}" data-sort-value="{{article.category.name|lower|replace(' ','-','g')}},*">
+		<a href="{{ url( article ) }}">
 
-	<li data-sort-value="{{article.category.name|lower|replace(' ','-','g')}},*">
+			{% if zoom == "featured" %}
 
-	{% if zoom == "featured" %}
+				<div class="tag">
+					<h4>Featured Article: {{ article.name }}</h4>
+					<span class="tag-date article-card-date right h5 din-regular">
+						{% if ( article.override_publication_date ) %}
+							{{ article.publish_date|date('M d Y') }}
+						{% else %}
+							{{ article.publish_date|date('M d Y') }}
+						{% endif %}
+					</span>
+				</div>
+				<div class="article-card-metadata row">
+					<div class="col-xs-6">
+						<h5 class="article-card-category">Category!</h5>
+					</div>
+					<div class="col-xs-6">
+						<h5 class="righted article-card-author">{{ article.author.name }}</h5>		
+					</div>
+				<div class="row article-card-body">
+					<div class="col-sm-12">
+						<img src="{{ article.hero_image|imageCrop(1024,400) }}">
+					</div>
+					<div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+						<h3 class="centered">{{ article.above_the_fold }}</h3>
+					</div>
+				</div>
+
+			{% elseif zoom == "expanded" %}
+
+				<div class="tag">
+					<h4>Featured Article: {{ article.name }}</h4>
+					<span class="tag-date article-card-date right h5 din-regular">
+						{% if ( article.override_publication_date ) %}
+							{{ article.publish_date|date('M d Y') }}
+						{% else %}
+							{{ article.publish_date|date('M d Y') }}
+						{% endif %}
+					</span>
+				</div>
+				<div class="article-card-metadata row">
+					<div class="col-sm-6">
+						<h5 class="article-card-category">Category!</h5>
+					</div>
+					<div class="col-sm-6">
+						<h5 class="righted article-card-author">{{ article.author.name }}</h5>		
+					</div>
+				<div class="row article-card-body">
+					<div class="col-sm-4">
+						<img src="{{ article.hero_image|imageSize(auto) }}">
+					</div>
+					<div class="col-sm-6">
+						<p>{{ article.above_the_fold }}</p>
+					</div>
+				</div>
+
+			{% elseif zoom == "condensed" %}
 
 
-		<h2>{{ article.name }}</h2>
+				<h2>{{ article.name }}</h2>
 
-		{% if ( article.override_publication_date ) %}
-			{{ article.publish_date|date('M d Y') }}
-		{% else %}
-			{{ article.publish_date|date('M d Y') }}
-		{% endif %}
-		
-		<h4>{{ article.author|json }}</h4>
-
-		<img src="{{ article.hero_image|imageSize(auto) }}">
-
-		<h2>{{ project.tagline }}</h2>
-
-		<h2>{{ project.summary }}</h2>
+				<img src="{{ article.hero_image|imageSize(auto) }}">
 
 
-	{% elseif zoom == "expanded" %}
+			{% endif %}
 
+		</a>
 
-		<h2>{{ article.name }}</h2>
-
-		{% if ( article.override_publication_date ) %}
-			{{ article.publish_date|date('M d Y') }}
-		{% else %}
-			{{ article.publish_date|date('M d Y') }}
-		{% endif %}
-
-		<h4>{{ article.author.name }}</h4>
-
-		<img src="{{ article.hero_image|imageSize(auto) }}">
-
-		<h2>{{ article.above_the_fold }}</h2>
-
-
-	{% elseif zoom == "condensed" %}
-
-
-		<h2>{{ article.name }}</h2>
-
-		<img src="{{ article.hero_image|imageSize(auto) }}">
-
-
-	{% endif %}
-
-	</li>
-
-	</a>
+	</div>
 
 {% endmacro %}
 

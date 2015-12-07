@@ -1574,6 +1574,10 @@ fancy objects
     background: white;
   }
 }
+.bg-medium {
+  background: #777777;
+}
+
 .bg-brand {
   background: #10A879;
 }
@@ -2107,7 +2111,7 @@ fancy objects
 }
 /********** @TYPOGRAPHY *********/
 body {
-  font-size: 14px;
+  font-size: 15px;
   font-family: "DinPro", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
@@ -2198,7 +2202,7 @@ p {
 }
 @media (max-width: 992px) {
   body {
-    font-size: 14px;
+    font-size: 15px;
   }
 
   h1, .h1 {
@@ -2227,7 +2231,7 @@ p {
 }
 @media (max-height: 700px) {
   body {
-    font-size: 14px;
+    font-size: 15px;
   }
 
   h1, .h1 {
@@ -2553,6 +2557,11 @@ figure[data-type=quote] cite:before {
   }
 }
 /********** @GLOBALS *********/
+.row .row {
+  margin-left: -5px;
+  margin-right: -5px;
+}
+
 a {
   transition: all 0.125s 0s ease;
   -moz-transition: all 0.125s 0s ease;
@@ -2565,20 +2574,52 @@ a:focus {
   color: #2B2B2B;
 }
 
-.border-bottom, #header-olin, #header-rwtl a span {
+.border-bottom, .tag, #header-olin, #header-rwtl a span {
   border-bottom: 3px solid #2B2B2B;
 }
 
-a.border-bottom:hover, a#header-olin:hover {
+.border-bottom-brand {
+  border-bottom: 3px solid #10A879;
+}
+
+.border-bottom-light {
+  border-bottom: 3px solid #efefef;
+}
+
+a.border-bottom:hover, a.tag:hover, a#header-olin:hover {
   border-bottom-color: #10A879;
 }
 
+.tag h4 {
+  display: inline-block;
+  background: #2B2B2B;
+  transform: skew(-10deg);
+  -moz-transform: skew(-10deg);
+  -webkit-transform: skew(-10deg);
+  -o-transform: skew(-10deg);
+  -ms-transform: skew(-10deg);
+  padding: 6px 15px 8px 15px;
+  color: white;
+  margin: 0;
+  margin-left: 3px;
+  position: relative;
+  top: 3px;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+  transition: all 0.125s 0s ease;
+  -moz-transition: all 0.125s 0s ease;
+  -webkit-transition: all 0.125s 0s ease;
+  -o-transition: all 0.125s 0s ease;
+  -ms-transition: all 0.125s 0s ease;
+  line-height: 1.5;
+}
+
 .tag-button {
-  transform: skew(-8deg);
-  -moz-transform: skew(-8deg);
-  -webkit-transform: skew(-8deg);
-  -o-transform: skew(-8deg);
-  -ms-transform: skew(-8deg);
+  transform: skew(-10deg);
+  -moz-transform: skew(-10deg);
+  -webkit-transform: skew(-10deg);
+  -o-transform: skew(-10deg);
+  -ms-transform: skew(-10deg);
 }
 .tag-button a {
   padding: 8px 17px 10px 17px;
@@ -2591,11 +2632,6 @@ a.border-bottom:hover, a#header-olin:hover {
   -webkit-transition: all 0.125s 0s ease;
   -o-transition: all 0.125s 0s ease;
   -ms-transition: all 0.125s 0s ease;
-  transform: skew(8deg);
-  -moz-transform: skew(8deg);
-  -webkit-transform: skew(8deg);
-  -o-transform: skew(8deg);
-  -ms-transform: skew(8deg);
   line-height: 1.5;
 }
 .tag-button a:hover {
@@ -2609,6 +2645,17 @@ a.border-bottom:hover, a#header-olin:hover {
 .tag-button.tag-button-brand a:hover {
   color: #10A879 !important;
   background: #efefef;
+}
+
+/********** @CARDS *********/
+.article-card-date {
+  margin-right: 15px;
+  position: relative;
+  top: 10px;
+}
+
+.article-card-author {
+  margin-right: 10px;
 }
 
 /********** @HEADER *********/
@@ -2761,6 +2808,35 @@ main {
   padding: 0 30px;
 }
 
+/********** @GUIDEPOST *********/
+.guidepost-sign {
+  min-height: 60px;
+}
+
+/********** @FOOTER *********/
+#footer * {
+  color: #efefef;
+}
+#footer h4 {
+  padding-bottom: 1em;
+  border-bottom-width: 5px;
+}
+#footer li {
+  height: 45px;
+}
+#footer li a {
+  border-bottom: 2px solid transparent;
+}
+#footer li a:hover {
+  border-bottom: 2px solid #efefef;
+}
+#footer li a.brand:hover {
+  border-bottom: 2px solid #10A879;
+}
+#footer a.brand {
+  color: #10A879;
+}
+
 /********** @DECK *********/
 #deck {
   overflow: hidden;
@@ -2905,6 +2981,15 @@ main {
   color: #10A879;
 }
 
+/********** @SITE INTRODUCTION *********/
+.site-introduction-statement {
+  line-height: 1.5;
+}
+.site-introduction-statement a {
+  font-size: inherit;
+  padding-bottom: 3px;
+}
+
 /********** @RESPONSIVE *********/
 @media (max-width: 1200px) {
   #deck-nav {
@@ -2923,6 +3008,11 @@ main {
   }
 }
 @media (max-width: 767px) {
+  .row .row {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
   #deck {
     padding-top: 20px;
   }
@@ -2941,6 +3031,14 @@ main {
 
   .deck-slide .slide-text {
     width: 90%;
+  }
+
+  .guidepost-sign a {
+    font-size: 16px;
+  }
+
+  #footer li {
+    height: 30px;
   }
 }
 @media (max-height: 700px) {

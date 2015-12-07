@@ -2,8 +2,14 @@
 
 /********** @GLOBALS *********/
 
-$tag-padding: 8px 17px 10px 17px;
-$tag-skew: -8deg;
+$tag-button-padding: 8px 17px 10px 17px;
+$tag-padding: 6px 15px 8px 15px;
+$tag-skew: -10deg;
+
+.row .row{
+	margin-left: -5px;
+	margin-right: -5px;
+}
 
 
 a{
@@ -18,22 +24,51 @@ a:focus{
 	border-bottom: 3px solid $dark;
 }
 
+.border-bottom-brand{
+	border-bottom: 3px solid $brand;
+}
+
+.border-bottom-light{
+	border-bottom: 3px solid $light;
+}
+
 a.border-bottom:hover{
 	border-bottom-color: $brand;
+}
+
+.tag{
+	@extend .border-bottom;
+	// position: relative;
+	// left: -2px;
+
+	h4{
+		display: inline-block;
+		background: $dark;
+		@include transform(skew($tag-skew));
+		padding: $tag-padding;
+		color: white;
+		margin: 0;
+		margin-left: 3px;
+		position: relative;
+		top: 3px;	
+		text-transform: uppercase;	
+		letter-spacing: .05em;	
+		@include transition(all,.125s);
+		line-height: 1.5;			
+	}
 }
 
 .tag-button{
 	@include transform(skew($tag-skew));
 
 	a{
-		padding: $tag-padding;
+		padding: $tag-button-padding;
 		background: $light;
 		@extend .h4;
 		margin: 0;
 		text-transform: uppercase;	
 		letter-spacing: .05em;	
 		@include transition(all,.125s);
-		@include transform(skew(-1 * $tag-skew));
 		line-height: 1.5;
 
 		&:hover{
@@ -57,6 +92,18 @@ a.border-bottom:hover{
 	}
 }
 
+
+/********** @CARDS *********/
+
+.article-card-date{
+	margin-right: 15px;
+	position: relative;
+	top: 10px;
+}
+
+.article-card-author{
+	margin-right: 10px;
+}
 
 /********** @HEADER *********/
 
@@ -211,8 +258,6 @@ menu{
 
 
 
-
-
 /********** @MAIN *********/
 
 main{
@@ -221,4 +266,47 @@ main{
 
 .container-fluid{
 	padding: 0 30px;
+}
+
+
+
+/********** @GUIDEPOST *********/
+
+ .guidepost-sign{
+	min-height: 60px;
+ }
+
+
+
+/********** @FOOTER *********/
+
+#footer{
+	*{
+		color: $light;
+	}
+
+	h4{
+		padding-bottom: 1em;
+		border-bottom-width: 5px;
+	}
+
+	li{
+		height: 45px;
+
+		a{
+			border-bottom: 2px solid transparent;
+			
+			&:hover{
+				border-bottom: 2px solid $light;
+			}
+
+			&.brand:hover{
+				border-bottom: 2px solid $brand;		
+			}
+		}
+	}
+
+	a.brand{
+		color: $brand;
+	}
 }

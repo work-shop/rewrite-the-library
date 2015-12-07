@@ -43,11 +43,11 @@ function equal_width( target, selector ) {
 		var navHeight = $('#deck-nav').height();
 		var deckSlickHeight = deckHeight - navHeight;
 
-		if($(window).width() < 768 || $(window).height() < 701){
-		var deckHeight = windowHeight - (headerHeight * 2) - 20;
-			var navHeight = $('#deck-nav').height();
-			var deckSlickHeight = deckHeight - navHeight;			
-		}
+		// if($(window).width() < 768 || $(window).height() < 701){
+		// 	var deckHeight = windowHeight - (headerHeight * 2) - 20;
+		// 	var navHeight = $('#deck-nav').height();
+		// 	var deckSlickHeight = deckHeight - navHeight;			
+		// }
 
 		$('#deck').height(deckHeight);
 		$('#deck-slick').height(deckSlickHeight);

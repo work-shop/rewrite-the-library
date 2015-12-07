@@ -51,13 +51,14 @@
 //xs
 @media ($xs-query) {
 
+	.row .row{
+		margin-left: 0px;
+		margin-right: 0px;
+	}		
+
 	#deck{
 		padding-top: 20px;
 	}	
-
-	// #deck-nav{
-	// 	height: 100px;
-	// }
 
 	menu{
 		padding-top: $header-height;
@@ -79,6 +80,20 @@
 		}
 	}		
 
+	.guidepost-sign{
+		a{
+			font-size: 16px;
+		}
+	}
+
+	#footer{
+
+		li{
+			height: 30px;
+		}
+
+	}
+
 }
 
 
@@ -88,11 +103,6 @@
 	#deck{
 		padding-top: 20px;
 	}
-
-	// #deck-nav{
-	// 	padding-top: 20px;
-	// 	height: 100px;
-	// }
 
 }
 

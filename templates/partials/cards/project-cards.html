@@ -7,51 +7,43 @@
 
 {% macro card( project, zoom ) %}
 
-	<a href="{{ url( project ) }}">
+	<div class="project-card card project-card-{{ zoom }}" data-sort-value="{{ project.space.name|lower|replace(' ', '-', 'g')}},*">
+		<a href="{{ url( project ) }}">
 
-	<li data-sort-value="{{ project.space.name|lower|replace(' ', '-', 'g')}},*">
+			{% if zoom == "featured" %}
 
-	{% if zoom == "featured" %}
+				<div class="tag">
+					<h4>Featured Project: {{ project.name }}</h4>
+				</div>
+				<div class="project-card-image">
+					<img src="{{ project.hero_image|imageCrop(1024,400) }}">
+				</div>
+				<div class="project-card-text row">
+					<div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+						<h3 class="centered">{{ project.tagline }}</h3>
+						<h4 class="centered">{{ project.summary }}</h4>						
+					</div>
+				</div>
 
+			{% elseif zoom == "expanded" %}
 
-		<h2>{{ project.name }}</h2>
+				<div class="tag">
+					<h4>Featured Project: {{ project.name }}</h4>
+				</div>
+				<div class="project-card-image">
+					<img src="{{ project.hero_image|imageCrop(1024,400) }}">
+				</div>
+				<div class="project-card-text row">
+					<div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+						<h3 class="centered">{{ project.tagline }}</h3>
+						<h4 class="centered">{{ project.summary }}</h4>						
+					</div>
+				</div>
 
-		<h4>
-			{{ project.collaborators|size }} Teammember{{ project.collaborators|size|pluralize("s") }} - {{ project.project_timeline }}
-		</h4>	
+			{% endif %}
 
-		<img src="{{ project.hero_image|imageSize(auto) }}">
-
-		<h2>{{ project.tagline }}</h2>
-
-		<h2>{{ project.summary }}</h2>
-
-
-	{% elseif zoom == "expanded" %}
-
-
-		<h2>{{ project.name }}</h2>
-
-		<h4>
-			{{ project.collaborators|size }} Teammember{{ project.collaborators|size|pluralize("s") }} - {{ project.project_timeline }}
-		</h4>
-
-		<img src="{{ project.hero_image|imageSize(auto) }}">
-
-		<h2>{{ project.tagline }}</h2>
-
-
-	{% elseif zoom == "condensed" %}
-
-
-		<h2>{{ project.name }}</h2>
-
-		<img src="{{ project.hero_image|imageSize(auto) }}">
-
-
-	{% endif %}
-
-	</li>
+		</a>
+	</div>
 
 {% endmacro %}
 
