@@ -389,24 +389,20 @@ main{
 		@extend .tag-button-small !optional;
 		margin-bottom: 1em;
 
-		&.active{
-			a{
-				background: $dark;
-				color: white;
-			}
-		}
-
-		&:hover{
-			a{
-				background: $brand;
-				color: white;
-			}
+		.active{
+			background: $dark;
+			color: white;
 		}
 
 		a{
 			display: block;
 			@extend .h6;
 			@extend .din-regular;
+
+			&:hover{
+				background: $brand;
+				color: white;
+			}			
 		}
 	}
 }

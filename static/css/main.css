@@ -2828,16 +2828,16 @@ main {
   margin-right: .5em;
   margin-bottom: 1em;
 }
-.filter-nav li.active a {
+.filter-nav li .active {
   background: #2B2B2B;
-  color: white;
-}
-.filter-nav li:hover a {
-  background: #10A879;
   color: white;
 }
 .filter-nav li a {
   display: block;
+}
+.filter-nav li a:hover {
+  background: #10A879;
+  color: white;
 }
 
 /********** @FILTER NAV *********/

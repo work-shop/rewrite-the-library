@@ -6,7 +6,7 @@
 
 {% macro card( article, zoom ) %}
 
-	<div class="article-card card article-card-{{ zoom }}" data-sort-value="{{article.category.name|lower|replace(' ','-','g')}},*">
+	<div class="article-card card article-card-{{ zoom }} {% if zoom == "expanded" %} col-sm-8 col-sm-offset-2 mb5 {% endif %}" data-sort-value="{{article.category.name|lower|replace(' ','-','g')}},*">
 		<a href="{{ url( article ) }}">
 
 			{% if zoom == "featured" %}
@@ -57,11 +57,14 @@
 					<div class="col-sm-6">
 						<h5 class="righted article-card-author">{{ article.author.name }}</h5>		
 					</div>
+				</div>
 				<div class="row article-card-body">
-					<div class="col-sm-4">
-						<img src="{{ article.hero_image|imageSize(auto) }}">
-					</div>
-					<div class="col-sm-6">
+					{% if article.hero_image %}
+						<div class="col-sm-5">
+							<img src="{{ article.hero_image|imageSize(auto) }}" class="bordered">
+						</div>
+					{% endif %}	
+					<div class="col-sm-7">
 						<p>{{ article.above_the_fold }}</p>
 					</div>
 				</div>

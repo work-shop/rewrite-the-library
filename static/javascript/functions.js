@@ -48,6 +48,9 @@ jQuery(document).ready(function($) {
 		e.preventDefault();
 		activate( $(this) );
 		filter( $(this).data('sort-key'), $('*[data-sort-value]') );
+		var href = $(this).attr("href");
+		href = href.toLowerCase();
+		scrollLink(href,125);
 	});	
 
 
@@ -80,21 +83,6 @@ jQuery(document).ready(function($) {
 		    }
 		  ]	
 	});
-
-	// $('.slick-active').next().click(function(event) {
-	// 	$('#deck-slick').slick('slickNext');
-	// 	console.log(this);
-	// });
-
-
-	// $('.slick-active').prev().click(function(event) {
-	// 	$('#deck-slick').slick('slickNext');
-	// 	console.log(this);
-	// });	
-
-	// $('.deck-slide').not('.slick-active').click(function(event) {
-	// 	$('#deck-slick').slick('slickNext');
-	// });
 
 });//end document.ready
 
@@ -188,6 +176,16 @@ function menuNavToggle(_link){
 	  	$( sibling ).slideUp();		
 	  	$(link).removeClass('opened');
 	}
+}
+
+//animate jump links
+function scrollLink(destination,speed){
+	if(!speed){
+		speed = 1500;
+	}
+	$('html,body').animate({
+		scrollTop: $(destination).offset().top - 150
+	},speed);
 }
 
 /** ----------- SORTING ACTIONS --------------------------------- */
