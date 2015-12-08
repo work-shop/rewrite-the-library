@@ -23,6 +23,10 @@ a:focus{
 
 .border-bottom{
 	border-bottom: 3px solid $dark;
+
+	&.thick{
+		border-bottom-width: 6px;
+	}
 }
 
 .border-bottom-brand{
@@ -43,8 +47,7 @@ a.border-bottom:hover{
 
 .tag{
 	@extend .border-bottom;
-	// position: relative;
-	// left: -2px;
+	@include transition(all,.125s);
 
 	h4,h5{
 		display: inline-block;
@@ -110,6 +113,20 @@ a.border-bottom:hover{
 
 
 /********** @CARDS *********/
+
+.card{
+	a:hover{
+		color: $dark;
+
+		.tag{
+			border-bottom-color: $brand;
+			h4,h5{
+				background: $brand;
+				color: white;
+			}
+		}
+	}
+}
 
 .article-card-date{
 	margin-right: 15px;

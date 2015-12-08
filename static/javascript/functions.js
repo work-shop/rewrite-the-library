@@ -131,7 +131,7 @@ function headerSpy(){
 
 function navSpy(){
 
-	if($('.filter-nav')){
+	if($('.filter-nav').length){
 
 		var headerHeight = $('#header-olin').height();
 		var nav = $('.filter-nav');

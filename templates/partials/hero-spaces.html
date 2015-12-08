@@ -6,12 +6,33 @@
 
 {# ------------------------------------------------------- #}
 
-<figure>
-	<img src="{{ cms.about.first_floor_image|imageSize(auto) }}" width="200" height="200" />
-</figure>
-
-<figure>
-	<img src="{{ cms.about.ground_floor_image|imageSize(auto) }}" width="200" height="200" />
-</figure>
-
-{{ cms.about.spaces_page_callout }}
+<section class="block hero bg-white pt6" id="hero-spaces">
+	<div class="container">
+		<div class="row mb5">
+			<div class="col-sm-8 col-sm-offset-2">
+				<h2 class="centered">
+					{{ cms.about.spaces_page_callout }}
+				</h2>
+			</div>
+		</div>
+		<div class="row mb3">
+			<div class="col-sm-4 col-sm-offset-1 col-xs-6">
+				<figure>
+					<img src="{{ cms.about.first_floor_image|imageSize(auto) }}" />
+				</figure>
+				<h4 class="centered uppercase din-regular">First Floor</h4>	
+			</div>
+			<div class="col-sm-4 col-sm-offset-1 col-xs-6">
+				<figure>
+					<img src="{{ cms.about.ground_floor_image|imageSize(auto) }}" />
+				</figure>
+				<h4 class="centered uppercase din-regular">Ground Floor</h4>		
+			</div>			
+		</div>
+		<div class="row mb5">
+			<div class="col-sm-12">
+				<hr class="border-bottom thick">
+			</div>
+		</div>
+	</div>
+</section>
