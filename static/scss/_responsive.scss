@@ -44,7 +44,16 @@
 //sm
 @media ($sm-query) {
 
+	.project-card{
 
+		&.project-card-expanded{
+			padding: 30px 20px 0px 20px;
+		}
+
+		.project-card-space{
+			left: 0;
+		}
+	}
 
 } 
 
@@ -94,10 +103,14 @@
 
 	}
 
+
+
+
+
 }
 
 
-//xs
+//short screens
 @media (max-height: 700px) {
 
 	#deck{

@@ -44,7 +44,8 @@ jQuery(document).ready(function($) {
 	});
 
 
-	$('*[data-sort-key]').on('click', function() {
+	$('*[data-sort-key]').on('click', function(e) {
+		e.preventDefault();
 		activate( $(this) );
 		filter( $(this).data('sort-key'), $('*[data-sort-value]') );
 	});	
@@ -101,6 +102,7 @@ jQuery(document).ready(function($) {
 $(window).scroll(function() { 
 	
 	window.requestAnimationFrame(headerSpy);
+	window.requestAnimationFrame(navSpy);
 
 });//end window.scroll
 
@@ -123,6 +125,29 @@ function headerSpy(){
 			$('body').removeClass('header-after').addClass('header-before');
 			$('#header-rwtl').removeClass('fixed').addClass('absolute');
 		}	
+	}
+
+}
+
+function navSpy(){
+
+	if($('.filter-nav')){
+
+		var headerHeight = $('#header-olin').height();
+		var nav = $('.filter-nav');
+		var navFix = $('#nav-fix');
+		var navScrollTop = ($('#nav').offset().top) - headerHeight;				
+
+		if(($(window).scrollTop() >= navScrollTop) && nav.hasClass('static') ) {
+			console.log(navScrollTop);
+			nav.removeClass('static').addClass('fixed');
+			//navFix.removeClass('off').addClass('on');	
+		}	
+		else if(($(window).scrollTop() < navScrollTop) && nav.hasClass('fixed') ){
+			nav.removeClass('fixed').addClass('static');
+			//navFix.removeClass('on').addClass('off');			
+		}
+
 	}
 
 }

@@ -11,7 +11,7 @@
 /********** @TYPOGRAPHY *********/
 
 body{
-	font-size: 15px;
+	font-size: 16px;
 	font-family:"DinPro", Helvetica, Arial, sans-serif; 
 	font-weight:normal; 
 	font-style:normal;
@@ -50,21 +50,39 @@ h3,.h3{
 }
 
 h4,.h4{
-	font-size: 1.0em;
+	font-size: 1em;
 }
 
 h5,.h5{
-	font-size: .9em;
+	font-size: .85em;
 }
 
 h6,.h6{
-	font-size: .8em;
+	font-size: .75em;
 }
 
 p{
 	font-size: 1em;
 	line-height: 1.4;
 }
+
+
+.icon{
+	&:before {
+    content: attr(data-icon);
+    font-family: "modern_pictograms_proregular";
+	font-size: 27px;
+	line-height: 100%;
+	vertical-align: middle;
+	position: relative;	
+	}
+	
+	&.large:before{
+		font-size: 72px;
+	}
+
+}
+
 
 //lg
 @media (min-width: 1200px) {
@@ -75,33 +93,7 @@ p{
 
 //md
 @media (max-width: 1200px) {
-	body{
-		font-size: 16px;
-	}
 
-	h1,.h1{
-		font-size: 2em;
-	}
-
-	h2,.h2{
-		font-size: 1.6em;
-	}
-
-	h3,.h3{
-		font-size: 1.25em;
-	}
-
-	h4,.h4{
-		font-size: 1em;
-	}
-
-	h5,.h5{
-		font-size: .8em;
-	}
-
-	h6,.h6{
-		font-size: .7em;
-	}
 	
 }
 
@@ -109,31 +101,19 @@ p{
 @media (max-width: 992px) {
 	
 	body{
-		font-size: 15px;
+		font-size: 14px;
 	}
 
 	h1,.h1{
-		font-size: 1.6em;
+		font-size: 2em;
 	}
 
 	h2,.h2{
-		font-size: 1.25em;
+		font-size: 1.5em;
 	}
 
 	h3,.h3{
-		font-size: 1em;
-	}
-
-	h4,.h4{
-		font-size: .8em;
-	}
-
-	h5,.h5{
-		font-size: .7em;
-	}
-
-	h6,.h6{
-		font-size: .6em;
+		font-size: 1.25em;
 	}
 
 } 
@@ -142,39 +122,29 @@ p{
 @media (max-height: 700px) {
 	
 	body{
-		font-size: 15px;
+		font-size: 14px;
 	}
 
-	h1,.h1{
-		font-size: 1.6em;
-	}
 
-	h2,.h2{
-		font-size: 1.25em;
-	}
-
-	h3,.h3{
-		font-size: 1em;
-	}
-
-	h4,.h4{
-		font-size: .8em;
-	}
-
-	h5,.h5{
-		font-size: .7em;
-	}
-
-	h6,.h6{
-		font-size: .6em;
-	}
 
 } 
 
 //xs
 @media (max-width: 767px) {
 	body{
-		font-size: 13px;
+		font-size: 14px;
+	}
+
+	.icon{
+
+		&:before{
+			font-size: 22px;
+		}
+		
+		&.large:before{
+			font-size: 48px;
+		}
+
 	}
 
 
@@ -239,21 +209,5 @@ p{
 	text-align: center;
 }
 
-/********** @ICONS *********/
 
-.icon{
-	&:before {
-    content: attr(data-icon);
-    font-family: "modern_pictograms_proregular";
-	font-size: 27px;
-	line-height: 100%;
-	vertical-align: middle;
-	position: relative;	
-	}
-	
-	&.large:before{
-		font-size: 72px;
-	}
-
-}
 

@@ -7,7 +7,7 @@
 
 {% macro card( project, zoom ) %}
 
-	<div class="project-card card project-card-{{ zoom }}" data-sort-value="{{ project.space.name|lower|replace(' ', '-', 'g')}},*">
+	<div class="project-card card project-card-{{ zoom }} {% if zoom == "expanded" %} col-xs-12 col-sm-6 project-card-expanded {% endif %}" data-sort-value="{{ project.space.name|lower|replace(' ', '-', 'g')}},*">
 		<a href="{{ url( project ) }}">
 
 			{% if zoom == "featured" %}
@@ -27,16 +27,24 @@
 
 			{% elseif zoom == "expanded" %}
 
-				<div class="tag">
-					<h4>Featured Project: {{ project.name }}</h4>
+				<div class="project-card-space hidden-xs">
+					<img src="/static/images/space.png">					
 				</div>
+
+				<div class="tag">
+					<h5>Featured Project: {{ project.name }}</h5>
+				</div>
+				<div class="project-card-metadata card-metadata row">
+					<div class="col-xs-12">
+						<h5 class="project-card-stats">Needs logic for # of participants and timeline</h5>
+					</div>
+				</div>				
 				<div class="project-card-image">
-					<img src="{{ project.hero_image|imageCrop(1024,400) }}">
+					<img src="{{ project.hero_image|imageCrop(1024,540) }}" class="bordered">
 				</div>
 				<div class="project-card-text row">
-					<div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
-						<h3 class="centered">{{ project.tagline }}</h3>
-						<h4 class="centered">{{ project.summary }}</h4>						
+					<div class="col-sm-9">
+						<h4 class="">{{ project.tagline }}</h4>
 					</div>
 				</div>
 

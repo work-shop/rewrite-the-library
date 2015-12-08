@@ -3,6 +3,7 @@
 /********** @GLOBALS *********/
 
 $tag-button-padding: 8px 17px 10px 17px;
+$tag-button-padding-small: 5px 12px 7px 12px;
 $tag-padding: 6px 15px 8px 15px;
 $tag-skew: -10deg;
 
@@ -36,12 +37,16 @@ a.border-bottom:hover{
 	border-bottom-color: $brand;
 }
 
+.bordered{
+	border: 3px solid $dark;
+}
+
 .tag{
 	@extend .border-bottom;
 	// position: relative;
 	// left: -2px;
 
-	h4{
+	h4,h5{
 		display: inline-block;
 		background: $dark;
 		@include transform(skew($tag-skew));
@@ -90,6 +95,17 @@ a.border-bottom:hover{
 		}
 
 	}
+
+}
+
+.tag-button-small{
+	a{
+		padding: $tag-button-padding-small;
+		@extend .h6;
+		margin: 0;
+		letter-spacing: .05em;	
+		line-height: 1.3;
+	}
 }
 
 
@@ -108,20 +124,20 @@ a.border-bottom:hover{
 .card-metadata{
 
 	h5{
-		margin: .6em 0;
+		margin: .8em 0;
 		@extend .din-regular;
 	}
 
 	.icon{
-		top: -3px;
+		top: -5px;
 	}
 
 }
 
-.person-card-stats{
-	margin-top: .6em;
-	margin-bottom: 0;
-}
+// .person-card-stats{
+// 	margin-top: .6em;
+// 	margin-bottom: 0;
+// }
 
 
 /********** @HEADER *********/
@@ -342,3 +358,66 @@ main{
 		border-bottom: 5px solid $dark;	
 	}
 }
+
+
+/********** @HERO *********/
+
+.filter-nav{
+
+
+	li{
+		display: inline-block;
+		margin-right: .5em;
+		@extend .tag-button;
+		@extend .tag-button-small !optional;
+		margin-bottom: 1em;
+
+		&.active{
+			a{
+				background: $dark;
+				color: white;
+			}
+		}
+
+		&:hover{
+			a{
+				background: $brand;
+				color: white;
+			}
+		}
+
+		a{
+			display: block;
+			@extend .h6;
+			@extend .din-regular;
+		}
+	}
+}
+
+
+/********** @FILTER NAV *********/
+
+$nav-fixed-height: 120px;
+
+#nav{
+	height: $nav-fixed-height;
+}
+
+.filter-nav{
+
+	&.fixed{
+		padding-top: 1em;
+		background: rgba(255,255,255,.75);
+
+		h6{
+			display: none;
+		}
+
+		position: fixed;
+		top: $header-height;
+		left: 0;
+		width: 100%;
+		z-index: 7;
+	}
+}
+

@@ -25,11 +25,15 @@
 
 	{{ nav.from( 'Spaces', cms.spaces ) }}
 
-	{% for project in cms.projects %}
-
-		{{ projects.expanded_card( project ) }}
-
-	{% endfor %}
+	<section class="block bg-white padded" id="projects">
+		<div class="container">
+			<div class="row">
+				{% for project in cms.projects %}
+					{{ projects.expanded_card( project ) }}				
+				{% endfor %}
+			</div>
+		</div>
+	</section>
 
 	{{ guideposts.back({url:'/', name: "Home"}) }}
 

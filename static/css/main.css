@@ -2111,14 +2111,14 @@ fancy objects
 }
 /********** @TYPOGRAPHY *********/
 body {
-  font-size: 15px;
+  font-size: 16px;
   font-family: "DinPro", Helvetica, Arial, sans-serif;
   font-weight: normal;
   font-style: normal;
   color: #2B2B2B;
 }
 
-.din-regular, .card-metadata h5, menu li li a {
+.din-regular, .card-metadata h5, menu li li a, .filter-nav li a {
   font-weight: 400;
 }
 
@@ -2130,7 +2130,7 @@ body {
   font-weight: 700;
 }
 
-h1, .h1, h2, .h2, h3, .h3, #deck-nav li a, h4, .h4, .tag-button a, h5, .h5, h6, .h6 {
+h1, .h1, h2, .h2, h3, .h3, #deck-nav li a, h4, .h4, .tag-button a, .filter-nav li a, h5, .h5, h6, .h6, .tag-button-small a, .filter-nav li a {
   font-weight: normal;
   line-height: 1.2em;
   font-weight: 500;
@@ -2149,16 +2149,16 @@ h3, .h3, #deck-nav li a {
   font-size: 1.25em;
 }
 
-h4, .h4, .tag-button a {
-  font-size: 1.0em;
+h4, .h4, .tag-button a, .filter-nav li a {
+  font-size: 1em;
 }
 
 h5, .h5 {
-  font-size: .9em;
+  font-size: .85em;
 }
 
-h6, .h6 {
-  font-size: .8em;
+h6, .h6, .tag-button-small a, .filter-nav li a {
+  font-size: .75em;
 }
 
 p {
@@ -2166,14 +2166,26 @@ p {
   line-height: 1.4;
 }
 
+.icon:before, #deck-slick button:before {
+  content: attr(data-icon);
+  font-family: "modern_pictograms_proregular";
+  font-size: 27px;
+  line-height: 100%;
+  vertical-align: middle;
+  position: relative;
+}
+.icon.large:before, #deck-slick button.large:before {
+  font-size: 72px;
+}
+
 @media (min-width: 1200px) {
   body {
     font-size: 18px;
   }
 }
-@media (max-width: 1200px) {
+@media (max-width: 992px) {
   body {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   h1, .h1 {
@@ -2181,86 +2193,28 @@ p {
   }
 
   h2, .h2 {
-    font-size: 1.6em;
+    font-size: 1.5em;
   }
 
   h3, .h3, #deck-nav li a {
     font-size: 1.25em;
-  }
-
-  h4, .h4, .tag-button a {
-    font-size: 1em;
-  }
-
-  h5, .h5 {
-    font-size: .8em;
-  }
-
-  h6, .h6 {
-    font-size: .7em;
-  }
-}
-@media (max-width: 992px) {
-  body {
-    font-size: 15px;
-  }
-
-  h1, .h1 {
-    font-size: 1.6em;
-  }
-
-  h2, .h2 {
-    font-size: 1.25em;
-  }
-
-  h3, .h3, #deck-nav li a {
-    font-size: 1em;
-  }
-
-  h4, .h4, .tag-button a {
-    font-size: .8em;
-  }
-
-  h5, .h5 {
-    font-size: .7em;
-  }
-
-  h6, .h6 {
-    font-size: .6em;
   }
 }
 @media (max-height: 700px) {
   body {
-    font-size: 15px;
-  }
-
-  h1, .h1 {
-    font-size: 1.6em;
-  }
-
-  h2, .h2 {
-    font-size: 1.25em;
-  }
-
-  h3, .h3, #deck-nav li a {
-    font-size: 1em;
-  }
-
-  h4, .h4, .tag-button a {
-    font-size: .8em;
-  }
-
-  h5, .h5 {
-    font-size: .7em;
-  }
-
-  h6, .h6 {
-    font-size: .6em;
+    font-size: 14px;
   }
 }
 @media (max-width: 767px) {
   body {
-    font-size: 13px;
+    font-size: 14px;
+  }
+
+  .icon:before, #deck-slick button:before {
+    font-size: 22px;
+  }
+  .icon.large:before, #deck-slick button.large:before {
+    font-size: 48px;
   }
 }
 /********** @FORMATTING *********/
@@ -2420,19 +2374,6 @@ p {
     text-align: center;
   }
 }
-/********** @ICONS *********/
-.icon:before, #deck-slick button:before {
-  content: attr(data-icon);
-  font-family: "modern_pictograms_proregular";
-  font-size: 27px;
-  line-height: 100%;
-  vertical-align: middle;
-  position: relative;
-}
-.icon.large:before, #deck-slick button.large:before {
-  font-size: 72px;
-}
-
 figure {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -2590,7 +2531,11 @@ a.border-bottom:hover, a.tag:hover, a#header-olin:hover {
   border-bottom-color: #10A879;
 }
 
-.tag h4 {
+.bordered {
+  border: 3px solid #2B2B2B;
+}
+
+.tag h4, .tag h5 {
   display: inline-block;
   background: #2B2B2B;
   transform: skew(-10deg);
@@ -2614,14 +2559,14 @@ a.border-bottom:hover, a.tag:hover, a#header-olin:hover {
   line-height: 1.5;
 }
 
-.tag-button {
+.tag-button, .filter-nav li {
   transform: skew(-10deg);
   -moz-transform: skew(-10deg);
   -webkit-transform: skew(-10deg);
   -o-transform: skew(-10deg);
   -ms-transform: skew(-10deg);
 }
-.tag-button a {
+.tag-button a, .filter-nav li a {
   padding: 8px 17px 10px 17px;
   background: #efefef;
   margin: 0;
@@ -2634,17 +2579,24 @@ a.border-bottom:hover, a.tag:hover, a#header-olin:hover {
   -ms-transition: all 0.125s 0s ease;
   line-height: 1.5;
 }
-.tag-button a:hover {
+.tag-button a:hover, .filter-nav li a:hover {
   background: #10A879;
   color: white !important;
 }
-.tag-button.tag-button-brand a {
+.tag-button.tag-button-brand a, .filter-nav li.tag-button-brand a {
   background: #10A879;
   color: white !important;
 }
-.tag-button.tag-button-brand a:hover {
+.tag-button.tag-button-brand a:hover, .filter-nav li.tag-button-brand a:hover {
   color: #10A879 !important;
   background: #efefef;
+}
+
+.tag-button-small a, .filter-nav li a {
+  padding: 5px 12px 7px 12px;
+  margin: 0;
+  letter-spacing: .05em;
+  line-height: 1.3;
 }
 
 /********** @CARDS *********/
@@ -2659,15 +2611,10 @@ a.border-bottom:hover, a.tag:hover, a#header-olin:hover {
 }
 
 .card-metadata h5 {
-  margin: .6em 0;
+  margin: .8em 0;
 }
 .card-metadata .icon, .card-metadata #deck-slick button:before, #deck-slick .card-metadata button:before {
-  top: -3px;
-}
-
-.person-card-stats {
-  margin-top: .6em;
-  margin-bottom: 0;
+  top: -5px;
 }
 
 /********** @HEADER *********/
@@ -2854,6 +2801,42 @@ main {
   border-bottom: 5px solid #2B2B2B;
 }
 
+/********** @HERO *********/
+.filter-nav li {
+  display: inline-block;
+  margin-right: .5em;
+  margin-bottom: 1em;
+}
+.filter-nav li.active a {
+  background: #2B2B2B;
+  color: white;
+}
+.filter-nav li:hover a {
+  background: #10A879;
+  color: white;
+}
+.filter-nav li a {
+  display: block;
+}
+
+/********** @FILTER NAV *********/
+#nav {
+  height: 120px;
+}
+
+.filter-nav.fixed {
+  padding-top: 1em;
+  background: rgba(255, 255, 255, 0.75);
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  z-index: 7;
+}
+.filter-nav.fixed h6 {
+  display: none;
+}
+
 /********** @DECK *********/
 #deck {
   overflow: hidden;
@@ -3007,6 +2990,27 @@ main {
   padding-bottom: 3px;
 }
 
+.project-card {
+  margin-bottom: 3em;
+}
+.project-card .card-metadata h5 {
+  margin: 1em 0;
+}
+.project-card.project-card-expanded {
+  padding: 30px 60px 0 60px;
+}
+.project-card .project-card-space {
+  width: 33%;
+  position: absolute;
+  left: 30px;
+  top: 0;
+  z-index: 0;
+}
+.project-card .project-card-image {
+  position: relative;
+  z-index: 1;
+}
+
 /********** @RESPONSIVE *********/
 @media (max-width: 1200px) {
   #deck-nav {
@@ -3022,6 +3026,14 @@ main {
   }
   #deck-slick button.slick-next {
     right: 30px !important;
+  }
+}
+@media (max-width: 992px) {
+  .project-card.project-card-expanded {
+    padding: 30px 20px 0px 20px;
+  }
+  .project-card .project-card-space {
+    left: 0;
   }
 }
 @media (max-width: 767px) {

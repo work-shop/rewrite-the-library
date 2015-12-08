@@ -77,7 +77,7 @@ function equal_width( target, selector ) {
 		'.half-h': {callback:width, target: 0.5},
 		'.ninety': {callback: height, target: 0.9},
 		'.ninety-h': {callback:width, target: 0.9},
-		'.three-quarter': {callback: height, target: 0.75},
+		'.three-quarter': {callback: height_strict, target: 0.75},
 		'.three-quarter-strict': {callback: height_strict, target: 0.75},
 		'.all': {callback: height, target: 1},
 		'.all-h': {callback:width, target: 1},

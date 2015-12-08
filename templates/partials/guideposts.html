@@ -34,9 +34,18 @@
 {% endmacro %}
 
 
-
 {% macro back( to ) %}
 
-	<a href="{{ to.url }}"><h4>this is the back guidepost. it goes to: {{ to.name }}</h4></a>
+	<section id="guidepost" class="guidepost guidepost-back bg-white pt5 pb7">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4 col-sm-offset-4 guidepost-sign">
+					<div class="tag-button centered">
+						<a href="{{ to.url }}" class="">Back to {{ to.name }}</a>
+					</div>
+				</div>		
+			</div>
+		</div>
+	</section>
 
 {% endmacro %}

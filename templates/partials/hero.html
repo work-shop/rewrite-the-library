@@ -7,7 +7,7 @@
 
 {% macro with( title, description, image ) %}
 
-	<section class="block hero eighty-five">
+	<section class="block hero {% if title == 'The Projects' %} hero-projects half {% else %} eighty-five {% endif %}">
 		{% if url( item ) == getCurrentUrl() %} {# It's an individual page #}
 
 			{% if item.project_images %}
@@ -41,7 +41,7 @@
 					<div class="row">
 						<div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
 							{% if title %}
-								<h1 class="hero-title centered mb2"><span class="din-medium">The Projects</span>{{ title }}</h1>
+								<h1 class="hero-title centered mb2"><span class="din-medium">{{ title }}</span></h1>
 							{% endif %}
 							<h2 class="hero-description centered din-regular">{{ description }}</h2>							
 						</div>

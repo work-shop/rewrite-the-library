@@ -35,12 +35,14 @@ module.exports = function(grunt) {
     watch: {
       sass: {
         files:['static/scss/**/*.scss'],
-        tasks: ['sass', 'build']
+        tasks: ['force:on', 'sass', 'force:reset', 'build']
       }
     }
   });
 
   grunt.loadNpmTasks('grunt-contrib-sass');
+
+  grunt.loadNpmTasks('grunt-force');
 
   // NEVER REMOVE THESE LINES, OR ELSE YOUR PROJECT MAY NOT WORK
   require('./options/generatorOptions.js')(grunt);

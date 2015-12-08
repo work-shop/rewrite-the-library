@@ -8,17 +8,19 @@
 
 {% if taxonomy|size %}
 
-	<nav>
-		<ul>
-		<li class="active" data-sort-key="*">All {{ name }}</li>
-
-		{% for term in taxonomy %}
-
-			<li data-sort-key="{{ term.name|lower|replace(' ', '-', 'g') }}" > {{ term.name}}</li>
-
-		{% endfor %}
+<section id="nav" class="off">
+	<nav class="filter-nav filter-nav-{{name}} static">
+		<h6 class="din-regular italic centered">Filter our projects by the spaces they inhabit</h6>
+		<ul class="centered">
+			<li class="active" data-sort-key="*"><a href="#">All {{ name }}</a></li>
+			{% for term in taxonomy %}
+				<li data-sort-key="{{ term.name|lower|replace(' ', '-', 'g') }}" ><a href="#">{{ term.name}}</a></li>				
+			{% endfor %}
 		</ul>
 	</nav>
+	<div id="nav-fix" class="off"></div>
+</section>
+	
 		
 {% endif %}
 
