@@ -14,29 +14,33 @@
 
 {% block title %}{% parent %} - {{ item.name }}{% endblock %}
 
-{% block body_attributes %}class="body-project header-white header-before header-absolute modal-off"{% endblock %}
+{% block body_attributes %}class="body-project body-individual header-white header-before header-absolute modal-off"{% endblock %}
 
 {% block content %}
 
 	{{ hero.with( undefined, undefined, item.hero_image ) }}
 
-	<h1>{{ item.name }}</h1>
+	<section class="block bg-white individual-description" id="project-description">
 
-	<h3>{{ item.tagline }}</h3>
+		<h1>{{ item.name }}</h1>
 
-	<p>{{ item.summary }}</p>
+		<h3>{{ item.tagline }}</h3>
 
-	<p>{{ item.project_timeline }}</p>
+		<p>{{ item.summary }}</p>
 
-	<ul>
-	{% for collaborator in item.collaborators %}
+		<p>{{ item.project_timeline }}</p>
 
-		<li>{{ collaborator.name }}</li>
+		<ul>
+		{% for collaborator in item.collaborators %}
 
-	{% endfor %}
-	</ul>
+			<li>{{ collaborator.name }}</li>
 
-	<p>{{ item.space.name }}</p>
+		{% endfor %}
+		</ul>
+
+		<p>{{ item.space.name }}</p>
+
+	</section>
 
 	{{ item.body|safe }}
 
