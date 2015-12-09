@@ -14,33 +14,39 @@
 
 {% block title %}{% parent %} - {{ item.name }}{% endblock %}
 
+{% block body_attributes %}class="body-project"{% endblock %}
+
 {% block content %}
 
-	{{ hero.with( undefined, undefined, item.hero_image ) }}
+	<div id="project" class="individual">
 
-	<h1>{{ item.name }}</h1>
+		{{ hero.with( undefined, undefined, item.hero_image ) }}
 
-	<h3>{{ item.tagline }}</h3>
+		<h1>{{ item.name }}</h1>
 
-	<p>{{ item.summary }}</p>
+		<h3>{{ item.tagline }}</h3>
 
-	<p>{{ item.project_timeline }}</p>
+		<p>{{ item.summary }}</p>
 
-	<ul>
-	{% for collaborator in item.collaborators %}
+		<p>{{ item.project_timeline }}</p>
 
-		<li>{{ collaborator.name }}</li>
+		<ul>
+		{% for collaborator in item.collaborators %}
 
-	{% endfor %}
-	</ul>
+			<li>{{ collaborator.name }}</li>
 
-	<p>{{ item.space.name }}</p>
+		{% endfor %}
+		</ul>
 
-	{{ item.body|safe }}
+		<p>{{ item.space.name }}</p>
 
-	{{ related.to( item ) }}
+		{{ item.body|safe }}
 
-	{{ guideposts.back({url: url('articles'), name: "Articles" }) }}
+		{{ related.to( item ) }}
+
+		{{ guideposts.back({url: url('articles'), name: "Articles" }) }}
+
+	</div>
 
 {% endblock %}
 

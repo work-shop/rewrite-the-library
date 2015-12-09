@@ -7,8 +7,6 @@
 
 {% macro card( project, zoom ) %}
 
-	<script type="text/javascript">console.log( {{ project }} )</script>
-
 	<div class="project-card card project-card-{{ zoom }} {% if zoom == "expanded" %} col-xs-12 col-sm-6 project-card-expanded {% endif %}" data-sort-value="{{ project.space.name|lower|replace(' ', '-', 'g')}},*">
 		<a href="{{ url( project ) }}">
 
