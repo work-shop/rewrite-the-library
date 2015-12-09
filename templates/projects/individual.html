@@ -42,14 +42,18 @@
 
 	</section>
 
-	{{ item.body|safe }}
+	<section class="block bg-white individual-body hidden" id="project-body">
 
-	{{ related.to( item ) }}
+		{{ item.body|safe }}
+
+		{{ related.to( item ) }}
+
+	</section>
 
 	{{ guideposts.back({url: url('articles'), name: "Articles" }) }}
 
 {% endblock %}
 
 {% block scripts_extra %}
-
+      <script src="/static/javascript/project-slick.js"></script>
 {% endblock %}

@@ -84,12 +84,6 @@ jQuery(document).ready(function($) {
 		  ]	
 	});
 
-	$('.project-slick').slick({
-		arrows: true,
-		dots: true,
-		slideShow: true
-	});	
-
 });//end document.ready
 
 
@@ -209,6 +203,7 @@ function scrollLink(destination,speed){
 		scrollTop: $(destination).offset().top - 150
 	},speed);
 }
+
 
 /** ----------- SORTING ACTIONS --------------------------------- */
 

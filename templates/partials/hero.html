@@ -7,15 +7,18 @@
 
 {% macro with( title, description, image ) %}
 
-	<section class="block hero {% if title == 'The Projects' %} hero-projects half {% else %} eighty-five {% endif %}">
+	<section class="block hero {% if title == 'The Projects' %} hero-projects half {% elseif url( item ) == getCurrentUrl() %} {% else %} eighty-five {% endif %}">
 		{% if url( item ) == getCurrentUrl() %} {# It's an individual page #}
 
 			{% if item.project_images %}
+
 				{% if item.project_images.length > 1 %}
-					<div class="project-slick hero-slideshow hero-slick background-mask-dark">
+					<div class="project-slick hero-slideshow hero-slick">
 						{% for image in item.project_images %}
 							<div class="project-slick-slide hero-slick-slide">
-								<img src="{{ image|imageSize(auto) }}" />
+								<img src="{{ image|imageCrop(1440,810) }}" alt="slide" />
+								<div class="background">
+								</div>
 							</div>
 						{% endfor %}
 					</div>
@@ -23,11 +26,16 @@
 					<div class="hero-background block-background background-mask-dark" style="background-image: url('{{ image|imageSize(auto) }}');">
 					</div>
 				{% endif %}
+
+				<div class="tag project-tag-white hidden">
+					<h4>{{ item.title }}</h4>
+				</div>
+
 			{% endif %}	
 
-			{% if title %}<h1>{{ title }}</h1>{% endif %}
-
-			{% if description %}<h2>{{ description }}</h2>{% endif %}
+			<div class="hidden">
+				{% if description %}<h2>{{ description }}</h2>{% endif %}
+			</div>
 
 		{% else %} {# It's a list page, or the about page #}
 

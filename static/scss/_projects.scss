@@ -34,11 +34,200 @@
 }
 
 .project-slick{
-	button{
+	position: relative;
+
+	&:before{
+		z-index: 1;
+	}
+
+	.slick-dots{
 		display: none !important;
 	}
+
+	button{
+		position: absolute;
+		z-index: 2;
+		top: 12.5%;
+		left: 20px;
+		width: 20px;
+		height: 40px;
+		background: none;
+		border: none;
+		@include transform(translate(0,-50%));
+		margin: 0;
+		padding: 0;
+		font-size: 0;
+		line-height: 0;
+
+		&:before{
+			@extend .icon;
+			content: '‘';
+			width: 20px;
+			display: block;
+			font-size: 90px;
+			line-height: 40px;
+			color: white;
+			@include transition(all,.125s);
+		}
+
+		&:hover{
+			cursor: pointer;
+			&:before{
+				//@include transform(scale(1.5));
+			}
+		}
+
+		&:focus{
+			outline: none;
+			border: none;
+		}
+
+		&.slick-next{
+			left: auto;
+			top: auto;
+			bottom: 12.5%;
+			right: 40px !important;
+
+			&:before{
+				content:'—';
+			}
+		}
+	}
+
 }
 
-.body-project{
+
+.project-tag{
+	position: absolute;
+}
+
+
+// .project-slick-slide{
+// 	position: relative;
+// 	z-index: 3;
+// 	//@include transition(transform,.35s);
+
+// 	-webkit-clip-path: polygon( 10% 0%, 100% 0%, 90% 50%, 90% 100%, 0% 100%, 10% 50% );	
+
+//  	.background{
+//  		&:before{
+// 	  		background: rgba(0,0,0,0);		
+//  	 		@include transition(all,.5s);		
+//  		}
+//  	}	
+
+// 	&.moving{
+// 		@include transform(translate(10%,0));			
+// 	}	
+
+// 	&.project-slick-next{
+// 		@include transform(translate(-10%,0));	
+
+// 		&.moving{
+// 			@include transform(translate(0%,0));			
+// 		}
+
+// 	}
+
+// 	&.project-slick-previous{
+// 		@include transform(translate(10%,0));	
+
+// 	}	 
+
+
+// 	&.project-slick-next-next{
+// 		&.moving{
+// 			@include transform(translate(-10%,0));
+// 		}		
+// 	}
+
+// 	&.project-slick-previous-previous{
+// 		&.moving{
+// 			@include transform(translate(10%,0));		
+// 		}
+// 	}	 
+
+		
+// 	&.slick-active{
+// 		z-index: -999; 	
+// 	 	@include transform(translate(0%,0));
+// 	 	-webkit-clip-path: polygon( 10% 0%, 100% 0%, 100% 50%, 90% 100%, 0% 100%,0% 50% );
+
+// 	 	.background{
+// 	 		@extend .background-mask-dark;
+// 	 	}
+// 	}
+
+
+
+// 	&:hover,&:focus{
+// 		outline: 0;
+// 		border: 0;
+// 	}
+
+// }
+
+
+
+.project-slick-slide{
+	position: relative;
+	z-index: 3;
+
+	-webkit-clip-path: polygon( 10% 0%, 100% 0%, 90% 50%, 90% 100%, 0% 100%, 10% 50% );	
+
+ 	.background{
+ 		&:before{
+	  		background: rgba(0,0,0,0);		
+ 	 		@include transition(all,.5s);		
+ 		}
+ 	}	
+
+	&.moving{
+		@include transform(translate(10%,0));		
+	}	
+
+	&.project-slick-next{
+		@include transform(translate(-10%,0));	
+
+		&.moving{
+			@include transform(translate(0%,0));			
+		}
+	}
+
+	&.project-slick-previous{
+		@include transform(translate(10%,0));	
+		&.moving{
+			@include transform(translate(20%,0));			
+		}		
+	}
+
+
+	&.project-slick-next-next{
+		&.moving{
+			@include transform(translate(-10%,0));			
+		}	
+	}
+
+	&.project-slick-previous-previous{
+		@include transform(translate(10%,0));	
+	
+	}	 
+
+	&.slick-active{
+		z-index: -999; 	
+	 	@include transform(translate(0%,0));
+	 	-webkit-clip-path: polygon( 10% 0%, 100% 0%, 100% 50%, 90% 100%, 0% 100%,0% 50% );
+
+	 	&.moving{
+	 		@include transform(translate(-10%,0));
+	 	}
+
+	 	.background{
+	 		@extend .background-mask-dark;
+	 	}
+	}
 
 }
+
+
+

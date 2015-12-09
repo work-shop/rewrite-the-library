@@ -60,10 +60,11 @@ function equal_width( target, selector ) {
 		var headerHeight = $('#header-rwtl').height();
 		var projectSlick = $('.project-slick');
 		var tagHeight = $('.project-tag').height();
-		var projectSlickHeight = windowHeight - (headerHeight) - tagHeight;
+		var projectSlickHeight = windowHeight - (headerHeight);
 
-		projectSlick.height(projectSlickHeight);
-		$('.project-slick-slide').height(projectSlickHeight);
+		projectSlick.css('max-height',projectSlickHeight);
+		$('.project-slick-slide').css('max-height',projectSlickHeight);
+		//$('.project-slick:before').css('max-height',projectSlickHeight);
 	}	
 
 	function collapseSubLists(){
