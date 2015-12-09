@@ -174,7 +174,7 @@ a.border-bottom:hover{
 	width: 100%;
 	height: $header-height;
 	top: $header-height;
-	background: white;
+	//background: white;
 	left: 0;
 	z-index: 7;
 	@include transition(position,.125s);
@@ -204,6 +204,27 @@ a.border-bottom:hover{
 			@extend .din-medium;
 			text-transform: uppercase;
 			padding-bottom: 3px;
+		}
+	}
+}
+
+.header-white{
+	#header-rwtl{
+		a{
+			color: white;
+			
+			&:hover{
+				color: white;
+
+				span{
+					border-bottom-color: $brand;
+					color: $brand;
+				}
+			}
+
+			span{
+				border-bottom: 3px solid white;
+			}
 		}
 	}
 }
@@ -312,7 +333,7 @@ menu{
 /********** @MAIN *********/
 
 main{
-	padding-top: $header-height;
+	//padding-top: $header-height;
 }
 
 .container-fluid{
@@ -420,7 +441,7 @@ $nav-fixed-height: 120px;
 
 	&.fixed{
 		padding-top: 1em;
-		background: rgba(255,255,255,.75);
+		//background: rgba(255,255,255,.75);
 
 		h6{
 			display: none;

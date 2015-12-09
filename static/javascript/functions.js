@@ -84,6 +84,12 @@ jQuery(document).ready(function($) {
 		  ]	
 	});
 
+	$('.project-slick').slick({
+		arrows: true,
+		dots: true,
+		focusOnSelect: true
+	});	
+
 });//end document.ready
 
 

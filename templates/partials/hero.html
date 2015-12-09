@@ -16,9 +16,6 @@
 						{% for image in item.project_images %}
 							<div class="project-slick-slide hero-slick-slide">
 								<img src="{{ image|imageSize(auto) }}" />
-								{% if image.caption %} 
-								<h4 class="white project-slick-slide-caption">{{ image.caption }}</h4>
-								{% endif %}
 							</div>
 						{% endfor %}
 					</div>

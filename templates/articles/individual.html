@@ -14,6 +14,8 @@
 
 {% block title %}{% parent %} - {{ item.name }}{% endblock %}
 
+{% block body_attributes %}class="body-article header-before header-absolute modal-off"{% endblock %}
+
 {% block content %}
 
 	{% if item.override_publication_date %}
