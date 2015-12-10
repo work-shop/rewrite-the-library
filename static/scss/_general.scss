@@ -178,7 +178,6 @@ a.border-bottom:hover{
 
 #header-olin{
 	height: $header-height;
-	@extend .border-bottom;
 
 	img{
 		width: 170px;
@@ -191,10 +190,11 @@ a.border-bottom:hover{
 	width: 100%;
 	height: $header-height;
 	top: $header-height;
-	//background: white;
+	@extend .border-top;
 	left: 0;
 	z-index: 7;
 	@include transition(position,.125s);
+
 
 	&.fixed{
 		position: fixed;
@@ -227,6 +227,8 @@ a.border-bottom:hover{
 
 .header-white{
 	#header-rwtl{
+		border-top-color: white;
+
 		a{
 			color: white;
 			

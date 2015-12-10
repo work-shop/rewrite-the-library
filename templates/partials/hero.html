@@ -18,7 +18,7 @@
 						<div class="project-slideshow-track clearfix">
 							{% for image in item.project_images %}
 								<div class="project-slick-slide project-slide hero-slick-slide project-slide-{{ loop.index0 }}" style="z-index: {{ loop.index0 }};">
-									<img src="{{ image|imageCrop(1440,600) }}" alt="slide" />
+									<img src="{{ image|imageCrop(1440,720) }}" alt="slide" />
 									<div class="background">
 									</div>
 								</div>

@@ -100,7 +100,7 @@ $(window).scroll(function() {
 
 function headerSpy(){
 
-	var headerHeight = $('#header-olin').height();	
+	var headerHeight = $('#header-olin').height() + 3;	
 
 
 	if($(window).scrollTop() >= headerHeight){

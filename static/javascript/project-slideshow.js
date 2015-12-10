@@ -1,6 +1,6 @@
 	
 //elements
-var container = $('.project-slideshow');
+var container = $('.hero-project');
 var	track = $('.project-slideshow-track');
 var	slides = $('.project-slide');	
 
@@ -48,6 +48,15 @@ function slideshowSetup(){
 	//overall sizing
 	slides.width(slideWidth);
 	track.width(trackWidth);
+
+
+	//set the height of the slideshow
+	h = $(window).height();
+	hh = $('#header-olin').height();
+	magic = 7;
+	containerHeight = h - hh - magic;
+	container.css('max-height',containerHeight);
+
 
 }
 
