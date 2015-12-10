@@ -20,34 +20,62 @@
 
 	{{ hero.with( undefined, undefined, item.hero_image ) }}
 
-	<section class="block bg-white individual-description" id="project-description">
-
-		<h1>{{ item.name }}</h1>
-
-		<h3>{{ item.tagline }}</h3>
-
-		<p>{{ item.summary }}</p>
-
-		<p>{{ item.project_timeline }}</p>
-
-		<ul>
-		{% for collaborator in item.collaborators %}
-
-			<li>{{ collaborator.name }}</li>
-
-		{% endfor %}
-		</ul>
-
-		<p>{{ item.space.name }}</p>
-
+	<section class="block bg-white individual-description pt5" id="project-description">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6">
+					<h3 class="mb3 mt0">{{ item.tagline }}</h3>
+					<p>{{ item.summary }}</p>
+				</div>
+				<div class="col-sm-5 col-sm-offset-1">
+					<div class="row mb3">
+						<div class="col-sm-6"><h5 class="uppercase m0">project timeline:</h5></div>
+						<div class="col-sm-6"><h5 class="din-regular m0">{{ item.project_timeline }}</h5></div>
+					</div>
+					<div class="row mb3">
+						<div class="col-sm-6"><h5 class="uppercase m0">collaborators:</h5></div>
+						<div class="col-sm-6">
+							<ul>
+								{% for collaborator in item.collaborators %}
+									<li class="h5 din-regular">{{ collaborator.name }}</li>
+								{% endfor %}
+							</ul>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-sm-6"><h5 class="uppercase m0">space:</h5></div>
+						<div class="col-sm-6"><h5 class="din-regular m0">{{ item.space.name }}</h5></div>
+					</div>										
+				</div>
+			</div>
+			<div class="row m4">
+				<div class="col-sm-12">
+					<hr class="border-bottom thick">
+				</div>
+			</div>			
+		</div>
 	</section>
 
-	<section class="block bg-white individual-body hidden" id="project-body">
-
-		{{ item.body|safe }}
-
-		{{ related.to( item ) }}
-
+	<section class="block bg-white individual-body pb4" id="project-body">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 col-md-10 col-md-offset-1">
+					<div class="wysiwyg">
+						{{ item.body|safe }}
+					</div>		
+				</div>
+			</div>			
+		</div>
+	</section>
+	<section class="block bg-light related pt3 border-top thick" id="project-related">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<h4 class="uppercase"><span class="border-bottom din-medium">Related Projects</span></h4>
+					{{ item.related }}
+				</div>
+			</div>
+		</div>
 	</section>
 
 	{{ guideposts.back({url: url('articles'), name: "Articles" }) }}

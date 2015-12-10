@@ -2118,18 +2118,6 @@ body {
   color: #2B2B2B;
 }
 
-.din-regular, .card-metadata h5, menu li li a, .filter-nav li a {
-  font-weight: 400;
-}
-
-.din-medium, #header-rwtl a span, menu li a {
-  font-weight: 500;
-}
-
-.din-bold {
-  font-weight: 700;
-}
-
 h1, .h1, h2, .h2, h3, .h3, #deck-nav li a, h4, .h4, .tag-button a, .filter-nav li a, h5, .h5, h6, .h6, .tag-button-small a, .filter-nav li a {
   font-weight: normal;
   line-height: 1.2em;
@@ -2166,7 +2154,7 @@ p {
   line-height: 1.4;
 }
 
-.icon:before, #deck-slick button:before, .project-slick button:before, .project-slideshow button:before {
+.icon:before, #deck-slick button:before, .project-slideshow button:before {
   content: attr(data-icon);
   font-family: "modern_pictograms_proregular";
   font-size: 27px;
@@ -2174,8 +2162,20 @@ p {
   vertical-align: middle;
   position: relative;
 }
-.icon.large:before, #deck-slick button.large:before, .project-slick button.large:before, .project-slideshow button.large:before {
+.icon.large:before, #deck-slick button.large:before, .project-slideshow button.large:before {
   font-size: 72px;
+}
+
+.din-regular, .card-metadata h5, menu li li a, .filter-nav li a {
+  font-weight: 400;
+}
+
+.din-medium, #header-rwtl a span, menu li a {
+  font-weight: 500;
+}
+
+.din-bold {
+  font-weight: 700;
 }
 
 @media (min-width: 1200px) {
@@ -2210,10 +2210,10 @@ p {
     font-size: 14px;
   }
 
-  .icon:before, #deck-slick button:before, .project-slick button:before, .project-slideshow button:before {
+  .icon:before, #deck-slick button:before, .project-slideshow button:before {
     font-size: 22px;
   }
-  .icon.large:before, #deck-slick button.large:before, .project-slick button.large:before, .project-slideshow button.large:before {
+  .icon.large:before, #deck-slick button.large:before, .project-slideshow button.large:before {
     font-size: 48px;
   }
 }
@@ -2522,6 +2522,13 @@ a:focus {
   border-bottom-width: 6px;
 }
 
+.border-top {
+  border-top: 3px solid #2B2B2B;
+}
+.border-top.thick {
+  border-top-width: 6px;
+}
+
 .border-bottom-brand {
   border-bottom: 3px solid #10A879;
 }
@@ -2548,11 +2555,11 @@ a.border-bottom:hover, a.tag:hover, a#header-olin:hover {
 .tag h4, .tag h5 {
   display: inline-block;
   background: #2B2B2B;
-  transform: skew(-10deg);
-  -moz-transform: skew(-10deg);
-  -webkit-transform: skew(-10deg);
-  -o-transform: skew(-10deg);
-  -ms-transform: skew(-10deg);
+  transform: skew(-15deg);
+  -moz-transform: skew(-15deg);
+  -webkit-transform: skew(-15deg);
+  -o-transform: skew(-15deg);
+  -ms-transform: skew(-15deg);
   padding: 6px 15px 8px 15px;
   color: white;
   margin: 0;
@@ -2568,13 +2575,20 @@ a.border-bottom:hover, a.tag:hover, a#header-olin:hover {
   -ms-transition: all 0.125s 0s ease;
   line-height: 1.5;
 }
+.tag.tag-white {
+  border-bottom-color: white;
+}
+.tag.tag-white h4, .tag.tag-white h5 {
+  background: white;
+  color: #2B2B2B;
+}
 
 .tag-button, .filter-nav li {
-  transform: skew(-10deg);
-  -moz-transform: skew(-10deg);
-  -webkit-transform: skew(-10deg);
-  -o-transform: skew(-10deg);
-  -ms-transform: skew(-10deg);
+  transform: skew(-15deg);
+  -moz-transform: skew(-15deg);
+  -webkit-transform: skew(-15deg);
+  -o-transform: skew(-15deg);
+  -ms-transform: skew(-15deg);
 }
 .tag-button a, .filter-nav li a {
   padding: 8px 17px 10px 17px;
@@ -2634,7 +2648,7 @@ a.border-bottom:hover, a.tag:hover, a#header-olin:hover {
 .card-metadata h5 {
   margin: .8em 0;
 }
-.card-metadata .icon, .card-metadata #deck-slick button:before, #deck-slick .card-metadata button:before, .card-metadata .project-slick button:before, .project-slick .card-metadata button:before, .card-metadata .project-slideshow button:before, .project-slideshow .card-metadata button:before {
+.card-metadata .icon, .card-metadata #deck-slick button:before, #deck-slick .card-metadata button:before, .card-metadata .project-slideshow button:before, .project-slideshow .card-metadata button:before {
   top: -5px;
 }
 
@@ -2779,7 +2793,7 @@ menu li li a:hover {
   position: relative;
   top: 20px;
 }
-#menu-close .icon:before, #menu-close #deck-slick button:before, #deck-slick #menu-close button:before, #menu-close .project-slick button:before, .project-slick #menu-close button:before, #menu-close .project-slideshow button:before, .project-slideshow #menu-close button:before {
+#menu-close .icon:before, #menu-close #deck-slick button:before, #deck-slick #menu-close button:before, #menu-close .project-slideshow button:before, .project-slideshow #menu-close button:before {
   font-size: 28px;
 }
 
@@ -3050,71 +3064,18 @@ menu li li a:hover {
   z-index: 1;
 }
 
-.project-slick {
-  position: relative;
-}
-.project-slick:before {
-  z-index: 1;
-}
-.project-slick .slick-dots {
-  display: none !important;
-}
-.project-slick button {
-  position: absolute;
-  z-index: 2;
-  top: 12.5%;
-  left: 20px;
-  width: 20px;
-  height: 40px;
-  background: none;
-  border: none;
-  transform: translate(0, -50%);
-  -moz-transform: translate(0, -50%);
-  -webkit-transform: translate(0, -50%);
-  -o-transform: translate(0, -50%);
-  -ms-transform: translate(0, -50%);
-  margin: 0;
-  padding: 0;
-  font-size: 0;
-  line-height: 0;
-}
-.project-slick button:before {
-  content: '‘';
-  width: 20px;
-  display: block;
-  font-size: 90px;
-  line-height: 40px;
-  color: white;
-  transition: all 0.125s 0s ease;
-  -moz-transition: all 0.125s 0s ease;
-  -webkit-transition: all 0.125s 0s ease;
-  -o-transition: all 0.125s 0s ease;
-  -ms-transition: all 0.125s 0s ease;
-}
-.project-slick button:hover {
-  cursor: pointer;
-}
-.project-slick button:focus {
-  outline: none;
-  border: none;
-}
-.project-slick button.slick-next {
-  left: auto;
-  top: auto;
-  bottom: 12.5%;
-  right: 40px !important;
-}
-.project-slick button.slick-next:before {
-  content: '—';
-}
-
 .project-tag {
   position: absolute;
+  bottom: 0;
+  width: 100%;
+  border-bottom: none !important;
+}
+.project-tag h4 {
+  font-size: 1.1em;
 }
 
 .hero-project {
   overflow: hidden;
-  margin: 0 auto;
 }
 
 .project-slideshow-track {

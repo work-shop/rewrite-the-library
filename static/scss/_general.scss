@@ -5,7 +5,7 @@
 $tag-button-padding: 8px 17px 10px 17px;
 $tag-button-padding-small: 5px 12px 7px 12px;
 $tag-padding: 6px 15px 8px 15px;
-$tag-skew: -10deg;
+$tag-skew: -15deg;
 
 .row .row{
 	margin-left: -5px;
@@ -27,6 +27,15 @@ a:focus{
 	&.thick{
 		border-bottom-width: 6px;
 	}
+}
+
+.border-top{
+	border-top: 3px solid $dark;
+
+	&.thick{
+		border-top-width: 6px;
+	}
+
 }
 
 .border-bottom-brand{
@@ -63,6 +72,14 @@ a.border-bottom:hover{
 		letter-spacing: .05em;	
 		@include transition(all,.125s);
 		line-height: 1.5;			
+	}
+
+	&.tag-white{
+		border-bottom-color: white;
+		h4,h5{
+			background: white;
+			color: $dark;	
+		}
 	}
 }
 

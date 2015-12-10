@@ -5,9 +5,6 @@ $slide-offset-doubled: $slide-offset * 2;
 
 .hero-project{
 	overflow: hidden;
-	//width: 60%;
-	margin: 0 auto;
-	//outline: 3px solid $brand;
 }
 
 .project-slideshow{
@@ -16,7 +13,6 @@ $slide-offset-doubled: $slide-offset * 2;
 
 .project-slideshow-track{
 	@include transition(all,.5s);
-	//@include transform(translateX( -13.889% ));
 }
 
 .project-slide{
@@ -41,8 +37,6 @@ $slide-offset-doubled: $slide-offset * 2;
 		@include transform(translateX( $slideTranslation3 ));
 	}
 }
-
-
 
 
 .project-slideshow{

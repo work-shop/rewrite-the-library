@@ -18,18 +18,6 @@ body{
 	color: $dark;
 }
 
-.din-regular{
-	font-weight: 400;
-}
-
-.din-medium{
-	font-weight: 500;
-}
-
-.din-bold{
-	font-weight: 700;
-}
-
 h1,.h1,h2,.h2,h3,.h3,h4,.h4,h5,.h5,h6,.h6{
 	font-weight: normal;
 	line-height: 1.2em;
@@ -82,6 +70,20 @@ p{
 	}
 
 }
+
+
+.din-regular{
+	font-weight: 400;
+}
+
+.din-medium{
+	font-weight: 500;
+}
+
+.din-bold{
+	font-weight: 700;
+}
+
 
 
 //lg

@@ -31,15 +31,13 @@
 					</div>
 				{% endif %}
 
-				<div class="tag project-tag-white hidden">
-					<h4>{{ item.title }}</h4>
+				<div class="container">
+					<div class="tag project-tag tag-white">
+						<h4>{{ item.name }}</h4>
+					</div>
 				</div>
 
 			{% endif %}	
-
-			<div class="hidden">
-				{% if description %}<h2>{{ description }}</h2>{% endif %}
-			</div>
 
 		{% else %} {# It's a list page, or the about page #}
 
