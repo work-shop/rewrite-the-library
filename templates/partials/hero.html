@@ -14,15 +14,17 @@
 
 				{% if item.project_images.length > 1 %}
 					<div class="project-slick-broken project-slideshow project-hero-slideshow hero-slideshow hero-slick">
+						<button class="slideshow-previous"></button>
 						<div class="project-slideshow-track clearfix">
 							{% for image in item.project_images %}
-								<div class="project-slick-slide project-slide hero-slick-slide project-slide-{{ loop.index }}" style="z-index: {{ loop.index }};">
-									<img src="{{ image|imageCrop(1440,810) }}" alt="slide" />
+								<div class="project-slick-slide project-slide hero-slick-slide project-slide-{{ loop.index0 }}" style="z-index: {{ loop.index0 }};">
+									<img src="{{ image|imageCrop(1440,600) }}" alt="slide" />
 									<div class="background">
 									</div>
 								</div>
 							{% endfor %}
 						</div>
+						<button class="slideshow-next"></button>
 					</div>
 				{% else %}
 					<div class="hero-background block-background background-mask-dark" style="background-image: url('{{ image|imageSize(auto) }}');">

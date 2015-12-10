@@ -231,31 +231,6 @@
 
 
 
-.hero-project{
-	overflow: visible;
-	width: 60%;
-	margin: 0 auto;
-}
-
-.project-slideshow{
-	
-}
-
-.project-slideshow-track{
-	//@include transform(translate(-16.6667%,0));
-}
-
-.project-slide{
-	float: left;
-	//@include transform(translate(-24%,0));
-	-webkit-clip-path: polygon( 10% 0%, 100% 0%, 90% 100%, 0% 100%);
-}
-
-.project-slide-1{
-	@include transform(translate(-12%,0));
-}
-
-
 
 
 
