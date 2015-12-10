@@ -21,10 +21,16 @@ $slide-offset-doubled: $slide-offset * 2;
 
 .project-slide{
 	float: left;
-	opacity: .75;
 
 	img{
 		-webkit-clip-path: polygon( $slide-offset-doubled 0%, 100% 0%, (100 - $slide-offset-doubled) 100%, 0% 100%);
+		clip-path: polygon( $slide-offset-doubled 0%, 100% 0%, (100 - $slide-offset-doubled) 100%, 0% 100%);
+	}
+
+	.background{
+		@extend .background-mask-dark;
+		-webkit-clip-path: polygon( $slide-offset-doubled 0%, 100% 0%, (100 - $slide-offset-doubled) 100%, 0% 100%);
+		clip-path: polygon( $slide-offset-doubled 0%, 100% 0%, (100 - $slide-offset-doubled) 100%, 0% 100%);		
 	}
 }
 

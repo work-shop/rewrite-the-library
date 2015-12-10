@@ -1634,7 +1634,7 @@ fancy objects
   -ms-transition: all 0.75s 0s ease;
 }
 
-.background-mask-dark:before {
+.background-mask-dark:before, .project-slide .background:before {
   content: '';
   display: block;
   position: absolute;
@@ -3127,10 +3127,14 @@ menu li li a:hover {
 
 .project-slide {
   float: left;
-  opacity: .75;
 }
 .project-slide img {
   -webkit-clip-path: polygon(16.666% 0%, 100% 0%, 83.334% 100%, 0% 100%);
+  clip-path: polygon(16.666% 0%, 100% 0%, 83.334% 100%, 0% 100%);
+}
+.project-slide .background {
+  -webkit-clip-path: polygon(16.666% 0%, 100% 0%, 83.334% 100%, 0% 100%);
+  clip-path: polygon(16.666% 0%, 100% 0%, 83.334% 100%, 0% 100%);
 }
 
 .project-slide-0 {
