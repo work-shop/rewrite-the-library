@@ -169,65 +169,93 @@
 
 
 
-.project-slick-slide{
-	position: relative;
-	z-index: 3;
+// .project-slick-slide{
+// 	position: relative;
+// 	z-index: 3;
 
-	-webkit-clip-path: polygon( 10% 0%, 100% 0%, 90% 50%, 90% 100%, 0% 100%, 10% 50% );	
+// 	-webkit-clip-path: polygon( 10% 0%, 100% 0%, 90% 50%, 90% 100%, 0% 100%, 10% 50% );	
 
- 	.background{
- 		&:before{
-	  		background: rgba(0,0,0,0);		
- 	 		@include transition(all,.5s);		
- 		}
- 	}	
+//  	.background{
+//  		&:before{
+// 	  		background: rgba(0,0,0,0);		
+//  	 		@include transition(all,.5s);		
+//  		}
+//  	}	
 
-	&.moving{
-		@include transform(translate(10%,0));				
-	}	
+// 	&.moving{
+// 		@include transform(translate(10%,0));				
+// 	}	
 
-	&.project-slick-next{
-		@include transform(translate(-10%,0));	
+// 	&.project-slick-next{
+// 		@include transform(translate(-10%,0));	
 
-		&.moving{
-			@include transform(translate(0%,0));			
-		}
-	}
+// 		&.moving{
+// 			@include transform(translate(0%,0));			
+// 		}
+// 	}
 
-	&.project-slick-previous{
-		@include transform(translate(10%,0));	
-		&.moving{
-			@include transform(translate(20%,0));			
-		}		
-	}
+// 	&.project-slick-previous{
+// 		@include transform(translate(10%,0));	
+// 		&.moving{
+// 			@include transform(translate(20%,0));			
+// 		}		
+// 	}
 
 
-	&.project-slick-next-next{
-		&.moving{
-			@include transform(translate(-10%,0));			
-		}	
-	}
+// 	&.project-slick-next-next{
+// 		&.moving{
+// 			@include transform(translate(-10%,0));			
+// 		}	
+// 	}
 
-	&.project-slick-previous-previous{
-		@include transform(translate(10%,0));	
+// 	&.project-slick-previous-previous{
+// 		@include transform(translate(10%,0));	
 	
-	}	 
+// 	}	 
 
-	&.slick-active{
-		z-index: -999; 	
-	 	@include transform(translate(0%,0));
-	 	-webkit-clip-path: polygon( 10% 0%, 100% 0%, 100% 50%, 90% 100%, 0% 100%,0% 50% );
+// 	&.slick-active{
+// 		z-index: -999; 	
+// 	 	@include transform(translate(0%,0));
+// 	 	-webkit-clip-path: polygon( 10% 0%, 100% 0%, 100% 50%, 90% 100%, 0% 100%,0% 50% );
 
-	 	&.moving{
-	 		@include transform(translate(0%,0));
-	 	}
+// 	 	&.moving{
+// 	 		@include transform(translate(0%,0));
+// 	 	}
 
-	 	.background{
-	 		@extend .background-mask-dark;
-	 	}
-	}
+// 	 	.background{
+// 	 		@extend .background-mask-dark;
+// 	 	}
+// 	}
 
+// }
+
+
+
+.hero-project{
+	overflow: visible;
+	width: 60%;
+	margin: 0 auto;
 }
+
+.project-slideshow{
+	
+}
+
+.project-slideshow-track{
+	//@include transform(translate(-16.6667%,0));
+}
+
+.project-slide{
+	float: left;
+	//@include transform(translate(-24%,0));
+	-webkit-clip-path: polygon( 10% 0%, 100% 0%, 90% 100%, 0% 100%);
+}
+
+.project-slide-1{
+	@include transform(translate(-12%,0));
+}
+
+
 
 
 

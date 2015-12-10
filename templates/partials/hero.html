@@ -7,20 +7,22 @@
 
 {% macro with( title, description, image ) %}
 
-	<section class="block hero {% if title == 'The Projects' %} hero-projects half {% elseif url( item ) == getCurrentUrl() %} {% else %} eighty-five {% endif %}">
+	<section class="block hero {% if title == 'The Projects' %} hero-projects half {% elseif url( item ) == getCurrentUrl() %} hero-project {% else %} eighty-five {% endif %}">
 		{% if url( item ) == getCurrentUrl() %} {# It's an individual page #}
 
 			{% if item.project_images %}
 
 				{% if item.project_images.length > 1 %}
-					<div class="project-slick hero-slideshow hero-slick">
-						{% for image in item.project_images %}
-							<div class="project-slick-slide hero-slick-slide">
-								<img src="{{ image|imageCrop(1440,810) }}" alt="slide" />
-								<div class="background">
+					<div class="project-slick-broken project-slideshow project-hero-slideshow hero-slideshow hero-slick">
+						<div class="project-slideshow-track clearfix">
+							{% for image in item.project_images %}
+								<div class="project-slick-slide project-slide hero-slick-slide project-slide-{{ loop.index }}" style="z-index: {{ loop.index }};">
+									<img src="{{ image|imageCrop(1440,810) }}" alt="slide" />
+									<div class="background">
+									</div>
 								</div>
-							</div>
-						{% endfor %}
+							{% endfor %}
+						</div>
 					</div>
 				{% else %}
 					<div class="hero-background block-background background-mask-dark" style="background-image: url('{{ image|imageSize(auto) }}');">

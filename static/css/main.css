@@ -1634,7 +1634,7 @@ fancy objects
   -ms-transition: all 0.75s 0s ease;
 }
 
-.background-mask-dark:before, .project-slick-slide.slick-active .background:before {
+.background-mask-dark:before {
   content: '';
   display: block;
   position: absolute;
@@ -3112,83 +3112,23 @@ menu li li a:hover {
   position: absolute;
 }
 
-.project-slick-slide {
-  position: relative;
-  z-index: 3;
-  -webkit-clip-path: polygon(10% 0%, 100% 0%, 90% 50%, 90% 100%, 0% 100%, 10% 50%);
+.hero-project {
+  overflow: visible;
+  width: 60%;
+  margin: 0 auto;
 }
-.project-slick-slide .background:before {
-  background: transparent;
-  transition: all 0.5s 0s ease;
-  -moz-transition: all 0.5s 0s ease;
-  -webkit-transition: all 0.5s 0s ease;
-  -o-transition: all 0.5s 0s ease;
-  -ms-transition: all 0.5s 0s ease;
+
+.project-slide {
+  float: left;
+  -webkit-clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
 }
-.project-slick-slide.moving {
-  transform: translate(10%, 0);
-  -moz-transform: translate(10%, 0);
-  -webkit-transform: translate(10%, 0);
-  -o-transform: translate(10%, 0);
-  -ms-transform: translate(10%, 0);
-}
-.project-slick-slide.project-slick-next {
-  transform: translate(-10%, 0);
-  -moz-transform: translate(-10%, 0);
-  -webkit-transform: translate(-10%, 0);
-  -o-transform: translate(-10%, 0);
-  -ms-transform: translate(-10%, 0);
-}
-.project-slick-slide.project-slick-next.moving {
-  transform: translate(0%, 0);
-  -moz-transform: translate(0%, 0);
-  -webkit-transform: translate(0%, 0);
-  -o-transform: translate(0%, 0);
-  -ms-transform: translate(0%, 0);
-}
-.project-slick-slide.project-slick-previous {
-  transform: translate(10%, 0);
-  -moz-transform: translate(10%, 0);
-  -webkit-transform: translate(10%, 0);
-  -o-transform: translate(10%, 0);
-  -ms-transform: translate(10%, 0);
-}
-.project-slick-slide.project-slick-previous.moving {
-  transform: translate(20%, 0);
-  -moz-transform: translate(20%, 0);
-  -webkit-transform: translate(20%, 0);
-  -o-transform: translate(20%, 0);
-  -ms-transform: translate(20%, 0);
-}
-.project-slick-slide.project-slick-next-next.moving {
-  transform: translate(-10%, 0);
-  -moz-transform: translate(-10%, 0);
-  -webkit-transform: translate(-10%, 0);
-  -o-transform: translate(-10%, 0);
-  -ms-transform: translate(-10%, 0);
-}
-.project-slick-slide.project-slick-previous-previous {
-  transform: translate(10%, 0);
-  -moz-transform: translate(10%, 0);
-  -webkit-transform: translate(10%, 0);
-  -o-transform: translate(10%, 0);
-  -ms-transform: translate(10%, 0);
-}
-.project-slick-slide.slick-active {
-  z-index: -999;
-  transform: translate(0%, 0);
-  -moz-transform: translate(0%, 0);
-  -webkit-transform: translate(0%, 0);
-  -o-transform: translate(0%, 0);
-  -ms-transform: translate(0%, 0);
-  -webkit-clip-path: polygon(10% 0%, 100% 0%, 100% 50%, 90% 100%, 0% 100%, 0% 50%);
-}
-.project-slick-slide.slick-active.moving {
-  transform: translate(0%, 0);
-  -moz-transform: translate(0%, 0);
-  -webkit-transform: translate(0%, 0);
-  -o-transform: translate(0%, 0);
-  -ms-transform: translate(0%, 0);
+
+.project-slide-1 {
+  transform: translate(-12%, 0);
+  -moz-transform: translate(-12%, 0);
+  -webkit-transform: translate(-12%, 0);
+  -o-transform: translate(-12%, 0);
+  -ms-transform: translate(-12%, 0);
 }
 
 /********** @RESPONSIVE *********/

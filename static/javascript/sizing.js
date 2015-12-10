@@ -62,8 +62,8 @@ function equal_width( target, selector ) {
 		var tagHeight = $('.project-tag').height();
 		var projectSlickHeight = windowHeight - (headerHeight);
 
-		projectSlick.css('max-height',projectSlickHeight);
-		$('.project-slick-slide').css('max-height',projectSlickHeight);
+		//projectSlick.css('max-height',projectSlickHeight);
+		//$('.project-slick-slide').css('max-height',projectSlickHeight);
 		//$('.project-slick:before').css('max-height',projectSlickHeight);
 	}	
 
