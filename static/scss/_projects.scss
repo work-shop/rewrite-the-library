@@ -183,7 +183,7 @@
  	}	
 
 	&.moving{
-		@include transform(translate(10%,0));		
+		@include transform(translate(10%,0));				
 	}	
 
 	&.project-slick-next{
@@ -219,7 +219,7 @@
 	 	-webkit-clip-path: polygon( 10% 0%, 100% 0%, 100% 50%, 90% 100%, 0% 100%,0% 50% );
 
 	 	&.moving{
-	 		@include transform(translate(-10%,0));
+	 		@include transform(translate(0%,0));
 	 	}
 
 	 	.background{

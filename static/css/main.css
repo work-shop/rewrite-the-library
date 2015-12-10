@@ -3184,11 +3184,11 @@ menu li li a:hover {
   -webkit-clip-path: polygon(10% 0%, 100% 0%, 100% 50%, 90% 100%, 0% 100%, 0% 50%);
 }
 .project-slick-slide.slick-active.moving {
-  transform: translate(-10%, 0);
-  -moz-transform: translate(-10%, 0);
-  -webkit-transform: translate(-10%, 0);
-  -o-transform: translate(-10%, 0);
-  -ms-transform: translate(-10%, 0);
+  transform: translate(0%, 0);
+  -moz-transform: translate(0%, 0);
+  -webkit-transform: translate(0%, 0);
+  -o-transform: translate(0%, 0);
+  -ms-transform: translate(0%, 0);
 }
 
 /********** @RESPONSIVE *********/

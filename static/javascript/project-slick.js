@@ -15,8 +15,8 @@ jQuery(document).ready(function($) {
 	$('.project-slick').slick({
 		centerMode: true,
 		centerPadding: 0,
-		speed: 10000,
-		fade: false,		
+		speed: 500,
+		fade: false,
 		arrows: true,
 		dots: true
 	});	
