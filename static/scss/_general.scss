@@ -27,6 +27,10 @@ a:focus{
 	&.thick{
 		border-bottom-width: 6px;
 	}
+
+	&.thin{
+		border-bottom-width: 2px;
+	}
 }
 
 .border-top{

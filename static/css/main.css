@@ -2521,6 +2521,9 @@ a:focus {
 .border-bottom.thick, .thick.tag, #header-rwtl a span.thick {
   border-bottom-width: 6px;
 }
+.border-bottom.thin, .thin.tag, #header-rwtl a span.thin {
+  border-bottom-width: 2px;
+}
 
 .border-top, #header-rwtl {
   border-top: 3px solid #2B2B2B;

@@ -32,28 +32,78 @@
 
 		{% set projects = merge( item.related_projects, item.space.projects_space )|exclude('name', item.name ) %}
 
-		{% set articles = merge( item.articles_related_projects, item.space.articles_spaces )  %}		
+		{% set articles = merge( item.articles_related_projects, item.space.articles_spaces )|uniq  %}		
 
 	{% endif %}
 
 
 	{% if projects|size %}
 
-		{% for project in projects %}
 
-			{{ projects.condensed_card( project ) }}
+		
+		<div class="row">
 
-		{% endfor %}
+			<div class="col-sm-12">
+				<h4 class="uppercase mb3"><span class="border-bottom din-medium">Related Projects</span></h4>
+			</div>
+
+			{% for project in projects %}
+
+				<div class="project-card-related project-card col-sm-3 col-md-2 col-xs-6">
+					<a href="{{ url( project ) }}">
+						<div class="project-card-tag tag">
+							<h5 class="">{{ project.name }}</h5>
+						</div>	
+						<div class="project-card-image mt1">
+							<img src="{{ project.hero_image|imageCrop(300,300) }}" class="bordered">
+						</div>
+					</a>
+				</div>
+
+			{% endfor %}
+
+			<div class="col-sm-12 hidden-xs">
+				<hr class="mt1 mb0 border-bottom">
+			</div>
+
+		</div>
 
 	{% endif %}
 	
 	{% if articles|size %}
 
-		{% for article in articles %}
+		<div class="row mt3">	
 
-			{{ articles.condensed_card( article ) }}
+			<div class="col-sm-12">
+				<h4 class="uppercase mb3"><span class="border-bottom din-medium">Related Articles</span></h4>
+			</div>		
 
-		{% endfor %}
+			{% for article in articles %}
+
+				<div class="article-card-related article-card col-xs-10 mb2-xs col-sm-5 {% if (loop.index0 % 2) %} col-sm-offset-1 {% endif %}">
+					<a href="{{ url( article ) }}">
+						<div class="tag">
+							<h4>{{ article.name }}</h4>
+						</div>
+						<div class="article-card-metadata card-metadata row border-bottom thin">
+							<div class="col-xs-6">
+								<h5 class="article-card-category">Category!</h5>
+							</div>
+							<div class="col-xs-6">
+								<h5 class="righted article-card-author">{{ article.author.name }}</h5>		
+							</div>
+						</div>
+						<div class="row article-card-body">
+							<div class="col-sm-11">
+								<p>{{ article.above_the_fold }}</p>
+							</div>
+						</div>
+					</a>
+				</div>
+
+			{% endfor %}
+
+		</div>
 
 	{% endif %}
 		
