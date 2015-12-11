@@ -11,8 +11,8 @@
 {% import "templates/partials/cards/project-cards.html" as projects %}
 
 {% macro to( item ) %}
-	{% if item._type == "articles" %}
 
+	{% if item._type == "articles" %}
 		{% set projects = item.related_projects %}
 
 		{% set articles = [] %}
