@@ -28,10 +28,49 @@ function equal_width( target, selector ) {
 					els
 				); 
 			}	
+		}	
+
+		if($('#deck').length){
+			deckSizing();		
 		}
+		if($('.project-slick').length){
+			projectSlickSizing();		
+		}		
 
 		$(document).trigger('dom-is-sized');
+
 	}
+
+	function deckSizing(){
+		var windowHeight = $(window).height();
+		var headerHeight = $('#header-rwtl').height();
+		var deckHeight = windowHeight - (headerHeight) - 40;
+		var navHeight = $('#deck-nav').height();
+		var deckSlickHeight = deckHeight - navHeight;
+
+		$('#deck').height(deckHeight);
+		$('#deck-slick').height(deckSlickHeight);
+		$('.deck-intro').height(deckSlickHeight);
+		$('.deck-slide').height(deckSlickHeight);
+		$('.deck-video iframe').height(deckSlickHeight);		
+	}
+
+	function projectSlickSizing(){
+		var windowHeight = $(window).height();
+		var headerHeight = $('#header-rwtl').height();
+		var projectSlick = $('.project-slick');
+		var tagHeight = $('.project-tag').height();
+		var projectSlickHeight = windowHeight - (headerHeight);
+
+		//projectSlick.css('max-height',projectSlickHeight);
+		//$('.project-slick-slide').css('max-height',projectSlickHeight);
+		//$('.project-slick:before').css('max-height',projectSlickHeight);
+	}	
+
+	function collapseSubLists(){
+		$('.sub-list').slideUp();
+		$('.sub-list').removeClass('open').addClass('closed');
+	}	
 
 	var actionmap = 
 	{ 
@@ -46,22 +85,22 @@ function equal_width( target, selector ) {
 		'.half-h': {callback:width, target: 0.5},
 		'.ninety': {callback: height, target: 0.9},
 		'.ninety-h': {callback:width, target: 0.9},
-		'.three-quarter': {callback: height, target: 0.75},
+		'.three-quarter': {callback: height_strict, target: 0.75},
 		'.three-quarter-strict': {callback: height_strict, target: 0.75},
 		'.all': {callback: height, target: 1},
 		'.all-h': {callback:width, target: 1},
 		'.all-strict': {callback:height_strict, target: 1},
 		//'.double': {callback: height, target: 2},
-		'.eighty-five': {callback: height, target: 0.85},
+		'.eighty-five': {callback: height_strict, target: 0.85},
 		'.height-is-width': {callback: equal_height, target: undefined },
 		//'.width-is-height': {callback: equal_width, target: undefined }
 	};
 
 	$( document ).ready( function() {
 		$(window).on('resize', recalculate);
+		collapseSubLists();
 		recalculate();
 	});
-
 	
 	
 })( jQuery );

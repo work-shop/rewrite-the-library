@@ -1,0 +1,47 @@
+
+.project-card{
+
+	//outline: 1px solid $dark;
+
+	margin-bottom: 3em;
+
+	&:nth-child(even){
+		@extend .col-sm-offset-1 !optional;
+	}
+
+	.card-metadata{
+		h5{
+			margin: 1em 0;
+		}
+	}
+
+	&.project-card-expanded{
+		padding: 30px 60px 0 60px;
+	}
+
+	.project-card-space{
+		width: 33%;
+		position: absolute;
+		left: 30px;
+		top: 0;
+		z-index: 0;
+	}
+
+	.project-card-image{
+		position: relative;
+		z-index: 1;
+	}
+}
+
+
+.project-tag{
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	border-bottom: none !important;
+
+	h4{
+		font-size: 1.1em;
+	}
+}
+

@@ -14,6 +14,7 @@
 
 {% extends "templates/partials/base.html" %}
 
+{% block body_attributes %}class="body-articles header-before header-absolute modal-off"{% endblock %}
 
 {% set pagename = "The Articles" %}
 
@@ -23,13 +24,23 @@
 	
 	{{ hero.with( pagename, cms.about.articles_page_callout, cms.about.articles_page_image ) }}
 
-	{{ nav.from( "Categories", cms.article_categories ) }}
+	{{ nav.from( 'Categories', cms.articlecategories ) }}
 
-	{% for article in cms.articles %}
-
-		{{ articles.expanded_card( article ) }}
-
-	{% endfor %}
+	<section class="block bg-white padded" id="list">
+		<div class="container">
+			<div class="row">
+				{% for article in cms.articles %}
+					{{ articles.expanded_card( article ) }}
+					{{ articles.expanded_card( article ) }}
+					{{ articles.expanded_card( article ) }}
+					{{ articles.expanded_card( article ) }}
+					{{ articles.expanded_card( article ) }}
+					{{ articles.expanded_card( article ) }}
+					
+				{% endfor %}
+			</div>
+		</div>
+	</section>
 
 	{{ guideposts.back({url:'/', name: "Home"}) }}
 

@@ -3,22 +3,26 @@
 {# NAV MACROS #}
 
 {# ------------------------------------------------------- #}
-
 {% macro from( name, taxonomy ) %}
 
 {% if taxonomy|size %}
 
-	<nav>
-		<ul>
-		<li class="active" data-sort-key="*">All {{ name }}</li>
-
-		{% for term in taxonomy %}
-
-			<li data-sort-key="{{ term.name|lower|replace(' ', '-', 'g') }}" > {{ term.name}}</li>
-
-		{% endfor %}
+<section id="nav" class="off">
+	<nav class="filter-nav filter-nav-{{name}} static">
+		{% if name == "Projects" %}
+			<h6 class="din-regular italic centered">Filter our projects by the spaces they inhabit</h6>
+		{% else %}
+			<h6 class="din-regular italic centered">Filter our articles by category</h6>
+		{% endif %}
+		<ul class="centered">
+			<li><a href="#list" data-sort-key="*" class="active">All {{ name }}</a></li>
+			{% for term in taxonomy %}
+				<li ><a href="#list" data-sort-key="{{ term.name|lower|replace(' ', '-', 'g') }}">{{ term.name}}</a></li>				
+			{% endfor %}
 		</ul>
 	</nav>
+</section>
+	
 		
 {% endif %}
 

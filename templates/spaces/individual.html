@@ -13,6 +13,7 @@
 
 {% extends "templates/partials/base.html" %}
 
+{% block body_attributes %}class="body-space header-before header-absolute modal-off"{% endblock %}
 
 {% block title %}{% parent %} - {{ item.name }} {% endblock %}
 

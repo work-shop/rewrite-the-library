@@ -98,7 +98,11 @@ fancy objects
 }
 
 @include size-dependent( ".bg-white" ) {
-	background: $ultra-light;
+	background: white;
+}
+
+.bg-medium{
+	background: $medium;
 }
 
 .bg-brand{
@@ -143,7 +147,7 @@ fancy objects
 		height: 100%;
 		top: 0;
 		left: 0;
-		background: rgba(255,255,255,.5);
+		background: rgba(255,255,255,.75);
 		@include transition(all);
 	}
 }
@@ -157,7 +161,8 @@ fancy objects
 		height: 100%;
 		top: 0;
 		left: 0;
-		background: rgba(40,30,30,.75);
+		$background-dark: darken($brand, 45%);
+		background: transparentize($background-dark, .72);
 		@include transition(all);
 	}
 }
@@ -190,7 +195,7 @@ fancy objects
 @include size-dependent(".vertical-center") {
 	margin-top: 0;
 	position: relative;
-	top: 49%;
+	top: 48%;
 	@include transform(translate(0,-50%));	
 }
 

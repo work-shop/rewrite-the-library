@@ -6,22 +6,88 @@
 
 {# ------------------------------------------------------- #}
 
+<section class="block" id="deck">
+	<div class="deck-intro">
+		<div class="vertical-center">
+			<h1 class="medium din-bold centered m0">
+				Rewriting <br/>
+				The Library <br/>
+				at Olin College
+			</h1>
+		</div>
+	</div>
+	<div class="slick slick-deck" id="deck-slick">
+		<div class="deck-slide deck-slide-empty">
+		</div>
+		<div class="deck-slide">
+			<div class="deck-slide-background block-background background-mask-dark" style="background-image: url('{{ cms.about.slideshow_end_image|imageSize(auto) }}')">
+			</div>
+			<div class="vertical-center slide-text">
+				<h1 class="din-bold white slide-caption mb1">
+					At Olin, we want<br/>
+					to reimagine what<br/>
+					a college library can be.<br/>
+				</h1>
+				<div class="tag-button tag-button-brand">
+					<a href="/about" class="">About Rewrite The Library</a>
+				</div>
+			</div>
+		</div>
+		<div class="deck-slide">
+			<div class="deck-video">
+				<iframe src="https://player.vimeo.com/video/139410557" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+			</div>
+			<div class="deck-slide-background block-background background-mask-dark" style="background-image: url('{{ cms.about.slideshow_start_image|imageSize(auto) }}')">
+			</div>
+			<div class="vertical-center">
+				<a href="#" class="deck-play-video display-block centered">
+					<span class="icon large white centered" data-icon="Ò"></span>
+				</a>
+			</div>
+		</div>		
+		<div class="deck-slide">
+			<div class="deck-slide-inner row vertical-center">
+			<div class="col-sm-5 col-sm-offset-1">
+				<figure>
+					<img src="{{ cms.about.first_floor_image|imageSize(auto) }}" />
+				</figure>
+			</div>	
+			<div class="col-sm-4 col-sm-offset-0">
+				<h2 class="m1">We're designing the library space-by-space.</h2>
+				<div class="tag-button tag-button-brand">
+					<a href="/about" class="">Library Spaces</a>
+				</div>				
+			</div>				
+	
+			</div>			
+		</div>
+		<div class="deck-slide">
+			<div class="deck-slide-background block-background background-mask-dark" style="background-image: url('{{ cms.about.slideshow_start_image|imageSize(auto) }}')">
+			</div>
+			<div class="vertical-center slide-text">
+				<h1 class="din-bold white slide-caption mb1">
+					Meet the team of students,<br/>
+					faculty, and collaborators<br/>
+					working on the Library.
+				</h1>
+				<div class="tag-button tag-button-brand">
+					<a href="/about#team" class="">The Team</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container-fluid">
+		<nav class="hidden-xs" id="deck-nav">
+			<ul>
+				<li><a href="#">Our <br/>Mission</a></li><!--
+				--><li><a href="#" class="active">Learn About <br/>The Project</a></li><!--
+				--><li><a href="#">Explore The <br/>Library Spaces</a></li><!--
+				--><li><a href="#">Meet <br/>Our Team</a></li><!--				
+			--></ul>
+		</nav>
+	</div>	
+</section>
 
 
-<img src="{{ cms.about.slideshow_start_image|imageSize(auto) }}" />
-
-{{ cms.about.slideshow_start_copy }}
-
-<figure>
-	<img src="{{ cms.about.first_floor_image|imageSize(auto) }}" />
-</figure>
-
-<figure>
-	<img src="{{ cms.about.ground_floor_image|imageSize(auto) }}" />
-</figure>
-
-<img src="{{ cms.about.slideshow_end_image|imageSize(auto) }}" />
-
-{{ cms.about.slideshow_end_copy }}
 
 

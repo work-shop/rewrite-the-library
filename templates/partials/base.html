@@ -26,8 +26,10 @@
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.0/normalize.min.css">
 
     <!-- build:css /static/css/minified.css -->
+    <link rel="stylesheet" href="/static/css/bootstrap.css"/> 
+    <link rel="stylesheet" href="/static/css/slick.css"/> 
+    <link rel="stylesheet" href="/static/css/wysiwyg_figures.css"/>          
     <link rel="stylesheet" href="/static/css/main.css"/>
-    <link rel="stylesheet" href="/static/css/wysiwyg_figures.css"/>
     <!-- endbuild -->
 
     {% block head_extra %}{% endblock %}
@@ -42,28 +44,25 @@
 
       {% include "templates/partials/header.html" %}
 
-      {% block content %}{% endblock %}
+      <main id="content">
+
+        {% block content %}{% endblock %}
+
+      </main>
 
       {% include "templates/partials/footer.html" %}
 
       <!-- build:js /static/javascript/minified.js -->
       <script src="/static/javascript/html5shiv.js"></script>
       <script src="/static/javascript/jquery.js"></script>
-
+      <script src="/static/javascript/slick.js"></script>      
       <script src="/static/javascript/sizing.js"></script>
-      <script src="/static/javascript/functions.js"></script>
+      <script src="/static/javascript/functions.js"></script>      
     
        {% block scripts_extra %}{% endblock %}
 
       <!-- endbuild -->
 
-      {# Google Analytics code. Feel free to remove. #}
-      <script>
-        var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-        g.src='//www.google-analytics.com/ga.js';
-        s.parentNode.insertBefore(g,s)}(document,'script'));
-      </script>
     {% endblock %}
   </body>
 </html>

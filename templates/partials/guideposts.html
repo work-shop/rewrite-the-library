@@ -6,14 +6,46 @@
 
 {% macro callout() %}
 
-	<h4>this is the callout guidepost</h4>
+	<section id="guidepost" class="guidepost guidepost-callout bg-white pt5 pb7">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4 guidepost-sign">
+					<h5 class="centered italic din-regular mt0 mb1 hidden-xs">Reach out individually</h5>
+					<div class="tag-button centered">
+						<a href="/contact" class="">Get in touch</a>
+					</div>
+				</div>
+				<div class="col-sm-4 guidepost-sign">
+					<h5 class="centered italic din-regular mt0 mb1 hidden-xs">Get our newsletter</h5>
+					<div class="tag-button centered">
+						<a href="/contact" class="">subscribe</a>
+					</div>					
+				</div>
+				<div class="col-sm-4 guidepost-sign">
+					<h5 class="centered italic din-regular mt0 mb1 hidden-xs">Support the project</h5>
+					<div class="tag-button centered">
+						<a href="/contact" class="">donate</a>
+					</div>						
+				</div>				
+			</div>
+		</div>
+	</section>
 
 {% endmacro %}
 
 
-
 {% macro back( to ) %}
 
-	<a href="{{ to.url }}"><h4>this is the back guidepost. it goes to: {{ to.name }}</h4></a>
+	<section id="guidepost" class="guidepost guidepost-back bg-white pt5 pb7">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-4 col-sm-offset-4 guidepost-sign">
+					<div class="tag-button centered">
+						<a href="{{ to.url }}" class="">Back to {{ to.name }}</a>
+					</div>
+				</div>		
+			</div>
+		</div>
+	</section>
 
 {% endmacro %}

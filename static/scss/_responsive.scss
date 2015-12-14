@@ -6,7 +6,28 @@
 //sm and up
 @media (min-width: 768px) {
 
-	
+	.header-white{
+		#header-rwtl{
+			border-top-color: white;
+
+			a{
+				color: white;
+				
+				&:hover{
+					color: white;
+
+					span{
+						border-bottom-color: $brand;
+						color: $brand;
+					}
+				}
+
+				span{
+					border-bottom: 3px solid white;
+				}
+			}
+		}
+	}	
 	
 }	
 
@@ -20,6 +41,23 @@
 //md
 @media ($md-query) {
 
+	#deck-nav{
+		height: 250px;
+		padding: 30px 60px 30px 60px;
+	}
+
+	#deck-slick{
+		button{
+			bottom: -60px;
+			left: 20px;
+			width: 20px;
+			height: 20px;
+
+			&.slick-next{
+				right: 30px !important;
+			}
+		}
+	}
 
 
 }
@@ -27,17 +65,88 @@
 //sm
 @media ($sm-query) {
 
+	.project-card{
 
+		&.project-card-expanded{
+			padding: 30px 20px 0px 20px;
+		}
+
+		.project-card-space{
+			left: 0;
+		}
+	}
 
 } 
 
 //xs
 @media ($xs-query) {
 
+	#header-rwtl{
+		background: rgba(255,255,255,.93);	
+	}
+	
+	.row .row{
+		margin-left: 0px;
+		margin-right: 0px;
+	}		
+
+	#deck{
+		padding-top: 20px;
+	}	
+
+	menu{
+		padding-top: $header-height;
+	}
+
+	#deck-nav{
+		li{
+			border: none !important;
+			a{
+				border: 2px solid $medium;
+				content: '.';
+			}
+		}
+	}
+
+	.deck-slide{
+		.slide-text{
+			width: 90%;
+		}
+	}		
+
+	.guidepost-sign{
+		a{
+			font-size: 16px;
+		}
+	}
+
+	#footer{
+
+		li{
+			height: 30px;
+		}
+
+	}
+
+	.space-card{
+		.space-card-plan{
+			padding: 0px 10px;
+		}
+	}
+
 
 
 }
 
+
+//short screens
+@media (max-height: 700px) {
+
+	#deck{
+		padding-top: 20px;
+	}
+
+}
 
 
 

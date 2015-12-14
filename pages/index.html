@@ -12,7 +12,7 @@
 
 {% extends "templates/partials/base.html" %}
 
-{% block body_attributes %}{% endblock %}
+{% block body_attributes %}class="body-home header-before header-absolute modal-off"{% endblock %}
 
 {% block content %}
 
@@ -20,28 +20,48 @@
 
     {% include "templates/partials/deck.html" %}
 
-  <p class="din-regular">Din Regular</p>
-
-  <p class="din-medium">Din Medium</p>
-
-  <p class="din-bold">Din Bold</p>
-
-  <p class="din-regular italic">Din Regular Italic</p>
-
-  <p class="din-medium italic">Din Medium Italic</p>
-
-  <p class="din-bold italic">Din Bold Italic</p>
+    <section id="site-introduction" class="block bg-white pt6 pb2">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2">
+                    <h2 class="centered site-introduction-statement m0">See the <a href="/projects" class="brand border-bottom-brand din-medium">Projects</a> and read the <a href="/blog" class="brand border-bottom-brand din-medium">Articles</a> that are Rewriting the Library at Olin</h2>
+                    <span class="icon centered large display-block" data-icon="”"></span>
+                </div>
+            </div>
+        </div>
+    </section>
 
     {% if cms.about.featured_project %}
-
-        {{ projects.featured_card( cms.about.featured_project ) }}
-
+        <section id="featured-project" class="block bg-white padded">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        {{ projects.featured_card( cms.about.featured_project ) }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">  
+                        <h3 class="centered"><a href="/projects" class="brand border-bottom-brand din-medium">See More Projects</a></h3>  
+                    </div>              
+                </div>
+        </section>    
     {% endif %}
 
-    {% if cms.about.featured_project %}
-
-        {{ articles.featured_card( cms.about.featured_article ) }}
-
+    {% if cms.about.featured_article %}
+        <section id="featured-article" class="block bg-light padded">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        {{ articles.featured_card( cms.about.featured_article ) }}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12">  
+                        <h3 class="centered"><a href="/blog" class="brand border-bottom-brand din-medium">See More Articles</a></h3>  
+                    </div>              
+                </div>                
+            </div>
+        </section>    
     {% endif %}
 
     {{ guideposts.callout() }}

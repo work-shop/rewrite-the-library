@@ -7,40 +7,56 @@
 
 {% macro with( title, description, image ) %}
 
-	{% if url( item ) == getCurrentUrl() %} {# It's an individual page #}
-	
-		<img src="{{ image|imageSize(auto) }}" />
+	<section class="block hero {% if title == 'The Projects' %} hero-projects half {% elseif url( item ) == getCurrentUrl() %} hero-project {% else %} eighty-five {% endif %}">
+		{% if url( item ) == getCurrentUrl() %} {# It's an individual page #}
 
-		{% if item.project_images %}
+			{% if item.project_images %}
 
-			<ul>
-			
-			{% for image in item.project_images %}
+				{% if item.project_images.length > 1 %}
+					<div class="project-slideshow project-hero-slideshow hero-slideshow">
+						<button class="slideshow-previous"></button>
+						<div class="project-slideshow-track clearfix">
+							{% for image in item.project_images %}
+								<div class="project-slide project-slide-{{ loop.index0 }}" style="z-index: {{ loop.index0 }};">
+									<img src="{{ image|imageCrop(1440,720) }}" alt="slide" />
+									<div class="background">
+									</div>
+								</div>
+							{% endfor %}
+						</div>
+						<button class="slideshow-next"></button>
+					</div>
+				{% else %}
+					<div class="hero-background block-background background-mask-dark" style="background-image: url('{{ image|imageSize(auto) }}');">
+					</div>
+				{% endif %}
 
+				<div class="container">
+					<div class="tag project-tag tag-white">
+						<h4>{{ item.name }}</h4>
+					</div>
+				</div>
 
-				<li>
-					<img src="{{ image|imageSize(auto) }}" />
-					{% if image.caption %} {{ image.caption }}{% endif %}
-				</li>
+			{% endif %}	
 
-			{% endfor %}
+		{% else %} {# It's a list page, or the about page #}
 
-			</ul>
+			<div class="hero-background block-background background-mask-light border-bottom" style="background-image: url('{{ image|imageSize(auto) }}');">
+			</div>		
+			<div class="hero-text vertical-center">
+				<div class="container">
+					<div class="row">
+						<div class="col-sm-8 col-sm-offset-2 col-md-6 col-md-offset-3">
+							{% if title %}
+								<h1 class="hero-title centered mb2"><span class="din-medium">{{ title }}</span></h1>
+							{% endif %}
+							<h2 class="hero-description centered din-regular">{{ description }}</h2>							
+						</div>
+					</div>
+				</div>				
+			</div>	
 
 		{% endif %}
-
-		{% if title %}<h1>{{ title }}</h1>{% endif %}
-
-		{% if description %}<h2>{{ description }}</h2>{% endif %}
-
-	{% else %} {# It's a list page #}
-
-		<img src="{{ image|imageSize(auto) }}" />
-
-		<h1>{{ title }}</h1>
-
-		<h2>{{ description }}</h2>
-
-	{% endif %}
+	</section>	
 
 {% endmacro %}

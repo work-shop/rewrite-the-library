@@ -14,21 +14,51 @@
 
 {% block title %}{% parent %} - {{ item.name }}{% endblock %}
 
+{% block body_attributes %}class="body-article body-individual header-before header-absolute modal-off"{% endblock %}
+
 {% block content %}
 
-	{% if item.override_publication_date %}
-		{{ item.override_publication_date|date('M d Y') }}
-	{% else %}
-		{{ item.publish_date|date('M d Y') }}
-	{% endif %}
+	<section class="block bg-white pt4 pb4 individual-description">
+		<div class="container">
+			<div class="row pb1">
+				<div class="col-sm-12">
+					<h6 class="din-regular mb1">
+						{% if item.override_publication_date %}
+							{{ item.override_publication_date|date('M d Y') }}
+						{% else %}
+							{{ item.publish_date|date('M d Y') }}
+						{% endif %}
+					</h6>
+				</div>
+				<div class="col-sm-8">
+					<h2 class="mt0">{{ item.name }}</h2>
+				</div>
+				<div class="col-sm-4">
+					<h4 class="din-regular mt0 article-author-name righted">{{item.author.name}}</h4>
+				</div>
+				<div class="col-sm-12">
+					<hr class="border-bottom m0">
+				</div>
+			</div>
+		</div>
+	</section>
 
-	<h1>{{ item.name }}</h1>
-
-	<h3>{{item.author.name}}</h3>
-
-	{{ item.body|safe }}
-
-	{{ related.to( item ) }}
+	<section class="block bg-white individual-body pb4" id="project-body">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12 col-md-10 col-md-offset-1">
+					<div class="wysiwyg">
+						{{ item.body|safe }}
+					</div>		
+				</div>
+			</div>			
+		</div>
+	</section>
+	<section class="block bg-light related pt3 pb6 border-top thick" id="project-related">
+		<div class="container">	
+			{{ related.to( item ) }}
+		</div>
+	</section>
 
 	{{ guideposts.back({url: url('articles'), name: "Articles" }) }}
 

@@ -14,40 +14,63 @@
 
 {% block title %}{% parent %} - Library Spaces{% endblock %}
 
+{% block body_attributes %}class="body-spaces header-before header-absolute modal-off"{% endblock %}
+
 {% block content %}
 
 	{% include "templates/partials/hero-spaces.html" %}
 
-
 	{# First Floor Display #}
 
-	<figure width="200" height="200">
-		<img src="{{ cms.about.first_floor_image|imageSize(auto) }}" />
-	</figure>
+	<section class="block bg-white pt2 pb6" id="spaces-first-floor-introduction">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6">
+					<h2 class="mb1 mt0"><span class="border-bottom din-medium">The First Floor</span></h2>
+					<p>
+						{{ cms.about.first_floor_description }}
+					</p>
+				</div>
+				<div class="col-sm-5 col-sm-offset-1 col-xs-6">
+					<figure>
+						<img src="{{ cms.about.first_floor_image|imageSize(auto) }}" />
+					</figure>					
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="block bg-white" id="spaces-first-floor-contents">
+		<div class="container bg-light pt3">
+			{% for space in cms.spaces|where('floor', 'First Floor') %}
+				{{ spaces.card( space ) }}
+			{% endfor %}			
+		</div>
+	</section>
 
-	{{ cms.about.first_floor_description }}
-	
-	{% for space in cms.spaces|where('floor', 'First Floor') %}
-
-		{{ spaces.card( space ) }}
-
-	{% endfor %}
-
-
-	<figure width="200" height="200">
-		<img src="{{ cms.about.ground_floor_image|imageSize(auto) }}" width="200" height="200" />
-	</figure>
-
-	{{ cms.about.ground_floor_description }}
-
-	{# Ground Floor Display #}
-
-	{% for space in cms.spaces|where('floor', 'Ground Floor') %}
-
-		{{ spaces.card( space ) }}
-
-	{% endfor %}
-
+	<section class="block bg-white pt5 pb6" id="spaces-ground-floor-introduction">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6">
+					<h2 class="mb1 mt0"><span class="border-bottom din-medium">The Ground Floor</span></h2>
+					<p>
+						{{ cms.about.ground_floor_description }}
+					</p>
+				</div>
+				<div class="col-sm-5 col-sm-offset-1 col-xs-6">
+					<figure>
+						<img src="{{ cms.about.ground_floor_image|imageSize(auto) }}" />
+					</figure>					
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="block bg-white" id="spaces-ground-floor-contents">
+		<div class="container bg-light pt3">
+			{% for space in cms.spaces|where('floor', 'Ground Floor') %}
+				{{ spaces.card( space ) }}
+			{% endfor %}			
+		</div>
+	</section>
 
 	{{ guideposts.back({url: '/', name: 'Home'}) }}
 

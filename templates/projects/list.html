@@ -14,6 +14,7 @@
 
 {% extends "templates/partials/base.html" %}
 
+{% block body_attributes %}class="body-projects header-before header-absolute modal-off"{% endblock %}
 
 {% set pagename = "The Projects" %}
 
@@ -25,11 +26,15 @@
 
 	{{ nav.from( 'Spaces', cms.spaces ) }}
 
-	{% for project in cms.projects %}
-
-		{{ projects.expanded_card( project ) }}
-
-	{% endfor %}
+	<section class="block bg-white padded" id="list">
+		<div class="container">
+			<div class="row">
+				{% for project in cms.projects %}
+					{{ projects.expanded_card( project ) }}				
+				{% endfor %}
+			</div>
+		</div>
+	</section>
 
 	{{ guideposts.back({url:'/', name: "Home"}) }}
 
