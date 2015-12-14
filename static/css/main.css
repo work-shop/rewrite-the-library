@@ -3401,6 +3401,11 @@ menu li li a:hover {
   content: '—';
 }
 
+.article-author-name {
+  position: relative;
+  top: 16px;
+}
+
 /********** @RESPONSIVE *********/
 @media (max-width: 1200px) {
   #deck-nav {
