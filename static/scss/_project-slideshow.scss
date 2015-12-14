@@ -33,8 +33,8 @@ $slide-offset-doubled: $slide-offset * 2;
 
 @for $i from 0 through 30 {
 	.project-slide-#{$i} {
-		$slideTranslation3: (-1 * ($slide-offset-doubled * $i)) - ($slide-offset);
-		@include transform(translateX( $slideTranslation3 ));
+		$slideTranslation: (-1 * ($slide-offset-doubled * $i)) - ($slide-offset);
+		@include transform(translateX( $slideTranslation ));
 	}
 }
 
@@ -70,7 +70,6 @@ $slide-offset-doubled: $slide-offset * 2;
 		&:hover{
 			cursor: pointer;
 			&:before{
-				//@include transform(scale(1.5));
 			}
 		}
 

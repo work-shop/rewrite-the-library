@@ -195,6 +195,7 @@ a.border-bottom:hover{
 	height: $header-height;
 	top: $header-height;
 	@extend .border-top;
+	
 	left: 0;
 	z-index: 7;
 	@include transition(position,.125s);
@@ -229,28 +230,28 @@ a.border-bottom:hover{
 	}
 }
 
-.header-white{
-	#header-rwtl{
-		border-top-color: white;
+// .header-white{
+// 	#header-rwtl{
+// 		border-top-color: white;
 
-		a{
-			color: white;
+// 		a{
+// 			color: white;
 			
-			&:hover{
-				color: white;
+// 			&:hover{
+// 				color: white;
 
-				span{
-					border-bottom-color: $brand;
-					color: $brand;
-				}
-			}
+// 				span{
+// 					border-bottom-color: $brand;
+// 					color: $brand;
+// 				}
+// 			}
 
-			span{
-				border-bottom: 3px solid white;
-			}
-		}
-	}
-}
+// 			span{
+// 				border-bottom: 3px solid white;
+// 			}
+// 		}
+// 	}
+// }
 
 
 /********** @MENUS AND MODALS *********/

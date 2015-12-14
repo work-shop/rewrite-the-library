@@ -13,11 +13,11 @@
 			{% if item.project_images %}
 
 				{% if item.project_images.length > 1 %}
-					<div class="project-slick-broken project-slideshow project-hero-slideshow hero-slideshow hero-slick">
+					<div class="project-slideshow project-hero-slideshow hero-slideshow">
 						<button class="slideshow-previous"></button>
 						<div class="project-slideshow-track clearfix">
 							{% for image in item.project_images %}
-								<div class="project-slick-slide project-slide hero-slick-slide project-slide-{{ loop.index0 }}" style="z-index: {{ loop.index0 }};">
+								<div class="project-slide project-slide-{{ loop.index0 }}" style="z-index: {{ loop.index0 }};">
 									<img src="{{ image|imageCrop(1440,720) }}" alt="slide" />
 									<div class="background">
 									</div>

@@ -2702,23 +2702,6 @@ a.border-bottom:hover, a.tag:hover {
   padding-bottom: 3px;
 }
 
-.header-white #header-rwtl {
-  border-top-color: white;
-}
-.header-white #header-rwtl a {
-  color: white;
-}
-.header-white #header-rwtl a:hover {
-  color: white;
-}
-.header-white #header-rwtl a:hover span {
-  border-bottom-color: #10A879;
-  color: #10A879;
-}
-.header-white #header-rwtl a span {
-  border-bottom: 3px solid white;
-}
-
 /********** @MENUS AND MODALS *********/
 body.modal-open {
   overflow: hidden;
@@ -2889,7 +2872,7 @@ menu li li a:hover {
 /********** @DECK *********/
 #deck {
   overflow: hidden;
-  padding-top: 40px;
+  padding-top: 70px;
 }
 
 .deck-intro {
@@ -3407,6 +3390,24 @@ menu li li a:hover {
 }
 
 /********** @RESPONSIVE *********/
+@media (min-width: 768px) {
+  .header-white #header-rwtl {
+    border-top-color: white;
+  }
+  .header-white #header-rwtl a {
+    color: white;
+  }
+  .header-white #header-rwtl a:hover {
+    color: white;
+  }
+  .header-white #header-rwtl a:hover span {
+    border-bottom-color: #10A879;
+    color: #10A879;
+  }
+  .header-white #header-rwtl a span {
+    border-bottom: 3px solid white;
+  }
+}
 @media (max-width: 1200px) {
   #deck-nav {
     height: 250px;
@@ -3432,6 +3433,10 @@ menu li li a:hover {
   }
 }
 @media (max-width: 767px) {
+  #header-rwtl {
+    background: rgba(255, 255, 255, 0.93);
+  }
+
   .row .row {
     margin-left: 0px;
     margin-right: 0px;

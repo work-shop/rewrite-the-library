@@ -43,12 +43,11 @@ function slideshowSetup(){
 	slideWidth = w * slideScale;
 
 	//width of track: number of slides(scaled) * window width
-	trackWidth = nSlides * (w * slideScale);	
+	trackWidth = nSlides * (slideWidth);	
 
 	//overall sizing
 	slides.width(slideWidth);
 	track.width(trackWidth);
-
 
 	//set the height of the slideshow
 	h = $(window).height();
@@ -56,7 +55,6 @@ function slideshowSetup(){
 	magic = 7;
 	containerHeight = h - hh - magic;
 	container.css('max-height',containerHeight);
-
 
 }
 
@@ -74,7 +72,6 @@ function slideshowIncrement(direction){
 
 	//maximum track translation before stopping
 	trackMax = (trackTranslation * (nSlides-1));
-	console.log(trackMax);
 
 	if(direction == 'next'){
 		//add the translation distance to the current track position
