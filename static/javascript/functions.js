@@ -244,6 +244,38 @@ function activate( key ) {
 	key.addClass('active');
 }
 
+/** ----------- BACK TO TOP ACTION --------------------------------- */
+
+
+$(document).ready(function() {
+
+	var stamptext = $( '#header-rwtl-center-stamp' ).children('span').html();
+
+	$('#header-rwtl-center-stamp')
+		.on('mouseover', function() {
+			
+			$( this ).children('span').html( "Back To Top");
+
+		})
+		.on('mouseout', function() {
+
+			$(this).children('span').html( stamptext );
+
+		});
+
+	$('#header-rwtl-center-stamp').click(function( e ) {
+
+	  	e.preventDefault();
+
+		$('body,html').animate({scrollTop:0},750);
+
+	});
+
+	$(window).on( "mousewheel", function() { $('html, body').stop(); });
+	$(window).on( "touchmove", function() { $('html, body').stop(); });
+
+});
+
 
 
 
