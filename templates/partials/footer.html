@@ -6,34 +6,34 @@
 
 {# ------------------------------------------------------- #}
 
+{% set limit = 5 %}
+
 <footer class="block bg-medium padded" id="footer">
 	<div class="container">
 		<nav id="footer-nav" class="row border-bottom-light pb3">
 			<div class="col-sm-6">
 				<h4 class="border-bottom-light uppercase din-regular">The Library Spaces</h4>
-				<ul>
-					{% for space in cms.spaces %}
-						<li><a href="{{ url( space ) }}" class="din-medium">{{ space.name }}</a></li>
-						<li><a href="{{ url( space ) }}" class="din-medium">{{ space.name }}</a></li>
-						<li><a href="{{ url( space ) }}" class="din-medium">{{ space.name }}</a></li>
-						<li><a href="{{ url( space ) }}" class="din-medium">{{ space.name }}</a></li>
-						<li><a href="{{ url( space ) }}" class="din-medium">{{ space.name }}</a></li>
-						<li><a href="{{ url( space ) }}" class="din-medium">{{ space.name }}</a></li>
-						<li><a href="{{ url( space ) }}" class="din-medium">{{ space.name }}</a></li>						
-						<li><a href="{{ url( space ) }}" class="din-medium">Needs Logic for splitting into two columns</a></li>
-					{% endfor %}
-				</ul>
+				
+				
+				<div class="row">
+					<ul class="col-sm-6">
+						{% for space in cms.spaces|slice(0, cms.spaces|size / 2) %}
+							<li><a href="{{ url( space ) }}" class="din-medium">{{ space.name }}</a></li>
+						{% endfor %}
+					</ul>
+					<ul class="col-sm-6">
+						{% for space in cms.spaces|slice(cms.spaces|size / 2, cms.spaces|size) %}
+							<li><a href="{{ url( space ) }}" class="din-medium">{{ space.name }}</a></li>
+						{% endfor %}
+					</ul>
+				</div>
+
 			</div>		
 			<div class="col-sm-3">
 				<h4 class="border-bottom-light uppercase din-regular">The Projects</h4>
 				<ul>
-					{% for project in cms.projects %}
+					{% for project in cms.projects|slice(0,limit) %}
 						<li><a href="{{ url( project ) }}" class="din-medium">{{ project.name }}</a></li>
-						<li><a href="{{ url( project ) }}" class="din-medium">{{ project.name }}</a></li>
-						<li><a href="{{ url( project ) }}" class="din-medium">{{ project.name }}</a></li>
-						<li><a href="{{ url( project ) }}" class="din-medium">{{ project.name }}</a></li>
-						<li><a href="{{ url( project ) }}" class="din-medium">{{ project.name }}</a></li>
-						<li><a href="{{ url( project ) }}" class="din-medium">Needs logic to limit to n entries</a></li>
 					{% endfor %}
 					<li class="mt2"><a href="/projects" class="din-medium brand">See All Projects</a></li>
 				</ul>
@@ -41,13 +41,8 @@
 			<div class="col-sm-3">
 				<h4 class="border-bottom-light uppercase din-regular">The Articles</h4>
 				<ul>
-					{% for article in cms.articles %}
+					{% for article in cms.articles|slice(0,limit) %}
 						<li><a href="{{ url( article ) }}" class="din-medium">{{ article.name }}</a></li>
-						<li><a href="{{ url( article ) }}" class="din-medium">{{ article.name }}</a></li>
-						<li><a href="{{ url( article ) }}" class="din-medium">{{ article.name }}</a></li>
-						<li><a href="{{ url( article ) }}" class="din-medium">{{ article.name }}</a></li>
-						<li><a href="{{ url( article ) }}" class="din-medium">{{ article.name }}</a></li>
-						<li><a href="{{ url( article ) }}" class="din-medium">Needs logic to limit to n entries</a></li>
 					{% endfor %}
 					<li class="mt2"><a href="/blog" class="din-medium brand">See All Articles</a></li>
 				</ul>
