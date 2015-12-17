@@ -39,8 +39,6 @@
 
 	{% if projects|size %}
 
-
-		
 		<div class="row">
 
 			<div class="col-sm-12">
@@ -87,7 +85,11 @@
 						</div>
 						<div class="article-card-metadata card-metadata row border-bottom thin">
 							<div class="col-xs-6">
-								<h5 class="article-card-category">Category!</h5>
+								<ul>
+								{% for category in article.categories %}
+									<li><h5 class="article-card-category">{{ category.name }}{% if loop.index != article.categories|size %}, {% endif %}</h5></li>
+								{% endfor %}
+								</ul>
 							</div>
 							<div class="col-xs-6">
 								<h5 class="righted article-card-author">{{ article.author.name }}</h5>		
