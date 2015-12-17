@@ -6,6 +6,8 @@
 
 {# ------------------------------------------------------- #}
 
+{% set limit = 10 %}
+
 <menu class="closed" id="menu">
 	<div class="blanket">
 	</div>
@@ -21,51 +23,26 @@
 							<ul class="open sub-list">
 								{% for space in cms.spaces %}
 									<li><a href="{{ url( space ) }}">{{ space.name }}</a></li>
-									<li><a href="{{ url( space ) }}">{{ space.name }}</a></li>
-									<li><a href="{{ url( space ) }}">{{ space.name }}</a></li>
-									<li><a href="{{ url( space ) }}">{{ space.name }}</a></li>
-									<li><a href="{{ url( space ) }}">{{ space.name }}</a></li>
 								{% endfor %}
-								<li><a href="/spaces">See All Spaces</a></li>
+								<li><a class="din-medium brand" href="/spaces">See All Spaces</a></li>				
 							</ul>
 						</li>
 						<li class="sub-list-parent">
 							<a href="#" class="menu-nav-toggle">The Projects</a>
 							<ul class="closed sub-list">
-								{% for project in cms.projects %}
-									<li><a href="{{ url( project ) }}">{{ project.name }}</a></li>
-									<li><a href="{{ url( project ) }}">{{ project.name }}</a></li>
+								{% for project in cms.projects|slice(0,limit) %}
 									<li><a href="{{ url( project ) }}">{{ project.name }}</a></li>
 								{% endfor %}
-								<li><a href="/projects">See All Projects</a></li>
+								<li><a class="din-medium brand" href="/projects">See All Projects</a></li>
 							</ul>
 						</li>
 						<li class="sub-list-parent">
 							<a href="#" class="menu-nav-toggle">The Articles</a>
 							<ul class="closed sub-list">
-								{% for article in cms.articles %}
-									<li><a href="{{ url( article ) }}">{{ article.name }}</a></li>
-									<li><a href="{{ url( article ) }}">{{ article.name }}</a></li>
-									<li><a href="{{ url( article ) }}">{{ article.name }}</a></li>
-									<li><a href="{{ url( article ) }}">{{ article.name }}</a></li>
-									<li><a href="{{ url( article ) }}">{{ article.name }}</a></li>
-									<li><a href="{{ url( article ) }}">{{ article.name }}</a></li>
-									<li><a href="{{ url( article ) }}">{{ article.name }}</a></li>
-									<li><a href="{{ url( article ) }}">{{ article.name }}</a></li>
-									<li><a href="{{ url( article ) }}">{{ article.name }}</a></li>
-									<li><a href="{{ url( article ) }}">{{ article.name }}</a></li>
-									<li><a href="{{ url( article ) }}">{{ article.name }}</a></li>
-									<li><a href="{{ url( article ) }}">{{ article.name }}</a></li>
-									<li><a href="{{ url( article ) }}">{{ article.name }}</a></li>
-									<li><a href="{{ url( article ) }}">{{ article.name }}</a></li>
-									<li><a href="{{ url( article ) }}">{{ article.name }}</a></li>
-									<li><a href="{{ url( article ) }}">{{ article.name }}</a></li>
-									<li><a href="{{ url( article ) }}">{{ article.name }}</a></li>
-									<li><a href="{{ url( article ) }}">{{ article.name }}</a></li>
-									<li><a href="{{ url( article ) }}">{{ article.name }}</a></li>
+								{% for article in cms.articles|slice(0,limit) %}
 									<li><a href="{{ url( article ) }}">{{ article.name }}</a></li>
 								{% endfor %}
-								<li><a href="/articles">See All Articles</a></li>
+								<li><a class="din-medium brand" href="/articles">See All Articles</a></li>
 							</ul>
 						</li>					
 					</ul>
