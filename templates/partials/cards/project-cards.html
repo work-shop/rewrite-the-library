@@ -36,7 +36,19 @@
 				</div>
 				<div class="project-card-metadata card-metadata row">
 					<div class="col-xs-12">
-						<h5 class="project-card-stats">Needs logic for # of participants and timeline</h5>
+						<h5 class="project-card-stats">
+							{{ project.collaborators|size }} pe{{ project.collaborators|size|pluralize('rson', 'ople') }} 
+							worked on this
+							{% if project.project_start|date('m Y') == project.project_end|date('m Y')  %}
+
+								during {{ project.project_start|date("F 'y") }}.
+
+							{% else %}
+
+								from {{ project.project_start|date("F 'y") }} to {{ project.project_end|date("F 'y") }}.
+
+							{% endif %}
+						</h5>
 					</div>
 				</div>				
 				<div class="project-card-image">
