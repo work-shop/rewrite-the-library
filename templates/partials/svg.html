@@ -1,0 +1,24 @@
+{% macro clippath( polygon, image ) %}
+
+<svg id="clip-field" width="{{image.width}}" height="{{image.height}}">
+<defs>
+	<clipPath id="clipShape" transform="scale({{ image.width / image.height }})">
+		{{ polygon|safe }}
+	</clipPath>
+</defs>
+
+<image clip-path="url( #clipShape )" xlink:href="{{ image|imageSize(auto) }}" width="{{ 2 * image.width }}" height="{{ 2 *image.height }}"/>
+
+</svg>
+
+{% endmacro %}
+
+{% macro shape( polygon ) %}
+
+<svg>
+<g class="svg-shape">
+	{{ polygon|safe }}
+</g>
+</svg>
+
+{% endmacro %}

@@ -19,23 +19,41 @@
 
 {% block content %}
 
+	
 
 	{% include "templates/partials/hero-space.html" %}
 
+	<section class="block container">
+	<div class="row">
 
 	{% for project in item.projects_space %}
+
+		<div class="col-sm-offset-2 col-sm-8">
 		
-		{{ projects.expanded_card( project ) }}
+		{{ projects.featured_card( project ) }}
+
+		</div>
 
 	{% endfor %}
 
+	</div>
+	</section>
+
+	<section class="block container">
+	<div class="row">
 
 	{% for article in item.articles_spaces %}
 
-		{{ articles.expanded_card( article ) }}
+		<div class="col-sm-offset-2 col-sm-8">
+
+		{{ articles.featured_card( article ) }}
+
+		</div>
 
 	{% endfor %}
 	
+	</div>
+	</section>
 
 	{{ guideposts.back({url: '/spaces', name: 'Spaces'}) }}
 

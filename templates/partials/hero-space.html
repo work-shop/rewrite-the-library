@@ -6,16 +6,32 @@
 
 {# ------------------------------------------------------- #}
 
-<img src="{{ item.context_image|imageSize(auto) }}" />
+{% import "templates/partials/svg.html" as svg %}
 
-<figure>
-	<img src="{{ item.shape_svg|imageSize(auto) }}" / >
-</figure>
+<section class="block hero container half m4">
+<div class="row">
 
-<figure>
-	<img src="{{ item.context_svg|imageSize(auto) }}" / >
-</figure>
+	<div class="col-sm-offset-1 col-sm-5 relative">
+		<div id="space-clipped-image" class="mt4">
 
-<h1>{{ item.name }}</h1>
+			{{ svg.clippath( item.inline_shape_svg, item.context_image ) }}
 
-<h4>{{ item.description }}</h4>
+		</div>
+
+		<img id="plan-image" src="{{ item.context_svg|imageSize(auto) }}" width="{{ item.context_svg.width / 2 }}" / >
+
+	</div>
+
+	<div class="col-sm-offset-1 col-sm-4">
+	<div class="mt4 half relative">
+		<div class="vertical-center">
+			<h3 class="hero-description centered din-medium title mb2">{{ item.name }}</h4>
+			<h4 class="hero-description centered din-regular">{{ item.description }}</h4>
+		</h3>
+	</div>	
+	</div>
+</div>
+</section>
+
+
+
