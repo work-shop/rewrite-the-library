@@ -24,14 +24,12 @@
   			</div>
   			<div class="col-sm-5 col-sm-offset-1">
   				<p>
-  				Field needed in CMS for this.
-  				Lorem ipsum Commodo voluptate deserunt laboris ea ut minim sed nostrud Ut tempor exercitation nulla dolor pariatur.
+                {{ cms.about.about_page_left_column }}
   				</p>
   			</div>
   			<div class="col-sm-5">
   				<p>
-  				Field needed in CMS for this.
-  				Lorem ipsum Commodo voluptate deserunt laboris ea ut minim sed nostrud Ut tempor exercitation nulla dolor pariatur.
+                {{ cms.about.about_page_right_column }}
   				</p>
   			</div>  			
   		</div>
@@ -49,11 +47,9 @@
   		</div>
     	<div class="row">
 		  {% for teammember in cms.about.teammembers %}
+
 		    {{ person.expanded_card( teammember ) }}
-		    {{ person.expanded_card( teammember ) }}
-		    {{ person.expanded_card( teammember ) }}
-		    {{ person.expanded_card( teammember ) }}
-		    {{ person.expanded_card( teammember ) }}
+
 		  {% endfor %}  						
   		</div>		
   	</div>
