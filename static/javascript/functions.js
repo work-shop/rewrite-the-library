@@ -10,12 +10,15 @@ var loaded = false;
  */
 $(document).one('dom-is-sized', function() {
 	
+	$('#load-overlay').fadeOut( 800 );
+
 });
 
 
-function domContains( element ) { return $( element ).length > 0; }
-
 //initial events, and general event binding
+//
+
+
 jQuery(document).ready(function($) {
 	
 	$('#backtotop').click(function(event) {
@@ -30,6 +33,7 @@ jQuery(document).ready(function($) {
 		scrollLink(href);	
 	});
 
+
 	$(".menu-toggle").click(function(e){
 		e.preventDefault();
 		cycleMenu();
@@ -39,6 +43,9 @@ jQuery(document).ready(function($) {
 	  	event.preventDefault();
 	  	menuNavToggle($(this));
 	});	
+
+	menuInit();
+
 
 	$('.blanket').click(function(event) {
 	  	event.preventDefault();
@@ -225,6 +232,22 @@ function menuNavToggle(_link){
 	  	$( sibling ).slideUp();		
 	  	$(link).removeClass('opened');
 	}
+}
+
+function  menuInit() {
+	$('.menu-nav-toggle').each( function() {
+
+		var sibling = $(this).next();
+
+		if ( sibling.hasClass('open') ) {
+
+			$(sibling).removeClass('closed').addClass('open');
+			console.log( 'open');
+			sibling.slideDown();
+			$(this).addClass('opened');
+
+		} 
+	});
 }
 
 //animate jump links
