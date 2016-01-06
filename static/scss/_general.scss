@@ -16,9 +16,11 @@ $tag-skew: -15deg;
 a{
 	@include transition(all, .125s);
 
-	&:hover {
-		border-bottom: 3px solid $brand;
-	}
+
+}
+
+.sync:hover {
+	border-bottom: 3px solid $brand;
 }
 
 a:focus{
