@@ -123,8 +123,8 @@
 
 
 #deck-nav{
-	height: 250px;
-	padding: 40px 120px 40px 120px;
+	height: 200px;
+	padding: 30px 120px 30px 120px;
 
 	li{
 		width: 25%;
@@ -141,7 +141,7 @@
 	
 		a{
 			@extend .h3;
-			color: $medium;
+			color: $dark;
 			text-align: center;
 			line-height: 1.2;
 
@@ -156,6 +156,18 @@
 	}
 }
 
+#deck-slick{
+	button{
+		bottom: -65px;
+		left: 20px;
+		width: 20px;
+		height: 20px;
+
+		&.slick-next{
+			right: 30px !important;
+		}
+	}
+}
 
 
 /********** @SITE INTRODUCTION *********/

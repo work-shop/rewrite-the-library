@@ -15,6 +15,10 @@ $tag-skew: -15deg;
 
 a{
 	@include transition(all, .125s);
+
+	&:hover {
+		border-bottom: 3px solid $brand;
+	}
 }
 
 a:focus{
@@ -61,6 +65,7 @@ a.border-bottom:hover{
 .tag{
 	@extend .border-bottom;
 	@include transition(all,.125s);
+	z-index:250;
 
 	h4,h5{
 		display: inline-block;
@@ -89,6 +94,7 @@ a.border-bottom:hover{
 
 .tag-button{
 	@include transform(skew($tag-skew));
+	z-index:250;
 
 	a{
 		padding: $tag-button-padding;
@@ -99,6 +105,7 @@ a.border-bottom:hover{
 		letter-spacing: .05em;	
 		@include transition(all,.125s);
 		line-height: 1.5;
+		border:none;
 
 		&:hover{
 			background: $brand;
@@ -123,6 +130,8 @@ a.border-bottom:hover{
 }
 
 .tag-button-small{
+	z-index:250;
+
 	a{
 		padding: $tag-button-padding-small;
 		@extend .h6;
