@@ -13,6 +13,8 @@ $(document).one('dom-is-sized', function() {
 });
 
 
+function domContains( element ) { return $( element ).length > 0; }
+
 //initial events, and general event binding
 jQuery(document).ready(function($) {
 	
@@ -53,11 +55,12 @@ jQuery(document).ready(function($) {
 		scrollLink(href,125);
 	});	
 
+	var videoSlide = 2;
 
-	$('#deck-slick').slick({
+	var slick = $('#deck-slick').slick({
 		centerMode: true,
 		arrows: true,
-		// dots: true,
+		dots: true,
 		focusOnSelect: true,
 		centerPadding: '250px',
 		slidesToShow: 1,
@@ -82,6 +85,36 @@ jQuery(document).ready(function($) {
 		      }
 		    }
 		  ]	
+	});
+
+	$('#deck-slick').on( 'beforeChange', function( e, slick, currentSlide, nextSlide ) {
+
+		$('.slick-guidepost').removeClass('active');
+
+		$('[data-slick-guidepost-index='+ nextSlide +']').addClass('active');
+
+	});
+
+	$('#deck-slick').on( 'afterChange', function( e, slick, currentSlide ) {
+
+		var deckOverlay = $('.deck-video-mask');
+
+		if ( currentSlide === videoSlide && !deckOverlay.hasClass('hidden') ) {
+
+			deckOverlay.addClass( 'hidden' );
+
+		} else if ( currentSlide !== videoSlide && deckOverlay.hasClass('hidden') ) {
+
+			deckOverlay.removeClass( 'hidden' );
+
+		}
+
+	});
+
+	$('.slick-guidepost').on( 'click', function() {
+
+		$('#deck-slick').slick('slickGoTo',  $( this ).data('slick-guidepost-index'), false );
+
 	});
 
 });//end document.ready
