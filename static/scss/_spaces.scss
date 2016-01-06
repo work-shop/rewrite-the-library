@@ -1,4 +1,3 @@
-
 .space-card{
 	.space-card-plan{
 		padding: 50px;
@@ -11,4 +10,24 @@
 	.space-card-contents-heading{
 		margin-bottom: .5em;
 	}
+}
+
+#space-clipped-image {
+	width:200%;
+	opacity: .25;
+}
+
+#plan-image {
+	width:75%;
+	position: absolute;
+	top: 100px;
+	left: 5%;
+}
+
+.first-floor-plan {
+	width:100%;
+}
+
+.ground-floor-plan {
+	width:89%
 }
