@@ -8,62 +8,40 @@
 
 {% import "templates/partials/cards/article-cards.html" as articles %}
 
-{% macro card( space ) %}
-	<script type="text/javascript">console.log({{ space.projects_spaces }})</script>
-	
-	<div class="card space-card row">
+{% macro card( space ) %}	
+	<div class="card space-card">
 		<a href="{{ url( space ) }}">
-			<div class="col-sm-3 col-sm-offset-1 space-card-plan col-xs-6 col-xs-offset-3">
-				<figure width="200" height="200">
-					<img src="{{ space.context_svg|imageSize(auto) }}" />
-				</figure>
-				<h6 class="centered din-regular">
-					{{ space.projects_space|size }} Project{{ space.projects_space|size|pluralize() }}, 
-					{{ space.articles_spaces|size }} Article{{ space.articles_spaces|size|pluralize() }}
-				</h6>							
-			</div>
-			<div class="col-sm-6 col-sm-offset-1">
-				<div class="tag">
-					<h5>{{ space.name }}</h5>
+			<div class="row mb1">
+
+				<div class="col-xs-offset-4 col-xs-8 col-sm-offset-4 col-sm-6">
+					<div class="tag">
+						<h5>{{ space.name }}</h5>
+					</div>
 				</div>
-				<p class="mb2">
-					{{ space.description }}
-				</p>
-				{%if space.projects_space %}
-					<div class="space-card-projects">
-						<h5 class="uppercase din-regular space-card-contents-heading">Projects:</h5>
-						<div class="row">
-							{% for project in space.projects_space %}
-								<div class="col-xs-6 col-sm-3">
-									<div class="space-card-project-image">
-										<img src="{{ project.hero_image|imageCrop(300,200) }}" class="bordered">
-									</div>
-									<div class="space-card-project-text">
-										<h6 class="din-regular space-card-contents-caption">{{ project.name }}</h6>
-									</div>		
-								</div>					
-							{% endfor %}
-						</div>
-					</div>
-				{% endif %}	
-				{%if space.articles_spaces %}
-					<div class="space-card-articles">
-						<h5 class="uppercase din-regular space-card-contents-heading">Articles:</h5>
-						<div class="row">
-							{% for article in space.articles_spaces %}
-								<div class="col-xs-6 col-sm-3">
-									<div class="space-card-article-image">
-										<img src="{{ article.hero_image|imageCrop(300,200) }}" class="bordered">
-									</div>
-									<div class="space-card-article-text">
-										<h6 class="din-regular space-card-contents-caption">{{ article.name }}</h6>
-									</div>		
-								</div>							
-							{% endfor %}
-						</div>
-					</div>
-				{% endif %}	
+					
 			</div>
+			<div class="row">
+
+				<div class="col-xs-4 col-sm-3 col-sm-offset-1 space-card-plan">
+					<figure width="200" height="200">
+						<img src="{{ space.context_svg|imageSize(auto) }}" />
+					</figure>
+					<h6 class="centered din-regular">
+						{{ space.projects_space|size }} Project{{ space.projects_space|size|pluralize() }}, 
+						{{ space.articles_spaces|size }} Article{{ space.articles_spaces|size|pluralize() }}
+					</h6>							
+				</div>
+
+				<div class="col-xs-8 col-sm-6">
+					
+					<p class="mb4 mt0">
+						{{ space.description }}
+					</p>
+				</div>
+				
+			</div>
+
+
 		</a>
 	</div>
 {% endmacro %}

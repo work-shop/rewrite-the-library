@@ -17,15 +17,11 @@
 		</div>
 		<div class="row mb3">
 			<div class="col-sm-4 col-sm-offset-1 col-xs-6">
-				<figure>
-					<img src="{{ cms.about.first_floor_image|imageSize(auto) }}" />
-				</figure>
+				<img class="floor-plan" src="{{ cms.about.first_floor_image|imageCrop(auto) }}" />
 				<h4 class="centered uppercase din-regular">First Floor</h4>	
 			</div>
 			<div class="col-sm-4 col-sm-offset-1 col-xs-6">
-				<figure>
-					<img src="{{ cms.about.ground_floor_image|imageSize(auto) }}" />
-				</figure>
+				<img class="ground-floor-plan" src="{{ cms.about.ground_floor_image|imageSize(auto) }}" />
 				<h4 class="centered uppercase din-regular">Ground Floor</h4>		
 			</div>			
 		</div>
