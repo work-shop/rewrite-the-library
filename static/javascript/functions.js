@@ -60,7 +60,7 @@ jQuery(document).ready(function($) {
 	var slick = $('#deck-slick').slick({
 		centerMode: true,
 		arrows: true,
-		dots: true,
+		//dots: true,
 		focusOnSelect: true,
 		centerPadding: '250px',
 		slidesToShow: 1,
@@ -78,7 +78,7 @@ jQuery(document).ready(function($) {
 		      breakpoint: 768,
 		      settings: {
 		        arrows: true,
-		        dots: true,
+		        //dots: true,
 		        centerMode: true,
 		        centerPadding: '10px',
 		        slidesToShow: 1
