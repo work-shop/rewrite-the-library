@@ -28,6 +28,9 @@
 	}
 
 	.project-card-image{
+
+		@include transition(all, .125s);
+
 		position: relative;
 		z-index: 1;
 
@@ -37,9 +40,12 @@
 
 	}
 
+
+
 	&:hover {
 
 		.project-card-image img {
+
 
 			border-color: $brand;
 
