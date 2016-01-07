@@ -18,6 +18,10 @@ function equal_width( target, selector ) {
 	selector.css({'width': selector.height() });
 }
 
+function fill( target, selector ) {
+	selector.css({'height': selector.parent().height() });
+}
+
 (function( $ ) {
 	function recalculate() {
 		for ( var selector in actionmap ) {
@@ -68,8 +72,17 @@ function equal_width( target, selector ) {
 	}	
 
 	function collapseSubLists(){
-		$('.sub-list').slideUp();
-		$('.sub-list').removeClass('open').addClass('closed');
+		$('.sub-list').filter( function() {
+
+			return !$(this).hasClass('open');
+
+		}).each( function() {
+
+			$(this).slideUp();
+			$(this).removeClass('open').addClass('closed');
+			
+		});
+
 	}	
 
 	var actionmap = 
@@ -94,6 +107,7 @@ function equal_width( target, selector ) {
 		'.eighty-five': {callback: height_strict, target: 0.85},
 		'.height-is-width': {callback: equal_height, target: undefined },
 		//'.width-is-height': {callback: equal_width, target: undefined }
+		'.fill': {callback: fill}
 	};
 
 	$( document ).ready( function() {
