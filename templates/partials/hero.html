@@ -7,17 +7,21 @@
 
 {% macro with( title, description, image ) %}
 
-	<section class="block hero {% if title == 'The Projects' %} hero-projects half {% elseif url( item ) == getCurrentUrl() %} hero-project {% else %} half {% endif %}">
+	<section class="block hero {% if title == 'The Projects' %} hero-projects {% elseif url( item ) == getCurrentUrl() %} hero-project {% else %} half {% endif %}">
 		{% if url( item ) == getCurrentUrl() %} {# It's an individual page #}
 
-			{% if item.project_images %}
-
-				{% if item.project_images.length > 1 %}
+				{% if item.project_images.length >= 1 %}
 					<div class="project-slideshow project-hero-slideshow hero-slideshow">
 						<button class="slideshow-previous"></button>
 						<div class="project-slideshow-track clearfix">
+							<div class="project-slide project-slide-0" style="z-index: 0;">
+								<img src="{{ image|imageCrop(1440,720) }}" alt="slide" />
+								<div class="background">
+								</div>
+							</div>
+
 							{% for image in item.project_images %}
-								<div class="project-slide project-slide-{{ loop.index0 }}" style="z-index: {{ loop.index0 }};">
+								<div class="project-slide project-slide-{{ loop.index }}" style="z-index: {{ loop.index }};">
 									<img src="{{ image|imageCrop(1440,720) }}" alt="slide" />
 									<div class="background">
 									</div>
@@ -26,18 +30,13 @@
 						</div>
 						<button class="slideshow-next"></button>
 					</div>
-				{% else %}
-					<div class="hero-background block-background background-mask-dark" style="background-image: url('{{ image|imageSize(auto) }}');">
-					</div>
 				{% endif %}
 
 				<div class="container">
-					<div class="tag project-tag tag-white">
+					<div class="tag project-title-tag tag-white">
 						<h4>{{ item.name }}</h4>
 					</div>
-				</div>
-
-			{% endif %}	
+				</div>	
 
 		{% else %} {# It's a list page, or the about page #}
 
