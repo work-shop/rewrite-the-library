@@ -40,8 +40,6 @@
 
 	}
 
-
-
 	&:hover {
 
 		.project-card-image img {
@@ -52,6 +50,10 @@
 		}
 
 	}
+
+	.svg-shape {
+		fill: $light;
+	}
 }
 
 
@@ -61,6 +63,16 @@
 	//left:2px;
 	width: 100%;
 	border-bottom: none !important;
+
+	h4{
+		font-size: 1.1em;
+	}
+}
+
+.project-title-tag {
+	position: absolute;
+	bottom: 0 !important;
+	width: 100%;
 
 	h4{
 		font-size: 1.1em;
