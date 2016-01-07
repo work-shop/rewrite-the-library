@@ -16,6 +16,10 @@
 
 	&:hover {
 
+		a {
+			color: $dark !important;
+		}
+
 		.tag h4, .tag h5 {
 
 			background-color: $brand;
@@ -29,7 +33,7 @@
 		}
 
 		.border-bottom {
-			border-color: $brand;
+			//border-color: $brand;
 		}
 
 	}

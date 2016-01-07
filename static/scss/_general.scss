@@ -469,7 +469,7 @@ main{
 $nav-fixed-height: 120px;
 
 #nav{
-	//height: $nav-fixed-height;
+	min-height: $nav-fixed-height;
 }
 
 .filter-nav{
