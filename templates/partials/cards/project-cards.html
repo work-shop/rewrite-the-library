@@ -4,6 +4,7 @@
 
 {# ------------------------------------------------------- #}
 
+{% import "templates/partials/svg.html" as svg %}
 
 {% macro card( project, zoom ) %}
 
@@ -12,8 +13,8 @@
 
 			{% if zoom == "featured" %}
 
-				<div class="tag">
-					<h4>Featured Project: {{ project.name }}</h4>
+				<div class="tag project-tag">
+					<h4>{{ project.name }}</h4>
 				</div>
 				<div class="project-card-image">
 					<img src="{{ project.hero_image|imageCrop(1024,400) }}">
@@ -28,7 +29,13 @@
 			{% elseif zoom == "expanded" %}
 
 				<div class="project-card-space hidden-xs">
-					<img src="/static/images/space.png">					
+
+					<svg>
+						<g class="svg-shape">
+							{{ project.space.inline_shape_svg|safe }}
+						</g>
+					</svg>			
+					
 				</div>
 
 				<div class="tag">
