@@ -19,9 +19,9 @@ a{
 
 }
 
-.sync:hover {
-	border-bottom: 3px solid $brand;
-}
+	.sync:hover {
+		border-bottom: 3px solid $brand;
+	}
 
 a:focus{
 	color: $dark;
@@ -469,7 +469,7 @@ main{
 $nav-fixed-height: 120px;
 
 #nav{
-	height: $nav-fixed-height;
+	//height: $nav-fixed-height;
 }
 
 .filter-nav{

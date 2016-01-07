@@ -30,13 +30,29 @@
 	.project-card-image{
 		position: relative;
 		z-index: 1;
+
+		img {
+			@extend .bordered;
+		}
+
+	}
+
+	&:hover {
+
+		.project-card-image img {
+
+			border-color: $brand;
+
+		}
+
 	}
 }
 
 
 .project-tag{
-	position: absolute;
-	bottom: 0;
+	position: relative;
+	top: -100%;
+	//left:2px;
 	width: 100%;
 	border-bottom: none !important;
 
