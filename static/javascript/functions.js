@@ -15,11 +15,13 @@ $(document).one('dom-is-sized', function() {
 });
 
 
-//initial events, and general event binding
-//
-
-
 jQuery(document).ready(function($) {
+
+	$('pre').each( function( i, block ) {
+
+		hljs.highlightBlock( block );
+
+	});
 	
 	$('#backtotop').click(function(event) {
 	  	event.preventDefault();
