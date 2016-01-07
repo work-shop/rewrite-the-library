@@ -79,3 +79,13 @@
 	}
 }
 
+.project-space {
+	position:absolute;
+	z-index:-250;
+
+	top:8%;
+	left:1%;	
+	
+	fill: $light;
+}
+
