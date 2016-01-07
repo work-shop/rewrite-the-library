@@ -9,7 +9,10 @@ figure {
 }
 
 figcaption {
-  text-align: center;
+  font-size:12px;
+  font-style:italic;
+  color:$medium;
+  text-align: left;
 }
 
 figure[data-type=table] {
@@ -17,6 +20,7 @@ figure[data-type=table] {
 }
 
 figure[data-type=video] {
+  border:3px solid $dark;
   position: relative;
   margin-bottom: 24px;
   text-align: center;
@@ -44,6 +48,7 @@ figure[data-type=image] {
   margin-bottom: 24px;
 }
 figure[data-type=image] img {
+  border:3px solid $dark;
   width: 100%;
 }
 figure[data-type=image].wy-figure-large {
