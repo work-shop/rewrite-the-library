@@ -8,41 +8,55 @@
 
 {% set limit = 10 %}
 
+{% set curUrl = getCurrentUrl() %}
+
+{% import "templates/partials/menu-macros.html" as menu %}
+
+
+
+
 <menu class="closed" id="menu">
 	<div class="blanket">
 	</div>
 	<div class="container">
+		{{ curUrl|startsWith(url('projects'))}}
 		<div class="row">
-			<div class="col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
+			<div class="col-sm-6 col-sm-offset-3 col-xs-8 col-xs-offset-2">
 				<nav id="menu-nav">
 					<ul class="centered uppercase">
-						<li><a href="/">Home</a></li>
-						<li><a href="/about">About</a></li>
+
+						<li><a class="{% if getCurrentUrl() == '/' %}active{%endif%}" href="/">Home</a></li>
+
+						<li><a class="{{ menu.active('/about','active') }}" href="/about">About</a></li>
+
 						<li class="sub-list-parent">
-							<a href="#" class="menu-nav-toggle">Library Spaces</a>
-							<ul class="open sub-list">
+							<a href="#" class="menu-nav-toggle {{ menu.active(url('spaces'),'opened') }}">Library Spaces</a>
+							<ul class="sub-list row {{ menu.active(url('spaces'),'open', 'closed') }}">
 								{% for space in cms.spaces %}
-									<li><a href="{{ url( space ) }}">{{ space.name }}</a></li>
+									<li class="col-sm-6"><a class="{{ menu.active(url(space),'active') }}" href="{{ url( space ) }}">{{ space.name }}</a></li>
 								{% endfor %}
-								<li><a class="din-medium brand" href="/spaces">See All Spaces</a></li>				
+								<li><a class="col-xs-12 din-medium brand mt1" href="/spaces">See All Spaces</a></li>				
 							</ul>
+
 						</li>
 						<li class="sub-list-parent">
-							<a href="#" class="menu-nav-toggle">The Projects</a>
-							<ul class="closed sub-list">
+							<a href="#" class="menu-nav-toggle {{ menu.active(url('projects'),'opened') }}">The Projects</a>
+							{% set projectsUrl = url('projects') %}
+							<ul class="sub-list row {{ menu.active(projectsUrl,'open','closed') }}">
 								{% for project in cms.projects|slice(0,limit) %}
-									<li><a href="{{ url( project ) }}">{{ project.name }}</a></li>
+									<li class="col-sm-6"><a class="{{ menu.active(url(project),'active') }}" href="{{ url( project ) }}">{{ project.name }}</a></li>
+									
 								{% endfor %}
-								<li><a class="din-medium brand" href="/projects">See All Projects</a></li>
+								<li><a class="col-sm-12 din-medium brand mt1" href="/projects">See All Projects</a></li>
 							</ul>
 						</li>
 						<li class="sub-list-parent">
-							<a href="#" class="menu-nav-toggle">The Articles</a>
-							<ul class="closed sub-list">
+							<a href="#" class="menu-nav-toggle {{ menu.active(url('articles'),'opened') }}">The Articles</a>
+							<ul class="sub-list row {{ menu.active(url('articles'),'open', 'closed') }}">
 								{% for article in cms.articles|slice(0,limit) %}
-									<li><a href="{{ url( article ) }}">{{ article.name }}</a></li>
+									<li class="col-sm-6"><a class="{{ menu.active(url(article),'active') }}" href="{{ url( article ) }}">{{ article.name }}</a></li>
 								{% endfor %}
-								<li><a class="din-medium brand" href="/articles">See All Articles</a></li>
+								<li><a class="col-sm-12 din-medium brand mt1" href="/articles">See All Articles</a></li>
 							</ul>
 						</li>					
 					</ul>

@@ -1,0 +1,15 @@
+{% macro active( test, consequent, alternate ) %}
+
+	{% set curUrl = getCurrentUrl() %}
+
+	{% if curUrl|startsWith(test) %}
+
+		{{ consequent }}
+
+	{% else %}
+
+		{{ alternate }}
+
+	{% endif %}
+
+{% endmacro %}
