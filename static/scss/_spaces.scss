@@ -13,8 +13,11 @@
 }
 
 #space-clipped-image {
-	width:200%;
+	height:500px;
+	width: 100%;
 	opacity: .25;
+
+	overflow:hidden;
 }
 
 #plan-image {
@@ -24,6 +27,7 @@
 	left: 5%;
 }
 
+
 .first-floor-plan {
 	width:100%;
 }
@@ -31,3 +35,59 @@
 .ground-floor-plan {
 	width:89%
 }
+
+
+
+
+/********** @RESPONSIVE *********/
+
+
+//sm and up
+@media (min-width: 768px) {
+	
+}	
+
+//lg
+@media ($lg-query) {
+
+
+}
+
+//md
+@media ($md-query) {
+
+
+}
+
+//sm
+@media ($sm-query) {
+
+
+	#plan-image {
+		width:300px;
+		position: absolute;
+		top: 100px;
+		left: 15%;
+	}
+
+} 
+
+//xs
+@media ($xs-query) {
+
+
+	#space-clipped-image {
+		height:250px !important;
+	}	
+
+
+}
+
+
+//short screens
+@media (max-height: 700px) {
+
+}
+
+
+
