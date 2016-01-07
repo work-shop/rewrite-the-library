@@ -7,7 +7,7 @@
 
 {% macro with( title, description, image ) %}
 
-	<section class="block hero {% if title == 'The Projects' %} hero-projects {% elseif url( item ) == getCurrentUrl() %} hero-project {% else %} half {% endif %}">
+	<section class="block hero mt4-xs {% if title == 'The Projects' %} hero-projects {% elseif url( item ) == getCurrentUrl() %} hero-project {% else %} half {% endif %}">
 		{% if url( item ) == getCurrentUrl() %} {# It's an individual page #}
 
 				{% if item.project_images.length >= 1 %}

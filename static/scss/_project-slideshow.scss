@@ -91,3 +91,65 @@ $slide-offset-doubled: $slide-offset * 2;
 	}
 
 }
+
+
+
+
+/********** @RESPONSIVE *********/
+
+
+//sm and up
+@media (min-width: 768px) {
+	
+}	
+
+//lg
+@media ($lg-query) {
+
+}
+
+//md
+@media ($md-query) {
+
+}
+
+//sm
+@media ($sm-query) {
+
+} 
+
+//xs
+@media ($xs-query) {
+
+	.project-slideshow{
+
+		button{
+
+			top: 15%;
+			left: -10px;
+
+			&:before{
+				width: 40px;
+				height:40px;
+
+				font-size: 40px;
+				
+			}
+
+			&.slideshow-next {
+				left: auto;
+				top: auto;
+				bottom: 0%;
+				right: 10px !important;
+			}
+		}
+	}
+}
+
+//short screens
+@media (max-height: 700px) {
+
+}
+
+
+
