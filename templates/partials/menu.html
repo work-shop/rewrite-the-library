@@ -34,7 +34,7 @@
 								{% for space in cms.spaces %}
 									<li class="col-sm-6"><a class="{{ menu.active(url(space),'active') }}" href="{{ url( space ) }}">{{ space.name }}</a></li>
 								{% endfor %}
-								<li><a class="sync col-xs-12 din-medium brand mt1" href="/spaces">See All Spaces</a></li>				
+								<li class="col-sm-12"><a class="sync din-medium brand mt1" href="/spaces">See All Spaces</a></li>				
 							</ul>
 
 						</li>
@@ -46,7 +46,7 @@
 									<li class="col-sm-6"><a class="{{ menu.active(url(project),'active') }}" href="{{ url( project ) }}">{{ project.name }}</a></li>
 									
 								{% endfor %}
-								<li><a class="sync col-sm-12 din-medium brand mt1" href="/projects">See All Projects</a></li>
+								<li class="col-sm-12"><a class="sync din-medium brand mt1" href="/projects">See All Projects</a></li>
 							</ul>
 						</li>
 						<li class="sub-list-parent">
@@ -55,7 +55,7 @@
 								{% for article in cms.articles|slice(0,limit) %}
 									<li class="col-sm-6"><a class="{{ menu.active(url(article),'active') }}" href="{{ url( article ) }}">{{ article.name }}</a></li>
 								{% endfor %}
-								<li><a class="sync col-sm-12 din-medium brand mt1" href="/articles">See All Articles</a></li>
+								<li class="col-sm-12"><a class="sync din-medium brand mt1" href="/articles">See All Articles</a></li>
 							</ul>
 						</li>					
 					</ul>
