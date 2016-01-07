@@ -11,11 +11,12 @@
 		{% if person.website %}<a href="{{ person.website }}">{% endif %}
 
 			{% if zoom == "expanded" %}
-
-					<div class="tag">
-						<h4>{{ person.name }}</h4>
+					<div class='row'>
+						<div class="col-sm-12">
+							<div class=" tag"><h4>{{ person.name }}</h4></div>
+						</div>
 					</div>
-					<div class="person-card-metadata row card-metadata">
+					<div class="row person-card-metadata card-metadata">
 						<div class="col-sm-6 col-xs-9">
 							<h5 class="person-card-role">{{ person.role.name }}</h5>
 						</div>
@@ -32,7 +33,9 @@
 							<img src="{{ person.image|imageSize(auto)}}" />
 						</div>
 						<div class="col-sm-12">
-							<h6 class="din-regular person-card-stats">Needs logic for projects, articles</h6>
+							<h6 class="din-regular person-card-stats">
+								{{ person.projects_collaborators|size }} Project{{ person.projects_collaborators|size|pluralize('s')}}, {{person.articles_author|size}} Article{{ person.articles_author|size|pluralize('s')}}
+							</h6>
 						</div>
 					</div>
 
