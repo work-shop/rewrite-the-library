@@ -21,6 +21,7 @@
 						{% endif %}
 					</span>
 				</div>
+
 				<div class="article-card-metadata  card-metadata row">
 					<div class="col-xs-6">
 						<ul>
@@ -43,17 +44,22 @@
 				</div>
 
 			{% elseif zoom == "expanded" %}
-
-				<div class="tag">
-					<h4>Featured Article: {{ article.name }}</h4>
-					<span class="tag-date article-card-date right h5 din-regular">
-						{% if ( article.override_publication_date ) %}
-							{{ article.publish_date|date('M d Y') }}
-						{% else %}
-							{{ article.publish_date|date('M d Y') }}
-						{% endif %}
-					</span>
+				<div class="row">
+					<div class="col-sm-12">
+						<div class="tag">
+							<h4 class="article-card-title-limited">{{ article.name }}</h4>
+							<span class="tag-date article-card-date right h5 din-regular">
+								{% if ( article.override_publication_date ) %}
+									{{ article.publish_date|date('M d Y') }}
+								{% else %}
+									{{ article.publish_date|date('M d Y') }}
+								{% endif %}
+							</span>
+						</div>
+					</div>
 				</div>
+
+				
 				<div class="article-card-metadata card-metadata row">
 					<div class="col-xs-6">
 						<ul>
@@ -66,7 +72,8 @@
 						<h5 class="righted article-card-author">{{ article.author.name }}</h5>		
 					</div>
 				</div>
-				<div class="row article-card-body">
+			
+				<div class="row article-card-body row">
 					{% if article.hero_image %}
 						<div class="col-sm-5">
 							<img src="{{ article.hero_image|imageSize(auto) }}" class="bordered">
