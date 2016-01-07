@@ -9,5 +9,48 @@
 
 .article-author-name{
 	position: relative;
-	top: 16px;
+	top:7px;
+}
+
+.article-card {
+
+	&:hover {
+
+		.tag h4, .tag h5 {
+
+			background-color: $brand;
+
+		}
+
+		.tag {
+
+			border-color: $brand;
+
+		}
+
+		.border-bottom {
+			border-color: $brand;
+		}
+
+	}
+
+}
+
+@media ($lg-query) {
+
+	.article-author-name { top:16px; }
+
+}
+
+
+@media ($md-query) {
+
+	.article-author-name { top:16px; }
+
+}
+
+@media ($sm-query) {
+
+	.article-author-name { top:8px; }
+
 }

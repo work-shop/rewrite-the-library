@@ -42,6 +42,14 @@
 
 	&:hover {
 
+		.tag h4, .tag h5 {
+			background-color: $brand;
+		}
+
+		.tag {
+			border-color:$brand;
+		}
+
 		.project-card-image img {
 
 
