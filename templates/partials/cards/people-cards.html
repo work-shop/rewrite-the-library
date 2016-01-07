@@ -6,7 +6,7 @@
 
 {% macro card( person, zoom ) %}
 
-	<div class="person card card-person card-person-{{ zoom }} col-xs-6 col-md-4 mb5">
+	<div id="{{ person.name|lower|replace(' ', '-', 'g') }}" class="person card card-person card-person-{{ zoom }} col-xs-6 col-md-4 mb5">
 
 		{% if person.website %}<a href="{{ person.website }}">{% endif %}
 
