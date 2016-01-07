@@ -6,7 +6,7 @@
 
 {% macro card( article, zoom ) %}
 
-	<div class="article-card card article-card-{{ zoom }} {% if zoom == "expanded" %} col-sm-8 col-sm-offset-2 mb5 {% endif %}" data-sort-value="{{article.category.name|lower|replace(' ','-','g')}},*">
+	<div class="article-card card article-card-{{ zoom }} {% if zoom == "expanded" %} col-sm-8 col-sm-offset-2 mb5 {% endif %}" data-sort-value="{% for cat in article.categories %}{{cat.name|lower|replace(' ','-','g')}},{%endfor%}*">
 		<a href="{{ url( article ) }}">
 
 			{% if zoom == "featured" %}
