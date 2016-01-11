@@ -28,11 +28,15 @@ w{# ------------------------------------------------------- #}
 
 	<section class="block bg-white padded" id="list">
 		<div class="container">
-			<div class="row">
+			
 				{% for project in cms.projects %}
-					{{ projects.expanded_card( project ) }}				
+					{% if loop.index0 % 2 == 0 %}<div class="row">{% endif %}
+
+					{{ projects.expanded_card( project ) }}	
+
+					{% if loop.index0 % 2 == 1 %}</div>{% endif %}			
 				{% endfor %}
-			</div>
+			
 		</div>
 	</section>
 
