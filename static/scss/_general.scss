@@ -490,6 +490,10 @@ $nav-fixed-height: 120px;
 	}
 }
 
+*[data-sort-key].active h5 {
+	color:$brand;
+}
+
 /******** @OVERLAY *********/
 #load-overlay {
 	position: fixed;
