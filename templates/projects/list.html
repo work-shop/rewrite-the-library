@@ -1,4 +1,4 @@
-{# ------------------------------------------------------- #}
+w{# ------------------------------------------------------- #}
 
 {# PROJECTS PAGE #}
 
@@ -24,7 +24,7 @@
 
 	{{ hero.with( pagename, cms.about.projects_page_callout, cms.about.projects_page_image ) }}
 
-	{{ nav.from( 'Spaces', cms.spaces ) }}
+	{{ nav.from( 'Spaces', cms.spaces|where('projects_space') ) }}
 
 	<section class="block bg-white padded" id="list">
 		<div class="container">

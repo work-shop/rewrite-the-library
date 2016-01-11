@@ -185,7 +185,7 @@ function navSpy(){
 		var navScrollTop = ($('#nav').offset().top) - headerHeight;				
 
 		if(($(window).scrollTop() >= navScrollTop) && nav.hasClass('static') ) {
-			console.log(navScrollTop);
+			
 			nav.removeClass('static').addClass('fixed');
 			//navFix.removeClass('off').addClass('on');	
 		}	

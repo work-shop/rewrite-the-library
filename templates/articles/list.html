@@ -24,7 +24,7 @@
 	
 	{{ hero.with( pagename, cms.about.articles_page_callout, cms.about.articles_page_image ) }}
 
-	{{ nav.from( 'Categories', cms.articlecategories ) }}
+	{{ nav.from( 'Categories', cms.articlecategories|where('articles_category') ) }}
 
 	<section class="block bg-white padded" id="list">
 		<div class="container">
