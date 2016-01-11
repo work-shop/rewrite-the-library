@@ -1,4 +1,4 @@
-{# ------------------------------------------------------- #}
+ {# ------------------------------------------------------- #}
 
 {# MENU SPACE PAGE #}
 
@@ -32,7 +32,7 @@
 							<a href="#" class="menu-nav-toggle {{ menu.active(url('spaces'),'opened') }}">Library Spaces</a>
 							<ul class="sub-list row {{ menu.active(url('spaces'),'open', 'closed') }}">
 								{% for space in cms.spaces %}
-									<li class="col-sm-6"><a class="{{ menu.active(url(space),'active') }}" href="{{ url( space ) }}">{{ space.name }}</a></li>
+									<li class="col-sm-12"><a class="{{ menu.active(url(space),'active') }}" href="{{ url( space ) }}">{{ space.name }}</a></li>
 								{% endfor %}
 								<li class="col-sm-12"><a class="sync din-medium brand mt1" href="/spaces">See All Spaces</a></li>				
 							</ul>
@@ -43,7 +43,7 @@
 							{% set projectsUrl = url('projects') %}
 							<ul class="sub-list row {{ menu.active(projectsUrl,'open','closed') }}">
 								{% for project in cms.projects|slice(0,limit) %}
-									<li class="col-sm-6"><a class="{{ menu.active(url(project),'active') }}" href="{{ url( project ) }}">{{ project.name }}</a></li>
+									<li class="col-sm-12"><a class="{{ menu.active(url(project),'active') }}" href="{{ url( project ) }}">{{ project.name }}</a></li>
 									
 								{% endfor %}
 								<li class="col-sm-12"><a class="sync din-medium brand mt1" href="/projects">See All Projects</a></li>
@@ -53,7 +53,7 @@
 							<a href="#" class="menu-nav-toggle {{ menu.active(url('articles'),'opened') }}">The Articles</a>
 							<ul class="sub-list row {{ menu.active(url('articles'),'open', 'closed') }}">
 								{% for article in cms.articles|slice(0,limit) %}
-									<li class="col-sm-6"><a class="{{ menu.active(url(article),'active') }}" href="{{ url( article ) }}">{{ article.name }}</a></li>
+									<li class="col-sm-12"><a class="{{ menu.active(url(article),'active') }}" href="{{ url( article ) }}">{{ article.name }}</a></li>
 								{% endfor %}
 								<li class="col-sm-12"><a class="sync din-medium brand mt1" href="/articles">See All Articles</a></li>
 							</ul>
